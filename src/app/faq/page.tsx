@@ -177,11 +177,11 @@ function AccordionItem({
         className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-neutral-50 transition-colors"
         aria-expanded={isOpen}
       >
-        <span className="font-heading font-bold text-dark pr-4">
+        <span className="font-heading font-bold text-dark-700 pr-4">
           {faq.question}
         </span>
         <ChevronDown
-          className={`w-5 h-5 text-gold flex-shrink-0 transition-transform duration-300 ${
+          className={`w-5 h-5 text-gold-400 flex-shrink-0 transition-transform duration-300 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -231,7 +231,7 @@ export default function FAQPage() {
               <a
                 key={category.title}
                 href={`#faq-${category.title.toLowerCase().replace(/\s+/g, "-")}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200 text-sm font-medium text-neutral-600 hover:border-gold hover:text-gold transition-all"
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200 text-sm font-medium text-neutral-600 hover:border-gold-400 hover:text-gold-400 transition-all"
               >
                 <category.icon className="w-4 h-4" />
                 {category.title}
@@ -247,10 +247,10 @@ export default function FAQPage() {
                 id={`faq-${category.title.toLowerCase().replace(/\s+/g, "-")}`}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center">
-                    <category.icon className="w-5 h-5 text-gold" />
+                  <div className="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center">
+                    <category.icon className="w-5 h-5 text-gold-400" />
                   </div>
-                  <h2 className="text-2xl font-heading font-bold text-dark">
+                  <h2 className="text-2xl font-heading font-bold text-dark-700">
                     {category.title}
                   </h2>
                 </div>
@@ -274,7 +274,7 @@ export default function FAQPage() {
 
           {/* Still have questions */}
           <div className="mt-16 bg-neutral-50 rounded-2xl border border-neutral-200 p-8 sm:p-10 text-center">
-            <h3 className="text-2xl font-heading font-bold text-dark mb-3">
+            <h3 className="text-2xl font-heading font-bold text-dark-700 mb-3">
               Still Have Questions?
             </h3>
             <p className="text-neutral-600 mb-6 max-w-lg mx-auto">
@@ -285,13 +285,13 @@ export default function FAQPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="bg-gold-gradient text-dark font-bold px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold/20 hover:scale-105 transition-all duration-200 text-sm"
+                className="bg-gold-gradient text-dark-700 font-bold px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200 text-sm"
               >
                 Contact Us
               </Link>
               <a
                 href="tel:+12517251929"
-                className="border border-neutral-300 text-dark font-semibold px-8 py-3.5 rounded-lg hover:border-gold hover:text-gold transition-all duration-200 text-sm"
+                className="border border-neutral-300 text-dark-700 font-semibold px-8 py-3.5 rounded-lg hover:border-gold-400 hover:text-gold-400 transition-all duration-200 text-sm"
               >
                 Call (251) 725-1929
               </a>
@@ -303,10 +303,10 @@ export default function FAQPage() {
       {/* ============================================================= */}
       {/* QUOTE FORM                                                     */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-dark">
+      <section className="py-16 sm:py-24 bg-dark-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Get Started
             </p>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">

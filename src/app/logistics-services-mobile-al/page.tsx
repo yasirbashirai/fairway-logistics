@@ -119,10 +119,10 @@ export default function LogisticsServicesMobileAL() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="animate-fade-in-up">
-              <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+              <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
                 Our Home Base
               </span>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2 mb-6">
                 Mobile, Alabama: Where Gulf Coast Logistics Begins
               </h2>
               <div className="space-y-4 text-neutral-600 leading-relaxed">
@@ -158,8 +158,8 @@ export default function LogisticsServicesMobileAL() {
 
             <div className="animate-fade-in-up stagger-2">
               <div className="bg-neutral-50 rounded-xl p-8 border border-neutral-200">
-                <h3 className="text-xl font-heading font-bold text-dark mb-6 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-gold" />
+                <h3 className="text-xl font-heading font-bold text-dark-700 mb-6 flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-gold-400" />
                   Mobile at a Glance
                 </h3>
                 <ul className="space-y-4">
@@ -174,7 +174,7 @@ export default function LogisticsServicesMobileAL() {
                     "Growing petrochemical corridor along the Mobile River",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
                       <span className="text-neutral-700 text-sm">{item}</span>
                     </li>
                   ))}
@@ -189,10 +189,10 @@ export default function LogisticsServicesMobileAL() {
       <section className="py-16 sm:py-20 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               What We Offer in Mobile
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
               Logistics Services Available in Mobile, AL
             </h2>
             <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
@@ -286,10 +286,10 @@ export default function LogisticsServicesMobileAL() {
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Why Mobile Matters
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
               Strategic Advantages of Mobile, AL Logistics
             </h2>
             <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
@@ -305,7 +305,7 @@ export default function LogisticsServicesMobileAL() {
                 key={i}
                 className={`gold-border-left pl-6 py-4 animate-fade-in-up stagger-${i + 1}`}
               >
-                <h3 className="text-lg font-heading font-bold text-dark mb-2">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
                   {advantage.title}
                 </h3>
                 <p className="text-neutral-600 text-sm leading-relaxed">
@@ -324,10 +324,10 @@ export default function LogisticsServicesMobileAL() {
       <section className="py-16 sm:py-20 bg-neutral-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Common Questions
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
               Mobile, AL Logistics FAQs
             </h2>
           </div>
@@ -338,7 +338,7 @@ export default function LogisticsServicesMobileAL() {
                 key={i}
                 className="bg-white rounded-xl border border-neutral-200 p-6 animate-fade-in-up"
               >
-                <h3 className="text-lg font-heading font-bold text-dark mb-3">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
                   {faq.question}
                 </h3>
                 <p className="text-neutral-600 leading-relaxed">{faq.answer}</p>
@@ -352,17 +352,17 @@ export default function LogisticsServicesMobileAL() {
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Get Started
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
               Request a Quote for Mobile, AL Logistics
             </h2>
             <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
               Whether you need containers moved from the Port of Mobile, flatbed hauling
               to AM/NS Calvert, or warehousing in the Mobile area, our team is ready to
               build a solution. Call us at{" "}
-              <a href="tel:251-725-1929" className="text-gold font-semibold hover:underline">
+              <a href="tel:251-725-1929" className="text-gold-400 font-semibold hover:underline">
                 251-725-1929
               </a>{" "}
               or fill out the form below.

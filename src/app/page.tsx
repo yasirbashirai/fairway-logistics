@@ -200,13 +200,13 @@ export default function HomePage() {
         <div className="absolute inset-0 hero-overlay" />
 
         {/* Decorative elements */}
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gold-400/5 rounded-full blur-3xl" />
 
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center py-32">
           {/* Eyebrow */}
-          <p className="text-gold font-accent uppercase tracking-[0.3em] text-sm mb-6 animate-fade-in-up">
+          <p className="text-gold-400 font-accent uppercase tracking-[0.3em] text-sm mb-6 animate-fade-in-up">
             Asset-Based Gulf Coast Logistics
           </p>
 
@@ -228,14 +228,14 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up stagger-3">
             <Link
               href="/request-quote"
-              className="bg-gold-gradient text-dark font-bold px-8 py-4 rounded-lg hover:shadow-lg hover:shadow-gold/25 hover:scale-105 transition-all duration-300 text-base flex items-center gap-2"
+              className="bg-gold-gradient text-dark-700 font-bold px-8 py-4 rounded-lg hover:shadow-lg hover:shadow-gold-400/25 hover:scale-105 transition-all duration-300 text-base flex items-center gap-2"
             >
               Request a Quote
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="tel:+12517251929"
-              className="border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-lg hover:border-gold hover:text-gold transition-all duration-300 text-base flex items-center gap-2"
+              className="border-2 border-white/30 text-white font-semibold px-8 py-4 rounded-lg hover:border-gold-400 hover:text-gold-400 transition-all duration-300 text-base flex items-center gap-2"
             >
               <Phone className="w-5 h-5" />
               Speak With Operations
@@ -245,7 +245,7 @@ export default function HomePage() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-gold/70" />
+          <ChevronDown className="w-8 h-8 text-gold-400/70" />
         </div>
 
         {/* Gold accent bottom line */}
@@ -264,10 +264,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Section header */}
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Services
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Integrated Gulf Coast Freight Solutions
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -313,7 +313,7 @@ export default function HomePage() {
                 />
               </div>
               {/* Floating stat card */}
-              <div className="absolute -bottom-6 -right-6 bg-dark rounded-xl p-5 shadow-2xl hidden sm:block">
+              <div className="absolute -bottom-6 -right-6 bg-dark-700 rounded-xl p-5 shadow-2xl hidden sm:block">
                 <p className="text-gold-gradient text-3xl font-bold font-accent">
                   15+
                 </p>
@@ -323,10 +323,10 @@ export default function HomePage() {
 
             {/* Text */}
             <div>
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 About Fairway Logistics
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 Gulf Coast&apos;s Asset-Based Logistics Partner
               </h2>
               <div className="gold-border-left pl-6 mb-6">
@@ -348,34 +348,34 @@ export default function HomePage() {
               {/* Key differentiators */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Truck className="w-5 h-5 text-gold" />
+                  <div className="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                    <Truck className="w-5 h-5 text-gold-400" />
                   </div>
-                  <span className="text-sm font-semibold text-dark">
+                  <span className="text-sm font-semibold text-dark-700">
                     Company-Owned Fleet
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Anchor className="w-5 h-5 text-gold" />
+                  <div className="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                    <Anchor className="w-5 h-5 text-gold-400" />
                   </div>
-                  <span className="text-sm font-semibold text-dark">
+                  <span className="text-sm font-semibold text-dark-700">
                     Port Specialists
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-5 h-5 text-gold" />
+                  <div className="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                    <Shield className="w-5 h-5 text-gold-400" />
                   </div>
-                  <span className="text-sm font-semibold text-dark">
+                  <span className="text-sm font-semibold text-dark-700">
                     FMCSA Compliant
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-gold" />
+                  <div className="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 text-gold-400" />
                   </div>
-                  <span className="text-sm font-semibold text-dark">
+                  <span className="text-sm font-semibold text-dark-700">
                     24/7 Operations
                   </span>
                 </div>
@@ -383,7 +383,7 @@ export default function HomePage() {
 
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-gold font-bold hover:gap-3 transition-all duration-300"
+                className="inline-flex items-center gap-2 text-gold-400 font-bold hover:gap-3 transition-all duration-300"
               >
                 Learn More About Us
                 <ArrowRight className="w-5 h-5" />
@@ -405,10 +405,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Regional Coverage
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Our Service Coverage
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -427,10 +427,10 @@ export default function HomePage() {
                 alt="Aerial view of Gulf Coast port operations"
                 className="w-full h-[400px] object-cover"
               />
-              <div className="absolute inset-0 bg-dark/60" />
+              <div className="absolute inset-0 bg-dark-700/60" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <MapPin className="w-12 h-12 text-gold mx-auto mb-3" />
+                  <MapPin className="w-12 h-12 text-gold-400 mx-auto mb-3" />
                   <p className="text-white font-heading font-bold text-2xl">
                     Gulf Coast Coverage
                   </p>
@@ -447,13 +447,13 @@ export default function HomePage() {
                 <Link
                   key={area.href}
                   href={area.href}
-                  className="group flex items-start gap-3 p-4 rounded-xl border border-neutral-200 hover:border-gold hover:shadow-lg transition-all duration-300"
+                  className="group flex items-start gap-3 p-4 rounded-xl border border-neutral-200 hover:border-gold-400 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-gradient group-hover:text-dark transition-all duration-300">
-                    <MapPin className="w-5 h-5 text-gold group-hover:text-dark" />
+                  <div className="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0 group-hover:bg-gold-gradient group-hover:text-dark-700 transition-all duration-300">
+                    <MapPin className="w-5 h-5 text-gold-400 group-hover:text-dark-700" />
                   </div>
                   <div>
-                    <p className="font-heading font-bold text-dark group-hover:text-gold transition-colors">
+                    <p className="font-heading font-bold text-dark-700 group-hover:text-gold-400 transition-colors">
                       {area.city}, {area.state}
                     </p>
                     <p className="text-xs text-neutral-500 mt-0.5">
@@ -483,13 +483,13 @@ export default function HomePage() {
       <section className="py-16 sm:py-24 bg-dark-gradient relative overflow-hidden">
         {/* Decorative */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gold-gradient" />
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gold/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gold/5 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gold-400/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gold-400/5 rounded-full blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
           {/* Header */}
           <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Get Started
             </p>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">

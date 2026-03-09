@@ -156,10 +156,10 @@ export default function CareersPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Why Fairway
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Why Work at Fairway Logistics?
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -176,10 +176,10 @@ export default function CareersPage() {
                 key={benefit.title}
                 className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
-                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-gold" />
+                <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
+                  <benefit.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark mb-2">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
                   {benefit.title}
                 </h3>
                 <p className="text-sm text-neutral-600 leading-relaxed">
@@ -195,10 +195,10 @@ export default function CareersPage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Open Positions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Current Openings
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -215,10 +215,10 @@ export default function CareersPage() {
                 className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:border-gold/30 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-heading font-bold text-dark">
+                  <h3 className="text-lg font-heading font-bold text-dark-700">
                     {job.title}
                   </h3>
-                  <span className="text-xs font-semibold bg-gold/10 text-gold px-3 py-1 rounded-full whitespace-nowrap">
+                  <span className="text-xs font-semibold bg-gold-400/10 text-gold-400 px-3 py-1 rounded-full whitespace-nowrap">
                     {job.type}
                   </span>
                 </div>
@@ -233,7 +233,7 @@ export default function CareersPage() {
                 </p>
                 <a
                   href="#apply"
-                  className="inline-flex items-center gap-1.5 text-gold font-semibold text-sm hover:underline"
+                  className="inline-flex items-center gap-1.5 text-gold-400 font-semibold text-sm hover:underline"
                 >
                   Apply Now
                   <ChevronRight className="w-4 h-4" />
@@ -256,14 +256,14 @@ export default function CareersPage() {
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
               </div>
-              <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full rounded-2xl bg-gold/10" />
+              <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full rounded-2xl bg-gold-400/10" />
             </div>
 
             <div>
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Our Culture
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 More Than a Workplace —{" "}
                 <span className="text-gold-gradient">A Team.</span>
               </h2>
@@ -304,8 +304,8 @@ export default function CareersPage() {
                   "Community involvement and local roots",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
+                    <span className="text-sm font-medium text-dark-700">{item}</span>
                   </div>
                 ))}
               </div>
@@ -318,7 +318,7 @@ export default function CareersPage() {
       <section id="apply" className="py-16 sm:py-24 bg-dark-gradient">
         <div className="max-w-2xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Apply Now
             </p>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
@@ -331,7 +331,7 @@ export default function CareersPage() {
           </div>
 
           {submitted ? (
-            <div className="bg-dark-light rounded-2xl border border-white/10 p-8 sm:p-12 text-center">
+            <div className="bg-dark-600 rounded-2xl border border-white/10 p-8 sm:p-12 text-center">
               <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
@@ -345,7 +345,7 @@ export default function CareersPage() {
               </p>
               <p className="text-sm text-neutral-500">
                 Questions? Call{" "}
-                <a href="tel:+12517251929" className="text-gold hover:underline">
+                <a href="tel:+12517251929" className="text-gold-400 hover:underline">
                   (251) 725-1929
                 </a>
               </p>
@@ -353,7 +353,7 @@ export default function CareersPage() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="bg-dark-light rounded-2xl border border-white/10 p-6 sm:p-8 space-y-5"
+              className="bg-dark-600 rounded-2xl border border-white/10 p-6 sm:p-8 space-y-5"
             >
               {/* Name */}
               <div>
@@ -410,11 +410,11 @@ export default function CareersPage() {
                   onChange={(e) => update("position", e.target.value)}
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm appearance-none focus:border-gold/50 focus:outline-none transition-colors"
                 >
-                  <option value="" className="bg-dark">
+                  <option value="" className="bg-dark-700">
                     Select a position
                   </option>
                   {positions.map((pos) => (
-                    <option key={pos} value={pos} className="bg-dark">
+                    <option key={pos} value={pos} className="bg-dark-700">
                       {pos}
                     </option>
                   ))}
@@ -455,7 +455,7 @@ export default function CareersPage() {
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-gold-gradient text-dark font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold/20 transition-all"
+                className="w-full flex items-center justify-center gap-2 bg-gold-gradient text-dark-700 font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all"
               >
                 <Send className="w-4 h-4" />
                 Submit Application

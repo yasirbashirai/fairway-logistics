@@ -119,10 +119,10 @@ export default function LogisticsServicesGulfportMS() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="animate-fade-in-up">
-              <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+              <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
                 Gulfport Coverage
               </span>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2 mb-6">
                 Gulfport: Mississippi&apos;s Port City on the Move
               </h2>
               <div className="space-y-4 text-neutral-600 leading-relaxed">
@@ -160,8 +160,8 @@ export default function LogisticsServicesGulfportMS() {
 
             <div className="animate-fade-in-up stagger-2">
               <div className="bg-neutral-50 rounded-xl p-8 border border-neutral-200">
-                <h3 className="text-xl font-heading font-bold text-dark mb-6 flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-gold" />
+                <h3 className="text-xl font-heading font-bold text-dark-700 mb-6 flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-gold-400" />
                   Gulfport Logistics Snapshot
                 </h3>
                 <ul className="space-y-4">
@@ -176,7 +176,7 @@ export default function LogisticsServicesGulfportMS() {
                     "90 miles from Mobile — daily service coverage",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
                       <span className="text-neutral-700 text-sm">{item}</span>
                     </li>
                   ))}
@@ -191,10 +191,10 @@ export default function LogisticsServicesGulfportMS() {
       <section className="py-16 sm:py-20 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Our Services
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
               Drayage & Freight Services in Gulfport, MS
             </h2>
             <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
@@ -287,10 +287,10 @@ export default function LogisticsServicesGulfportMS() {
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Strategic Advantages
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
               Why Gulfport Is a Key Drayage Market
             </h2>
             <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
@@ -305,7 +305,7 @@ export default function LogisticsServicesGulfportMS() {
                 key={i}
                 className={`gold-border-left pl-6 py-4 animate-fade-in-up stagger-${i + 1}`}
               >
-                <h3 className="text-lg font-heading font-bold text-dark mb-2">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
                   {advantage.title}
                 </h3>
                 <p className="text-neutral-600 text-sm leading-relaxed">
@@ -324,10 +324,10 @@ export default function LogisticsServicesGulfportMS() {
       <section className="py-16 sm:py-20 bg-neutral-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Common Questions
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
               Gulfport Drayage & Logistics FAQs
             </h2>
           </div>
@@ -338,7 +338,7 @@ export default function LogisticsServicesGulfportMS() {
                 key={i}
                 className="bg-white rounded-xl border border-neutral-200 p-6 animate-fade-in-up"
               >
-                <h3 className="text-lg font-heading font-bold text-dark mb-3">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
                   {faq.question}
                 </h3>
                 <p className="text-neutral-600 leading-relaxed">{faq.answer}</p>
@@ -352,16 +352,16 @@ export default function LogisticsServicesGulfportMS() {
       <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <span className="text-gold font-semibold text-sm uppercase tracking-wider">
+            <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Get Started
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
               Request a Quote for Gulfport Drayage & Logistics
             </h2>
             <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
               Need containers moved from the Port of Gulfport or freight delivered
               along the Mississippi coast? Call{" "}
-              <a href="tel:251-725-1929" className="text-gold font-semibold hover:underline">
+              <a href="tel:251-725-1929" className="text-gold-400 font-semibold hover:underline">
                 251-725-1929
               </a>{" "}
               or fill out the form below.

@@ -134,10 +134,10 @@ export default function ResourcesPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Latest Articles
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Featured Resources
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -156,8 +156,8 @@ export default function ResourcesPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   activeCategory === cat
-                    ? "bg-gold-gradient text-dark"
-                    : "border border-neutral-200 text-neutral-600 hover:border-gold hover:text-gold"
+                    ? "bg-gold-gradient text-dark-700"
+                    : "border border-neutral-200 text-neutral-600 hover:border-gold-400 hover:text-gold-400"
                 }`}
               >
                 {cat}
@@ -183,8 +183,8 @@ export default function ResourcesPage() {
                     />
                     {/* Category badge */}
                     <div className="absolute top-3 left-3">
-                      <span className="inline-flex items-center gap-1 bg-dark/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
-                        <Tag className="w-3 h-3 text-gold" />
+                      <span className="inline-flex items-center gap-1 bg-dark-700/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        <Tag className="w-3 h-3 text-gold-400" />
                         {article.category}
                       </span>
                     </div>
@@ -201,7 +201,7 @@ export default function ResourcesPage() {
                       <span>{article.readTime}</span>
                     </div>
 
-                    <h3 className="text-lg font-heading font-bold text-dark mb-3 group-hover:text-gold transition-colors line-clamp-2">
+                    <h3 className="text-lg font-heading font-bold text-dark-700 mb-3 group-hover:text-gold-400 transition-colors line-clamp-2">
                       {article.title}
                     </h3>
 
@@ -209,7 +209,7 @@ export default function ResourcesPage() {
                       {article.excerpt}
                     </p>
 
-                    <div className="flex items-center gap-1.5 text-gold font-semibold text-sm mt-auto pt-2">
+                    <div className="flex items-center gap-1.5 text-gold-400 font-semibold text-sm mt-auto pt-2">
                       Read Article
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -233,11 +233,11 @@ export default function ResourcesPage() {
       {/* ============================================================= */}
       {/* NEWSLETTER SIGNUP                                              */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-dark">
+      <section className="py-16 sm:py-24 bg-dark-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-6">
-              <Send className="w-8 h-8 text-gold" />
+            <div className="w-16 h-16 rounded-full bg-gold-400/10 flex items-center justify-center mx-auto mb-6">
+              <Send className="w-8 h-8 text-gold-400" />
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
@@ -250,7 +250,7 @@ export default function ResourcesPage() {
             </p>
 
             {subscribed ? (
-              <div className="bg-dark-light rounded-xl border border-white/10 p-8">
+              <div className="bg-dark-600 rounded-xl border border-white/10 p-8">
                 <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -273,11 +273,11 @@ export default function ResourcesPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-neutral-500 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
+                  className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-neutral-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                 />
                 <button
                   type="submit"
-                  className="bg-gold-gradient text-dark font-bold text-sm px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-gold/20 transition-all whitespace-nowrap"
+                  className="bg-gold-gradient text-dark-700 font-bold text-sm px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all whitespace-nowrap"
                 >
                   Subscribe
                 </button>
@@ -297,10 +297,10 @@ export default function ResourcesPage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Browse By Topic
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Resource Categories
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -355,16 +355,16 @@ export default function ResourcesPage() {
                 key={cat.title}
                 className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
-                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                  <cat.icon className="w-6 h-6 text-gold" />
+                <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
+                  <cat.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark mb-2">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
                   {cat.title}
                 </h3>
                 <p className="text-sm text-neutral-600 leading-relaxed mb-3">
                   {cat.description}
                 </p>
-                <span className="text-xs text-gold font-semibold">
+                <span className="text-xs text-gold-400 font-semibold">
                   {cat.count}
                 </span>
               </div>

@@ -24,21 +24,21 @@ export default function StickyCTA() {
         <div className="flex items-center gap-3 min-w-0">
           <a
             href="tel:+12517251929"
-            className="flex items-center gap-2 text-dark font-bold text-sm shrink-0"
+            className="flex items-center gap-2 text-dark-700 font-bold text-sm shrink-0"
           >
             <Phone className="w-4 h-4" />
             <span className="hidden xs:inline">(251) 725-1929</span>
           </a>
           <Link
             href="/request-quote"
-            className="bg-dark text-white font-bold text-xs px-4 py-2 rounded-lg hover:bg-dark-light transition-colors whitespace-nowrap"
+            className="bg-dark-700 text-white font-bold text-xs px-4 py-2 rounded-lg hover:bg-dark-600 transition-colors whitespace-nowrap"
           >
             Get a Freight Quote
           </Link>
         </div>
         <button
           onClick={() => setDismissed(true)}
-          className="text-dark/60 hover:text-dark p-1 flex-shrink-0"
+          className="text-dark-700/60 hover:text-dark-700 p-1 flex-shrink-0"
           aria-label="Dismiss"
         >
           <X className="w-5 h-5" />

@@ -94,8 +94,8 @@ export default function MetricsSection() {
               style={{ animationDelay: `${i * 150}ms` }}
             >
               <div className="flex justify-center mb-4">
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center">
-                  <m.icon className="w-6 h-6 text-gold" />
+                <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center">
+                  <m.icon className="w-6 h-6 text-gold-400" />
                 </div>
               </div>
               <AnimatedCounter

@@ -208,10 +208,10 @@ export default function EnergyIndustrialFreightPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Energy & Industrial
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 Powering the Gulf Coast{" "}
                 <span className="text-gold-gradient">Energy Corridor.</span>
               </h2>
@@ -257,8 +257,8 @@ export default function EnergyIndustrialFreightPage() {
                   "Gulf Coast petrochemical corridor expertise",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
+                    <span className="text-sm font-medium text-dark-700">{item}</span>
                   </div>
                 ))}
               </div>
@@ -272,7 +272,7 @@ export default function EnergyIndustrialFreightPage() {
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
               </div>
-              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl bg-gold/10" />
+              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl bg-gold-400/10" />
             </div>
           </div>
         </div>
@@ -282,10 +282,10 @@ export default function EnergyIndustrialFreightPage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Industry Challenges
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Energy Sector Freight Challenges
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -302,10 +302,10 @@ export default function EnergyIndustrialFreightPage() {
                 key={challenge.title}
                 className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${Math.min(i + 1, 6)}`}
               >
-                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                  <challenge.icon className="w-6 h-6 text-gold" />
+                <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
+                  <challenge.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark mb-2">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
                   {challenge.title}
                 </h3>
                 <p className="text-sm text-neutral-600 leading-relaxed">
@@ -321,10 +321,10 @@ export default function EnergyIndustrialFreightPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Capabilities
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Specialized Energy Freight Services
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -341,10 +341,10 @@ export default function EnergyIndustrialFreightPage() {
                 className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center">
-                    <cap.icon className="w-6 h-6 text-gold" />
+                  <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
+                    <cap.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark">
+                  <h3 className="text-lg font-heading font-bold text-dark-700">
                     {cap.title}
                   </h3>
                 </div>
@@ -354,7 +354,7 @@ export default function EnergyIndustrialFreightPage() {
                 <ul className="space-y-2">
                   {cap.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
                       <span className="text-sm text-neutral-700">{feature}</span>
                     </li>
                   ))}
@@ -369,10 +369,10 @@ export default function EnergyIndustrialFreightPage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Safety First
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Safety in Energy Logistics
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -389,8 +389,8 @@ export default function EnergyIndustrialFreightPage() {
                 className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <Shield className="w-6 h-6 text-gold" />
-                  <h3 className="text-lg font-heading font-bold text-dark">
+                  <Shield className="w-6 h-6 text-gold-400" />
+                  <h3 className="text-lg font-heading font-bold text-dark-700">
                     {protocol.title}
                   </h3>
                 </div>
@@ -407,10 +407,10 @@ export default function EnergyIndustrialFreightPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Energy Freight FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -422,7 +422,7 @@ export default function EnergyIndustrialFreightPage() {
                 key={faq.question}
                 className="bg-neutral-50 rounded-xl border border-neutral-200 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark mb-3">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
                   {faq.question}
                 </h3>
                 <p className="text-neutral-600 leading-relaxed text-sm">
@@ -438,7 +438,7 @@ export default function EnergyIndustrialFreightPage() {
       <section className="py-16 sm:py-24 bg-dark-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Get Started
             </p>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">

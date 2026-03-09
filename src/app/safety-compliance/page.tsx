@@ -169,10 +169,10 @@ export default function SafetyCompliancePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Our Commitment
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 Safety Is{" "}
                 <span className="text-gold-gradient">Non-Negotiable</span>
               </h2>
@@ -208,8 +208,8 @@ export default function SafetyCompliancePage() {
                   "Modern fleet with advanced safety features",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
+                    <span className="text-sm font-medium text-dark-700">{item}</span>
                   </div>
                 ))}
               </div>
@@ -223,7 +223,7 @@ export default function SafetyCompliancePage() {
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
               </div>
-              <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full rounded-2xl bg-gold/10" />
+              <div className="absolute -z-10 -bottom-4 -left-4 w-full h-full rounded-2xl bg-gold-400/10" />
             </div>
           </div>
         </div>
@@ -235,10 +235,10 @@ export default function SafetyCompliancePage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Regulatory Compliance
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Certifications & Compliance
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -256,11 +256,11 @@ export default function SafetyCompliancePage() {
                 className={`bg-white rounded-xl border border-neutral-200 p-8 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                    <cert.icon className="w-7 h-7 text-gold" />
+                  <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                    <cert.icon className="w-7 h-7 text-gold-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-heading font-bold text-dark mb-2">
+                    <h3 className="text-xl font-heading font-bold text-dark-700 mb-2">
                       {cert.title}
                     </h3>
                     <p className="text-neutral-600 leading-relaxed">
@@ -280,10 +280,10 @@ export default function SafetyCompliancePage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Safety Programs
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Proactive Safety Management
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -299,10 +299,10 @@ export default function SafetyCompliancePage() {
                 key={program.title}
                 className={`bg-neutral-50 rounded-xl border border-neutral-100 p-8 hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
-                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-5">
-                  <program.icon className="w-6 h-6 text-gold" />
+                <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-5">
+                  <program.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark mb-3">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
                   {program.title}
                 </h3>
                 <p className="text-neutral-600 leading-relaxed">
@@ -331,10 +331,10 @@ export default function SafetyCompliancePage() {
             </div>
 
             <div className="lg:order-1">
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Driver Excellence
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 Driver Training & Standards
               </h2>
 
@@ -355,7 +355,7 @@ export default function SafetyCompliancePage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {driverStandards.map((standard) => (
                   <div key={standard} className="flex items-center gap-3">
-                    <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
+                    <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
                     <span className="text-sm text-neutral-700">{standard}</span>
                   </div>
                 ))}
@@ -371,10 +371,10 @@ export default function SafetyCompliancePage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Fleet Maintenance
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Equipment Maintenance Program
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -391,10 +391,10 @@ export default function SafetyCompliancePage() {
                 key={item.title}
                 className={`bg-neutral-50 rounded-xl border border-neutral-100 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
-                <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-5">
-                  <item.icon className="w-8 h-8 text-gold" />
+                <div className="w-16 h-16 rounded-full bg-gold-400/10 flex items-center justify-center mx-auto mb-5">
+                  <item.icon className="w-8 h-8 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark mb-3">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
                   {item.title}
                 </h3>
                 <p className="text-neutral-600 leading-relaxed">
@@ -413,10 +413,10 @@ export default function SafetyCompliancePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
                 Transparency
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-4">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-4">
                 Incident Reporting & Response
               </h2>
               <div className="section-divider mx-auto mt-6" />
@@ -459,12 +459,12 @@ export default function SafetyCompliancePage() {
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
                     <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center flex-shrink-0">
-                      <span className="text-dark font-bold text-sm">
+                      <span className="text-dark-700 font-bold text-sm">
                         {item.step}
                       </span>
                     </div>
                     <div>
-                      <h4 className="font-heading font-bold text-dark mb-1">
+                      <h4 className="font-heading font-bold text-dark-700 mb-1">
                         {item.title}
                       </h4>
                       <p className="text-sm text-neutral-600 leading-relaxed">
@@ -485,7 +485,7 @@ export default function SafetyCompliancePage() {
       <section className="bg-dark-gradient py-16 sm:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               By The Numbers
             </p>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
@@ -500,8 +500,8 @@ export default function SafetyCompliancePage() {
                 className={`text-center animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex justify-center mb-4">
-                  <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center">
-                    <BarChart3 className="w-6 h-6 text-gold" />
+                  <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center">
+                    <BarChart3 className="w-6 h-6 text-gold-400" />
                   </div>
                 </div>
                 <span className="text-4xl sm:text-5xl font-bold text-gold-gradient">

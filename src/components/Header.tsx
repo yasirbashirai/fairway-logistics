@@ -128,7 +128,7 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-dark/95 backdrop-blur-md shadow-lg shadow-black/20"
+            ? "bg-dark-700/95 backdrop-blur-md shadow-lg shadow-black/20"
             : "bg-transparent"
         }`}
       >
@@ -140,14 +140,14 @@ export default function Header() {
         >
           <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm text-neutral-300">
             <span className="flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-gold" />
+              <MapPin className="w-3.5 h-3.5 text-gold-400" />
               456 Dauphin Street, Mobile, AL 36602
             </span>
             <a
               href="tel:+12517251929"
-              className="flex items-center gap-2 hover:text-gold transition-colors"
+              className="flex items-center gap-2 hover:text-gold-400 transition-colors"
             >
-              <Phone className="w-3.5 h-3.5 text-gold" />
+              <Phone className="w-3.5 h-3.5 text-gold-400" />
               (251) 725-1929
             </a>
           </div>
@@ -175,21 +175,21 @@ export default function Header() {
               onMouseEnter={() => handleMouseEnter("services")}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-gold transition-colors">
+              <button className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-gold-400 transition-colors">
                 Services <ChevronDown className="w-4 h-4" />
               </button>
               {activeDropdown === "services" && (
                 <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-dark-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl w-[520px] p-4 grid grid-cols-2 gap-2">
+                  <div className="bg-dark-600/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl w-[520px] p-4 grid grid-cols-2 gap-2">
                     {services.map((s) => (
                       <Link
                         key={s.href}
                         href={s.href}
                         className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors group"
                       >
-                        <s.icon className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                        <s.icon className="w-5 h-5 text-gold-400 mt-0.5 flex-shrink-0" />
                         <div>
-                          <span className="block text-white group-hover:text-gold transition-colors font-semibold text-sm">
+                          <span className="block text-white group-hover:text-gold-400 transition-colors font-semibold text-sm">
                             {s.label}
                           </span>
                           <span className="text-neutral-400 text-xs">{s.desc}</span>
@@ -207,19 +207,19 @@ export default function Header() {
               onMouseEnter={() => handleMouseEnter("regions")}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-gold transition-colors">
+              <button className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-gold-400 transition-colors">
                 Regions <ChevronDown className="w-4 h-4" />
               </button>
               {activeDropdown === "regions" && (
                 <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-dark-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl w-64 p-2">
+                  <div className="bg-dark-600/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl w-64 p-2">
                     {regions.map((r) => (
                       <Link
                         key={r.href}
                         href={r.href}
-                        className="flex items-center gap-2 px-4 py-2.5 rounded-lg hover:bg-white/5 text-white hover:text-gold transition-colors text-sm"
+                        className="flex items-center gap-2 px-4 py-2.5 rounded-lg hover:bg-white/5 text-white hover:text-gold-400 transition-colors text-sm"
                       >
-                        <MapPin className="w-4 h-4 text-gold flex-shrink-0" />
+                        <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
                         {r.label}
                       </Link>
                     ))}
@@ -234,19 +234,19 @@ export default function Header() {
               onMouseEnter={() => handleMouseEnter("industries")}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-gold transition-colors">
+              <button className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-gold-400 transition-colors">
                 Industries <ChevronDown className="w-4 h-4" />
               </button>
               {activeDropdown === "industries" && (
                 <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-dark-light/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl w-72 p-2">
+                  <div className="bg-dark-600/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl w-72 p-2">
                     {industries.map((ind) => (
                       <Link
                         key={ind.href}
                         href={ind.href}
-                        className="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-white/5 text-white hover:text-gold transition-colors text-sm"
+                        className="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-white/5 text-white hover:text-gold-400 transition-colors text-sm"
                       >
-                        <ind.icon className="w-4 h-4 text-gold flex-shrink-0" />
+                        <ind.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
                         {ind.label}
                       </Link>
                     ))}
@@ -257,13 +257,13 @@ export default function Header() {
 
             <Link
               href="/about"
-              className="px-3 py-2 rounded-md hover:text-gold transition-colors"
+              className="px-3 py-2 rounded-md hover:text-gold-400 transition-colors"
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="px-3 py-2 rounded-md hover:text-gold transition-colors"
+              className="px-3 py-2 rounded-md hover:text-gold-400 transition-colors"
             >
               Contact
             </Link>
@@ -273,14 +273,14 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-4">
             <a
               href="tel:+12517251929"
-              className="flex items-center gap-2 text-sm text-white hover:text-gold transition-colors"
+              className="flex items-center gap-2 text-sm text-white hover:text-gold-400 transition-colors"
             >
-              <Phone className="w-4 h-4 text-gold" />
+              <Phone className="w-4 h-4 text-gold-400" />
               <span className="font-semibold">(251) 725-1929</span>
             </a>
             <Link
               href="/request-quote"
-              className="bg-gold-gradient text-dark font-bold text-sm px-5 py-2.5 rounded-lg hover:shadow-lg hover:shadow-gold/20 hover:scale-105 transition-all duration-200"
+              className="bg-gold-gradient text-dark-700 font-bold text-sm px-5 py-2.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
             >
               Request a Quote
             </Link>
@@ -313,7 +313,7 @@ export default function Header() {
 
         {/* Panel */}
         <div
-          className={`absolute top-0 right-0 h-full w-[85%] max-w-sm bg-dark shadow-2xl transition-transform duration-300 overflow-y-auto ${
+          className={`absolute top-0 right-0 h-full w-[85%] max-w-sm bg-dark-700 shadow-2xl transition-transform duration-300 overflow-y-auto ${
             mobileOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -338,7 +338,7 @@ export default function Header() {
               className="flex items-center gap-3 text-white mb-6 pb-6 border-b border-white/10"
             >
               <div className="bg-gold-gradient p-2 rounded-lg">
-                <Phone className="w-4 h-4 text-dark" />
+                <Phone className="w-4 h-4 text-dark-700" />
               </div>
               <div>
                 <p className="text-xs text-neutral-400">Call Us 24/7</p>
@@ -352,7 +352,7 @@ export default function Header() {
               <div>
                 <button
                   onClick={() => toggleMobileSubmenu("services")}
-                  className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold rounded-lg hover:bg-white/5 transition-colors"
+                  className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
                 >
                   Services
                   <ChevronDown
@@ -368,9 +368,9 @@ export default function Header() {
                         key={s.href}
                         href={s.href}
                         onClick={() => setMobileOpen(false)}
-                        className="flex items-center gap-2 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold rounded-lg hover:bg-white/5 transition-colors"
+                        className="flex items-center gap-2 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
                       >
-                        <s.icon className="w-4 h-4 text-gold flex-shrink-0" />
+                        <s.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
                         {s.label}
                       </Link>
                     ))}
@@ -382,7 +382,7 @@ export default function Header() {
               <div>
                 <button
                   onClick={() => toggleMobileSubmenu("regions")}
-                  className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold rounded-lg hover:bg-white/5 transition-colors"
+                  className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
                 >
                   Regions
                   <ChevronDown
@@ -398,9 +398,9 @@ export default function Header() {
                         key={r.href}
                         href={r.href}
                         onClick={() => setMobileOpen(false)}
-                        className="flex items-center gap-2 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold rounded-lg hover:bg-white/5 transition-colors"
+                        className="flex items-center gap-2 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
                       >
-                        <MapPin className="w-4 h-4 text-gold flex-shrink-0" />
+                        <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
                         {r.label}
                       </Link>
                     ))}
@@ -412,7 +412,7 @@ export default function Header() {
               <div>
                 <button
                   onClick={() => toggleMobileSubmenu("industries")}
-                  className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold rounded-lg hover:bg-white/5 transition-colors"
+                  className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
                 >
                   Industries
                   <ChevronDown
@@ -428,9 +428,9 @@ export default function Header() {
                         key={ind.href}
                         href={ind.href}
                         onClick={() => setMobileOpen(false)}
-                        className="flex items-center gap-2 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold rounded-lg hover:bg-white/5 transition-colors"
+                        className="flex items-center gap-2 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
                       >
-                        <ind.icon className="w-4 h-4 text-gold flex-shrink-0" />
+                        <ind.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
                         {ind.label}
                       </Link>
                     ))}
@@ -441,14 +441,14 @@ export default function Header() {
               <Link
                 href="/about"
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-3 text-white hover:text-gold rounded-lg hover:bg-white/5 transition-colors"
+                className="block px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
               >
                 About
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="block px-3 py-3 text-white hover:text-gold rounded-lg hover:bg-white/5 transition-colors"
+                className="block px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
               >
                 Contact
               </Link>
@@ -459,7 +459,7 @@ export default function Header() {
               <Link
                 href="/request-quote"
                 onClick={() => setMobileOpen(false)}
-                className="block text-center bg-gold-gradient text-dark font-bold px-6 py-3.5 rounded-lg hover:shadow-lg transition-all"
+                className="block text-center bg-gold-gradient text-dark-700 font-bold px-6 py-3.5 rounded-lg hover:shadow-lg transition-all"
               >
                 Request a Quote
               </Link>
@@ -468,7 +468,7 @@ export default function Header() {
             {/* Address */}
             <div className="mt-8 pt-6 border-t border-white/10 text-neutral-400 text-xs">
               <p className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
                 456 Dauphin Street, Mobile, AL 36602
               </p>
             </div>

@@ -230,14 +230,14 @@ export default function GulfCoastLogisticsPage() {
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
               </div>
-              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl bg-gold/10" />
+              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl bg-gold-400/10" />
             </div>
 
             <div>
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Regional Expertise
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 Your Logistics Partner on the{" "}
                 <span className="text-gold-gradient">Gulf Coast</span>
               </h2>
@@ -276,8 +276,8 @@ export default function GulfCoastLogisticsPage() {
                   "FMCSA registered, fully insured, DOT compliant",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
+                    <span className="text-sm font-medium text-dark-700">{item}</span>
                   </div>
                 ))}
               </div>
@@ -292,10 +292,10 @@ export default function GulfCoastLogisticsPage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Service Coverage
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Gulf Coast Service Areas
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -314,17 +314,17 @@ export default function GulfCoastLogisticsPage() {
                 className={`group bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center group-hover:bg-gold-gradient transition-all duration-300">
-                    <MapPin className="w-5 h-5 text-gold group-hover:text-dark" />
+                  <div className="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center group-hover:bg-gold-gradient transition-all duration-300">
+                    <MapPin className="w-5 h-5 text-gold-400 group-hover:text-dark-700" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark group-hover:text-gold transition-colors">
+                  <h3 className="text-lg font-heading font-bold text-dark-700 group-hover:text-gold-400 transition-colors">
                     {area.city}
                   </h3>
                 </div>
                 <p className="text-sm text-neutral-600 leading-relaxed mb-4">
                   {area.description}
                 </p>
-                <div className="flex items-center gap-1.5 text-gold font-semibold text-sm">
+                <div className="flex items-center gap-1.5 text-gold-400 font-semibold text-sm">
                   View Services
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -340,10 +340,10 @@ export default function GulfCoastLogisticsPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Strategic Advantage
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Why Gulf Coast Logistics Matters
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -360,10 +360,10 @@ export default function GulfCoastLogisticsPage() {
                 key={item.title}
                 className={`bg-neutral-50 rounded-xl p-8 border border-neutral-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-5">
-                  <item.icon className="w-7 h-7 text-gold" />
+                <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center mb-5">
+                  <item.icon className="w-7 h-7 text-gold-400" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-dark mb-3">
+                <h3 className="text-xl font-heading font-bold text-dark-700 mb-3">
                   {item.title}
                 </h3>
                 <p className="text-neutral-600 leading-relaxed">
@@ -381,10 +381,10 @@ export default function GulfCoastLogisticsPage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Services
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Comprehensive Logistics Services
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -410,10 +410,10 @@ export default function GulfCoastLogisticsPage() {
       {/* ============================================================= */}
       {/* QUOTE FORM                                                     */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-dark">
+      <section className="py-16 sm:py-24 bg-dark-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Get Started
             </p>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">

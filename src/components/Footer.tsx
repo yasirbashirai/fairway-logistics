@@ -37,7 +37,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-neutral-300">
+    <footer className="bg-dark-700 text-neutral-300">
       {/* Gold accent top line */}
       <div className="h-1 bg-gold-gradient" />
 
@@ -71,7 +71,7 @@ export default function Footer() {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-gold hover:text-dark transition-all duration-200"
+                  className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-gold-400 hover:text-dark-700 transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -89,9 +89,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-400 hover:text-gold transition-colors flex items-center gap-2 group"
+                    className="text-sm text-neutral-400 hover:text-gold-400 transition-colors flex items-center gap-2 group"
                   >
-                    <ArrowRight className="w-3 h-3 text-gold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                    <ArrowRight className="w-3 h-3 text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
                     <span>{link.label}</span>
                   </Link>
                 </li>
@@ -109,9 +109,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-400 hover:text-gold transition-colors flex items-center gap-2 group"
+                    className="text-sm text-neutral-400 hover:text-gold-400 transition-colors flex items-center gap-2 group"
                   >
-                    <ArrowRight className="w-3 h-3 text-gold opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
+                    <ArrowRight className="w-3 h-3 text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
                     <span>{link.label}</span>
                   </Link>
                 </li>
@@ -126,29 +126,29 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 text-sm">
-                <MapPin className="w-4 h-4 text-gold mt-0.5 flex-shrink-0" />
+                <MapPin className="w-4 h-4 text-gold-400 mt-0.5 flex-shrink-0" />
                 <span>456 Dauphin Street, Mobile, AL 36602</span>
               </li>
               <li>
                 <a
                   href="tel:+12517251929"
-                  className="flex items-center gap-3 text-sm hover:text-gold transition-colors"
+                  className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-gold flex-shrink-0" />
+                  <Phone className="w-4 h-4 text-gold-400 flex-shrink-0" />
                   (251) 725-1929
                 </a>
               </li>
               <li>
                 <a
                   href="mailto:info@fairwaylogisticsllc.com"
-                  className="flex items-center gap-3 text-sm hover:text-gold transition-colors"
+                  className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-gold flex-shrink-0" />
+                  <Mail className="w-4 h-4 text-gold-400 flex-shrink-0" />
                   info@fairwaylogisticsllc.com
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm">
-                <Clock className="w-4 h-4 text-gold flex-shrink-0" />
+                <Clock className="w-4 h-4 text-gold-400 flex-shrink-0" />
                 24/7 Operations
               </li>
             </ul>
@@ -164,11 +164,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold transition-colors"
+                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 transition-colors"
               />
               <button
                 type="submit"
-                className="bg-gold-gradient text-dark font-bold px-4 py-2.5 rounded-lg text-sm hover:shadow-lg hover:shadow-gold/20 transition-all flex-shrink-0"
+                className="bg-gold-gradient text-dark-700 font-bold px-4 py-2.5 rounded-lg text-sm hover:shadow-lg hover:shadow-gold-400/20 transition-all flex-shrink-0"
               >
                 Join
               </button>
@@ -182,15 +182,15 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-500">
           <p>&copy; {currentYear} Fairway Logistics LLC. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy-policy" className="hover:text-gold transition-colors">
+            <Link href="/privacy-policy" className="hover:text-gold-400 transition-colors">
               Privacy Policy
             </Link>
             <span className="text-neutral-700">|</span>
-            <Link href="/terms-of-service" className="hover:text-gold transition-colors">
+            <Link href="/terms-of-service" className="hover:text-gold-400 transition-colors">
               Terms of Service
             </Link>
             <span className="text-neutral-700">|</span>
-            <Link href="/sitemap.xml" className="hover:text-gold transition-colors">
+            <Link href="/sitemap.xml" className="hover:text-gold-400 transition-colors">
               Sitemap
             </Link>
           </div>

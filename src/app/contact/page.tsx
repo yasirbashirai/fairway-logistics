@@ -144,10 +144,10 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* LEFT — Contact Form (3 cols) */}
             <div className="lg:col-span-3">
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Send Us a Message
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 Get in Touch
               </h2>
 
@@ -156,7 +156,7 @@ export default function ContactPage() {
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-heading font-bold text-dark mb-3">
+                  <h3 className="text-2xl font-heading font-bold text-dark-700 mb-3">
                     Message Sent!
                   </h3>
                   <p className="text-neutral-600 mb-6 max-w-md mx-auto">
@@ -167,7 +167,7 @@ export default function ContactPage() {
                     Need immediate help? Call{" "}
                     <a
                       href="tel:+12517251929"
-                      className="text-gold hover:underline font-semibold"
+                      className="text-gold-400 hover:underline font-semibold"
                     >
                       (251) 725-1929
                     </a>
@@ -178,7 +178,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Name */}
                     <div>
-                      <label className="block text-sm font-medium text-dark mb-1.5">
+                      <label className="block text-sm font-medium text-dark-700 mb-1.5">
                         Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -186,7 +186,7 @@ export default function ContactPage() {
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => update("name", e.target.value)}
-                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark text-sm placeholder-neutral-400 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm placeholder-neutral-400 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                       />
                       {errors.name && (
                         <p className="flex items-center gap-1 text-red-500 text-xs mt-1">
@@ -198,7 +198,7 @@ export default function ContactPage() {
 
                     {/* Email */}
                     <div>
-                      <label className="block text-sm font-medium text-dark mb-1.5">
+                      <label className="block text-sm font-medium text-dark-700 mb-1.5">
                         Email Address <span className="text-red-500">*</span>
                       </label>
                       <input
@@ -206,7 +206,7 @@ export default function ContactPage() {
                         placeholder="john@company.com"
                         value={formData.email}
                         onChange={(e) => update("email", e.target.value)}
-                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark text-sm placeholder-neutral-400 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm placeholder-neutral-400 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                       />
                       {errors.email && (
                         <p className="flex items-center gap-1 text-red-500 text-xs mt-1">
@@ -220,7 +220,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Phone */}
                     <div>
-                      <label className="block text-sm font-medium text-dark mb-1.5">
+                      <label className="block text-sm font-medium text-dark-700 mb-1.5">
                         Phone Number
                       </label>
                       <input
@@ -228,19 +228,19 @@ export default function ContactPage() {
                         placeholder="(251) 555-0123"
                         value={formData.phone}
                         onChange={(e) => update("phone", e.target.value)}
-                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark text-sm placeholder-neutral-400 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm placeholder-neutral-400 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                       />
                     </div>
 
                     {/* Subject */}
                     <div>
-                      <label className="block text-sm font-medium text-dark mb-1.5">
+                      <label className="block text-sm font-medium text-dark-700 mb-1.5">
                         Subject
                       </label>
                       <select
                         value={formData.subject}
                         onChange={(e) => update("subject", e.target.value)}
-                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark text-sm appearance-none focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm appearance-none focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                       >
                         <option value="">Select a subject</option>
                         {subjects.map((s) => (
@@ -254,7 +254,7 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-sm font-medium text-dark mb-1.5">
+                    <label className="block text-sm font-medium text-dark-700 mb-1.5">
                       Message <span className="text-red-500">*</span>
                     </label>
                     <textarea
@@ -262,7 +262,7 @@ export default function ContactPage() {
                       placeholder="Tell us how we can help..."
                       value={formData.message}
                       onChange={(e) => update("message", e.target.value)}
-                      className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark text-sm placeholder-neutral-400 focus:border-gold focus:ring-1 focus:ring-gold outline-none transition-colors resize-none"
+                      className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm placeholder-neutral-400 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors resize-none"
                     />
                     {errors.message && (
                       <p className="flex items-center gap-1 text-red-500 text-xs mt-1">
@@ -274,7 +274,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="flex items-center gap-2 bg-gold-gradient text-dark font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold/20 hover:scale-105 transition-all duration-200"
+                    className="flex items-center gap-2 bg-gold-gradient text-dark-700 font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
                   >
                     Send Message
                     <ArrowRight className="w-4 h-4" />
@@ -285,21 +285,21 @@ export default function ContactPage() {
 
             {/* RIGHT — Contact Info (2 cols) */}
             <div className="lg:col-span-2">
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Contact Information
               </p>
-              <h2 className="text-2xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-2xl font-heading font-bold text-dark-700 mb-6">
                 Reach Us Directly
               </h2>
 
               <div className="space-y-6 mb-8">
                 {contactDetails.map((detail) => (
                   <div key={detail.title} className="flex gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
-                      <detail.icon className="w-6 h-6 text-gold" />
+                    <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center flex-shrink-0">
+                      <detail.icon className="w-6 h-6 text-gold-400" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-dark mb-1">
+                      <h3 className="font-heading font-bold text-dark-700 mb-1">
                         {detail.title}
                       </h3>
                       {detail.lines.map((line) =>
@@ -307,7 +307,7 @@ export default function ContactPage() {
                           <a
                             key={line}
                             href={detail.href}
-                            className="block text-sm text-neutral-600 hover:text-gold transition-colors"
+                            className="block text-sm text-neutral-600 hover:text-gold-400 transition-colors"
                             target={detail.href.startsWith("http") ? "_blank" : undefined}
                             rel={detail.href.startsWith("http") ? "noopener noreferrer" : undefined}
                           >
@@ -326,7 +326,7 @@ export default function ContactPage() {
 
               {/* Quick Links */}
               <div className="bg-neutral-50 rounded-xl border border-neutral-200 p-6">
-                <h3 className="font-heading font-bold text-dark mb-4">
+                <h3 className="font-heading font-bold text-dark-700 mb-4">
                   Quick Links
                 </h3>
                 <div className="space-y-3">
@@ -339,9 +339,9 @@ export default function ContactPage() {
                     <Link
                       key={link.label}
                       href={link.href}
-                      className="flex items-center gap-2 text-sm text-neutral-600 hover:text-gold transition-colors group"
+                      className="flex items-center gap-2 text-sm text-neutral-600 hover:text-gold-400 transition-colors group"
                     >
-                      <ArrowRight className="w-3.5 h-3.5 text-gold group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-3.5 h-3.5 text-gold-400 group-hover:translate-x-1 transition-transform" />
                       {link.label}
                     </Link>
                   ))}
@@ -358,10 +358,10 @@ export default function ContactPage() {
       <section className="bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <div className="text-center mb-10">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Location
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Find Us in Mobile, Alabama
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -392,10 +392,10 @@ export default function ContactPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Office
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Mobile, Alabama Headquarters
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -407,10 +407,10 @@ export default function ContactPage() {
                 key={feature.title}
                 className={`bg-neutral-50 rounded-xl border border-neutral-100 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-5">
-                  <feature.icon className="w-7 h-7 text-gold" />
+                <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center mx-auto mb-5">
+                  <feature.icon className="w-7 h-7 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark mb-3">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-neutral-600 leading-relaxed">

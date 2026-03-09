@@ -45,10 +45,10 @@ export default function IndustryGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section header */}
         <div className="text-center mb-12">
-          <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+          <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
             Industries We Serve
           </p>
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
             Logistics Solutions by Industry
           </h2>
           <div className="section-divider mx-auto mt-4" />
@@ -62,16 +62,16 @@ export default function IndustryGrid() {
               href={ind.href}
               className="group bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-gold mb-4 group-hover:bg-gold-gradient group-hover:text-dark transition-all duration-300">
+              <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center text-gold-400 mb-4 group-hover:bg-gold-gradient group-hover:text-dark-700 transition-all duration-300">
                 <ind.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-heading font-bold text-dark mb-2 group-hover:text-gold transition-colors">
+              <h3 className="text-lg font-heading font-bold text-dark-700 mb-2 group-hover:text-gold-400 transition-colors">
                 {ind.title}
               </h3>
               <p className="text-sm text-neutral-600 leading-relaxed mb-4">
                 {ind.description}
               </p>
-              <span className="flex items-center gap-1.5 text-gold font-semibold text-sm">
+              <span className="flex items-center gap-1.5 text-gold-400 font-semibold text-sm">
                 Learn More
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>

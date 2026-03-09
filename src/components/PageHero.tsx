@@ -42,7 +42,7 @@ export default function PageHero({
             aria-label="Breadcrumb"
             className="flex items-center gap-1.5 text-sm text-neutral-400 mb-4"
           >
-            <Link href="/" className="hover:text-gold transition-colors">
+            <Link href="/" className="hover:text-gold-400 transition-colors">
               Home
             </Link>
             {breadcrumbs.map((crumb, i) => (
@@ -51,12 +51,12 @@ export default function PageHero({
                 {crumb.href ? (
                   <Link
                     href={crumb.href}
-                    className="hover:text-gold transition-colors"
+                    className="hover:text-gold-400 transition-colors"
                   >
                     {crumb.label}
                   </Link>
                 ) : (
-                  <span className="text-gold">{crumb.label}</span>
+                  <span className="text-gold-400">{crumb.label}</span>
                 )}
               </span>
             ))}

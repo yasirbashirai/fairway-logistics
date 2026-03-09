@@ -118,8 +118,8 @@ export default function QuoteForm() {
   /* ---- Success state ---- */
   if (submitted) {
     return (
-      <div className="bg-dark-light rounded-2xl border border-white/10 p-8 sm:p-12 text-center max-w-2xl mx-auto">
-        <div className="w-16 h-16 bg-green rounded-full flex items-center justify-center mx-auto mb-6">
+      <div className="bg-dark-600 rounded-2xl border border-white/10 p-8 sm:p-12 text-center max-w-2xl mx-auto">
+        <div className="w-16 h-16 bg-fwgreen-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <Check className="w-8 h-8 text-white" />
         </div>
         <h3 className="text-2xl font-heading font-bold text-white mb-3">
@@ -131,7 +131,7 @@ export default function QuoteForm() {
         </p>
         <p className="text-sm text-neutral-500">
           Need immediate assistance? Call{" "}
-          <a href="tel:+12517251929" className="text-gold hover:underline">
+          <a href="tel:+12517251929" className="text-gold-400 hover:underline">
             (251) 725-1929
           </a>
         </p>
@@ -141,7 +141,7 @@ export default function QuoteForm() {
 
   /* ---- Form ---- */
   return (
-    <div className="quote-form bg-dark-light rounded-2xl border border-white/10 overflow-hidden max-w-2xl mx-auto">
+    <div className="quote-form bg-dark-600 rounded-2xl border border-white/10 overflow-hidden max-w-2xl mx-auto">
       {/* Progress indicator */}
       <div className="px-6 sm:px-8 pt-8">
         <div className="flex items-center justify-between mb-8">
@@ -151,7 +151,7 @@ export default function QuoteForm() {
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
                     step >= s.num
-                      ? "bg-gold-gradient text-dark"
+                      ? "bg-gold-gradient text-dark-700"
                       : "bg-white/10 text-neutral-500"
                   }`}
                 >
@@ -234,11 +234,11 @@ export default function QuoteForm() {
                 onChange={(e) => update("freightType", e.target.value)}
                 className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm appearance-none"
               >
-                <option value="" className="bg-dark">
+                <option value="" className="bg-dark-700">
                   Select freight type
                 </option>
                 {freightTypes.map((ft) => (
-                  <option key={ft} value={ft} className="bg-dark">
+                  <option key={ft} value={ft} className="bg-dark-700">
                     {ft}
                   </option>
                 ))}
@@ -384,7 +384,7 @@ export default function QuoteForm() {
           {step < 3 ? (
             <button
               onClick={nextStep}
-              className="flex items-center gap-2 bg-gold-gradient text-dark font-bold text-sm px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-gold/20 transition-all"
+              className="flex items-center gap-2 bg-gold-gradient text-dark-700 font-bold text-sm px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all"
             >
               Continue
               <ChevronRight className="w-4 h-4" />
@@ -392,7 +392,7 @@ export default function QuoteForm() {
           ) : (
             <button
               onClick={handleSubmit}
-              className="flex items-center gap-2 bg-gold-gradient text-dark font-bold text-sm px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-gold/20 transition-all"
+              className="flex items-center gap-2 bg-gold-gradient text-dark-700 font-bold text-sm px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all"
             >
               Submit Quote Request
               <ChevronRight className="w-4 h-4" />

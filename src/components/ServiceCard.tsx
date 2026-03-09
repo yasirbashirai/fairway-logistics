@@ -25,12 +25,12 @@ export default function ServiceCard({
 
         <div className="p-6 flex-1 flex flex-col">
           {/* Icon */}
-          <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center text-gold mb-4 group-hover:bg-gold-gradient group-hover:text-dark transition-all duration-300">
+          <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center text-gold-400 mb-4 group-hover:bg-gold-gradient group-hover:text-dark-700 transition-all duration-300">
             {icon}
           </div>
 
           {/* Title */}
-          <h3 className="text-lg font-heading font-bold text-dark mb-2 group-hover:text-gold transition-colors">
+          <h3 className="text-lg font-heading font-bold text-dark-700 mb-2 group-hover:text-gold-400 transition-colors">
             {title}
           </h3>
 
@@ -47,7 +47,7 @@ export default function ServiceCard({
                   key={i}
                   className="flex items-center gap-2 text-xs text-neutral-500"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold-400 flex-shrink-0" />
                   {feat}
                 </li>
               ))}
@@ -55,7 +55,7 @@ export default function ServiceCard({
           )}
 
           {/* Arrow link */}
-          <div className="flex items-center gap-1.5 text-gold font-semibold text-sm mt-auto pt-2">
+          <div className="flex items-center gap-1.5 text-gold-400 font-semibold text-sm mt-auto pt-2">
             Learn More
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </div>

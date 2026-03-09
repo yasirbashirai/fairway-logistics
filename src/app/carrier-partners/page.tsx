@@ -179,10 +179,10 @@ export default function CarrierPartnersPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Why Partner With Us
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Carrier Partner Benefits
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -199,10 +199,10 @@ export default function CarrierPartnersPage() {
                 key={benefit.title}
                 className={`bg-neutral-50 rounded-xl border border-neutral-100 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
-                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                  <benefit.icon className="w-6 h-6 text-gold" />
+                <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
+                  <benefit.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark mb-2">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
                   {benefit.title}
                 </h3>
                 <p className="text-sm text-neutral-600 leading-relaxed">
@@ -221,10 +221,10 @@ export default function CarrierPartnersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Qualifications
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 Requirements to Join
               </h2>
 
@@ -238,7 +238,7 @@ export default function CarrierPartnersPage() {
               <div className="space-y-3">
                 {requirements.map((req) => (
                   <div key={req} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-neutral-700">{req}</span>
                   </div>
                 ))}
@@ -253,7 +253,7 @@ export default function CarrierPartnersPage() {
                   className="w-full h-[450px] object-cover"
                 />
               </div>
-              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl bg-gold/10" />
+              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl bg-gold-400/10" />
             </div>
           </div>
         </div>
@@ -265,10 +265,10 @@ export default function CarrierPartnersPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Getting Started
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Onboarding Process
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -287,12 +287,12 @@ export default function CarrierPartnersPage() {
               >
                 {/* Step number badge */}
                 <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center mx-auto mb-4">
-                  <span className="text-dark font-bold text-sm">{i + 1}</span>
+                  <span className="text-dark-700 font-bold text-sm">{i + 1}</span>
                 </div>
-                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-6 h-6 text-gold" />
+                <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark mb-2">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
                   {step.title}
                 </h3>
                 <p className="text-sm text-neutral-600 leading-relaxed">
@@ -301,7 +301,7 @@ export default function CarrierPartnersPage() {
                 {/* Connector line */}
                 {i < onboardingSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-16 -right-3 w-6">
-                    <ArrowRight className="w-6 h-6 text-gold" />
+                    <ArrowRight className="w-6 h-6 text-gold-400" />
                   </div>
                 )}
               </div>
@@ -327,10 +327,10 @@ export default function CarrierPartnersPage() {
             </div>
 
             <div className="lg:order-1">
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Carrier Tools
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 Technology & Tools Provided
               </h2>
 
@@ -366,7 +366,7 @@ export default function CarrierPartnersPage() {
                     key={tool.title}
                     className="bg-white rounded-lg border border-neutral-200 p-4"
                   >
-                    <h4 className="font-heading font-bold text-dark mb-1">
+                    <h4 className="font-heading font-bold text-dark-700 mb-1">
                       {tool.title}
                     </h4>
                     <p className="text-sm text-neutral-600">
@@ -386,18 +386,18 @@ export default function CarrierPartnersPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Get Paid
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
               Payment Terms
             </h2>
             <div className="section-divider mx-auto mb-10" />
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="bg-neutral-50 rounded-xl border border-neutral-100 p-6">
-                <Clock className="w-8 h-8 text-gold mx-auto mb-3" />
-                <h3 className="font-heading font-bold text-dark text-lg mb-2">
+                <Clock className="w-8 h-8 text-gold-400 mx-auto mb-3" />
+                <h3 className="font-heading font-bold text-dark-700 text-lg mb-2">
                   Standard Pay
                 </h3>
                 <p className="text-3xl font-bold text-gold-gradient mb-2">
@@ -408,9 +408,9 @@ export default function CarrierPartnersPage() {
                 </p>
               </div>
 
-              <div className="bg-dark rounded-xl border border-gold/30 p-6 relative overflow-hidden">
+              <div className="bg-dark-700 rounded-xl border border-gold/30 p-6 relative overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gold-gradient" />
-                <DollarSign className="w-8 h-8 text-gold mx-auto mb-3" />
+                <DollarSign className="w-8 h-8 text-gold-400 mx-auto mb-3" />
                 <h3 className="font-heading font-bold text-white text-lg mb-2">
                   Quick Pay
                 </h3>
@@ -423,8 +423,8 @@ export default function CarrierPartnersPage() {
               </div>
 
               <div className="bg-neutral-50 rounded-xl border border-neutral-100 p-6">
-                <Send className="w-8 h-8 text-gold mx-auto mb-3" />
-                <h3 className="font-heading font-bold text-dark text-lg mb-2">
+                <Send className="w-8 h-8 text-gold-400 mx-auto mb-3" />
+                <h3 className="font-heading font-bold text-dark-700 text-lg mb-2">
                   Direct Deposit
                 </h3>
                 <p className="text-3xl font-bold text-gold-gradient mb-2">
@@ -442,10 +442,10 @@ export default function CarrierPartnersPage() {
       {/* ============================================================= */}
       {/* APPLICATION FORM                                               */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-dark" id="apply">
+      <section className="py-16 sm:py-24 bg-dark-700" id="apply">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Apply Now
             </p>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
@@ -459,8 +459,8 @@ export default function CarrierPartnersPage() {
           </div>
 
           {submitted ? (
-            <div className="bg-dark-light rounded-2xl border border-white/10 p-8 sm:p-12 text-center max-w-2xl mx-auto">
-              <div className="w-16 h-16 bg-green rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-dark-600 rounded-2xl border border-white/10 p-8 sm:p-12 text-center max-w-2xl mx-auto">
+              <div className="w-16 h-16 bg-fwgreen-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-heading font-bold text-white mb-3">
@@ -472,7 +472,7 @@ export default function CarrierPartnersPage() {
               </p>
               <p className="text-sm text-neutral-500">
                 Questions? Call{" "}
-                <a href="tel:+12517251929" className="text-gold hover:underline">
+                <a href="tel:+12517251929" className="text-gold-400 hover:underline">
                   (251) 725-1929
                 </a>
               </p>
@@ -480,7 +480,7 @@ export default function CarrierPartnersPage() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="bg-dark-light rounded-2xl border border-white/10 p-6 sm:p-8 max-w-3xl mx-auto"
+              className="bg-dark-600 rounded-2xl border border-white/10 p-6 sm:p-8 max-w-3xl mx-auto"
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 {/* Company Name */}
@@ -547,11 +547,11 @@ export default function CarrierPartnersPage() {
                     onChange={(e) => update("fleetSize", e.target.value)}
                     className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm appearance-none"
                   >
-                    <option value="" className="bg-dark">Select fleet size</option>
-                    <option value="1-5" className="bg-dark">1-5 trucks</option>
-                    <option value="6-20" className="bg-dark">6-20 trucks</option>
-                    <option value="21-50" className="bg-dark">21-50 trucks</option>
-                    <option value="50+" className="bg-dark">50+ trucks</option>
+                    <option value="" className="bg-dark-700">Select fleet size</option>
+                    <option value="1-5" className="bg-dark-700">1-5 trucks</option>
+                    <option value="6-20" className="bg-dark-700">6-20 trucks</option>
+                    <option value="21-50" className="bg-dark-700">21-50 trucks</option>
+                    <option value="50+" className="bg-dark-700">50+ trucks</option>
                   </select>
                 </div>
 
@@ -661,7 +661,7 @@ export default function CarrierPartnersPage() {
               <div className="mt-6 flex justify-end">
                 <button
                   type="submit"
-                  className="flex items-center gap-2 bg-gold-gradient text-dark font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold/20 hover:scale-105 transition-all duration-200"
+                  className="flex items-center gap-2 bg-gold-gradient text-dark-700 font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
                 >
                   Submit Application
                   <ArrowRight className="w-4 h-4" />

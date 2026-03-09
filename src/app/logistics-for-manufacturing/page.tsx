@@ -207,10 +207,10 @@ export default function LogisticsForManufacturingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+              <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Manufacturing Industry
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
                 The Gulf Coast Manufacturing Economy{" "}
                 <span className="text-gold-gradient">Runs on Reliable Freight.</span>
               </h2>
@@ -255,8 +255,8 @@ export default function LogisticsForManufacturingPage() {
                   "Real-time GPS tracking on every shipment",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
+                    <span className="text-sm font-medium text-dark-700">{item}</span>
                   </div>
                 ))}
               </div>
@@ -270,7 +270,7 @@ export default function LogisticsForManufacturingPage() {
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
               </div>
-              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl bg-gold/10" />
+              <div className="absolute -z-10 -bottom-4 -right-4 w-full h-full rounded-2xl bg-gold-400/10" />
             </div>
           </div>
         </div>
@@ -280,10 +280,10 @@ export default function LogisticsForManufacturingPage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Manufacturing Challenges
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Logistics Challenges We Solve for Manufacturers
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -300,10 +300,10 @@ export default function LogisticsForManufacturingPage() {
                 key={challenge.title}
                 className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${Math.min(i + 1, 6)}`}
               >
-                <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center mb-4">
-                  <challenge.icon className="w-6 h-6 text-gold" />
+                <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
+                  <challenge.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark mb-2">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
                   {challenge.title}
                 </h3>
                 <p className="text-sm text-neutral-600 leading-relaxed">
@@ -319,10 +319,10 @@ export default function LogisticsForManufacturingPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Services
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Freight Services for Manufacturers
             </h2>
             <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
@@ -340,10 +340,10 @@ export default function LogisticsForManufacturingPage() {
                 className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gold/10 flex items-center justify-center">
-                    <service.icon className="w-6 h-6 text-gold" />
+                  <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
+                    <service.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark">
+                  <h3 className="text-lg font-heading font-bold text-dark-700">
                     {service.title}
                   </h3>
                 </div>
@@ -353,7 +353,7 @@ export default function LogisticsForManufacturingPage() {
                 <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-gold flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
                       <span className="text-sm text-neutral-700">{feature}</span>
                     </li>
                   ))}
@@ -368,10 +368,10 @@ export default function LogisticsForManufacturingPage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Sectors We Serve
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Gulf Coast Manufacturing Sectors
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -384,8 +384,8 @@ export default function LogisticsForManufacturingPage() {
                 className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <Factory className="w-6 h-6 text-gold" />
-                  <h3 className="text-lg font-heading font-bold text-dark">
+                  <Factory className="w-6 h-6 text-gold-400" />
+                  <h3 className="text-lg font-heading font-bold text-dark-700">
                     {sector.title}
                   </h3>
                 </div>
@@ -402,10 +402,10 @@ export default function LogisticsForManufacturingPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-8 sm:p-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-3">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
               Case Study
             </p>
-            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-dark mb-4">
+            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-dark-700 mb-4">
               How a Gulf Coast Auto Parts Manufacturer Reduced Logistics Costs by 18%
             </h2>
             <p className="text-neutral-600 leading-relaxed mb-6">
@@ -439,10 +439,10 @@ export default function LogisticsForManufacturingPage() {
       <section className="py-16 sm:py-24 bg-neutral-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
               Manufacturing Logistics FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -454,7 +454,7 @@ export default function LogisticsForManufacturingPage() {
                 key={faq.question}
                 className="bg-white rounded-xl border border-neutral-200 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark mb-3">
+                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
                   {faq.question}
                 </h3>
                 <p className="text-neutral-600 leading-relaxed text-sm">
@@ -470,7 +470,7 @@ export default function LogisticsForManufacturingPage() {
       <section className="py-16 sm:py-24 bg-dark-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <p className="text-gold font-semibold text-sm uppercase tracking-wider mb-2">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Get Started
             </p>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
