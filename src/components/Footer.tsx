@@ -1,17 +1,10 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Facebook,
-  Linkedin,
-  Twitter,
-  ArrowRight,
-} from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+
+/* ------------------------------------------------------------------ */
+/*  Data                                                               */
+/* ------------------------------------------------------------------ */
 
 const serviceLinks = [
   { label: "Asset-Based Trucking", href: "/asset-based-trucking" },
@@ -23,7 +16,7 @@ const serviceLinks = [
 ];
 
 const quickLinks = [
-  { label: "About Us", href: "/about" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Request a Quote", href: "/request-quote" },
   { label: "Carrier Partners", href: "/carrier-partners" },
@@ -33,97 +26,107 @@ const quickLinks = [
   { label: "Resources", href: "/resources" },
 ];
 
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
+const socialIcons = [
+  { letter: "F", label: "Facebook" },
+  { letter: "L", label: "LinkedIn" },
+  { letter: "I", label: "Instagram" },
+];
 
+/* ------------------------------------------------------------------ */
+/*  Component                                                          */
+/* ------------------------------------------------------------------ */
+
+export default function Footer() {
   return (
     <footer className="bg-dark-700 text-neutral-300">
-      {/* Gold accent top line */}
+      {/* Gold gradient accent line */}
       <div className="h-1 bg-gold-gradient" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-10">
-        {/* 4-column grid */}
+      {/* Main footer content */}
+      <div className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
-          {/* Column 1 — Company Info */}
+
+          {/* ---- Column 1: Company ---- */}
           <div>
             <Link href="/" className="inline-block mb-5">
               <Image
                 src="/logo.jpg"
                 alt="Fairway Logistics LLC"
                 width={160}
-                height={48}
-                className="h-12 w-auto"
+                height={40}
+                className="h-10 w-auto"
               />
             </Link>
             <p className="text-sm leading-relaxed text-neutral-400 mb-6">
               Fairway Logistics LLC is an asset-based logistics company
-              headquartered in Mobile, Alabama, proudly serving the Gulf Coast
-              region with reliable freight and transportation solutions.
+              headquartered in Mobile, Alabama. We deliver reliable freight
+              and transportation solutions across the Gulf Coast region.
             </p>
-            {/* Social icons */}
-            <div className="flex items-center gap-3">
-              {[
-                { icon: Facebook, label: "Facebook" },
-                { icon: Linkedin, label: "LinkedIn" },
-                { icon: Twitter, label: "Twitter" },
-              ].map(({ icon: Icon, label }) => (
+
+            {/* Contact info with gold icons */}
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3 text-sm">
+                <MapPin className="w-4 h-4 text-gold-400 mt-0.5 flex-shrink-0" />
+                <span>456 Dauphin Street, Mobile, AL 36602</span>
+              </li>
+              <li>
                 <a
-                  key={label}
-                  href="#"
-                  aria-label={label}
-                  className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center hover:bg-gold-400 hover:text-dark-700 transition-all duration-200"
+                  href="tel:+12517251929"
+                  className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors"
                 >
-                  <Icon className="w-4 h-4" />
+                  <Phone className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                  (251) 725-1929
                 </a>
-              ))}
-            </div>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@fairwaylogisticsllc.com"
+                  className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors"
+                >
+                  <Mail className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                  info@fairwaylogisticsllc.com
+                </a>
+              </li>
+            </ul>
           </div>
 
-          {/* Column 2 — Services */}
+          {/* ---- Column 2: Our Services ---- */}
           <div>
-            <h3 className="text-white font-heading font-bold text-sm uppercase tracking-wider mb-5">
-              Our Services
-            </h3>
-            <ul className="space-y-2.5">
+            <ColumnHeading>Our Services</ColumnHeading>
+            <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-400 hover:text-gold-400 transition-colors flex items-center gap-2 group"
+                    className="text-sm text-neutral-400 hover:text-gold-400 transition-colors"
                   >
-                    <ArrowRight className="w-3 h-3 text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
-                    <span>{link.label}</span>
+                    {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 3 — Quick Links */}
+          {/* ---- Column 3: Quick Links ---- */}
           <div>
-            <h3 className="text-white font-heading font-bold text-sm uppercase tracking-wider mb-5">
-              Quick Links
-            </h3>
-            <ul className="space-y-2.5">
+            <ColumnHeading>Quick Links</ColumnHeading>
+            <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-400 hover:text-gold-400 transition-colors flex items-center gap-2 group"
+                    className="text-sm text-neutral-400 hover:text-gold-400 transition-colors"
                   >
-                    <ArrowRight className="w-3 h-3 text-gold-400 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
-                    <span>{link.label}</span>
+                    {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 4 — Contact + Newsletter */}
+          {/* ---- Column 4: Contact Us ---- */}
           <div>
-            <h3 className="text-white font-heading font-bold text-sm uppercase tracking-wider mb-5">
-              Contact Us
-            </h3>
+            <ColumnHeading>Contact Us</ColumnHeading>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3 text-sm">
                 <MapPin className="w-4 h-4 text-gold-400 mt-0.5 flex-shrink-0" />
@@ -153,18 +156,15 @@ export default function Footer() {
               </li>
             </ul>
 
-            {/* Newsletter */}
+            {/* Newsletter signup */}
             <h4 className="text-white font-heading font-semibold text-sm mb-3">
               Newsletter
             </h4>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="flex gap-2"
-            >
+            <form className="flex gap-2">
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 bg-white/5 border border-white/10 rounded-lg px-3 py-2.5 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-gold-400 transition-colors"
+                className="flex-1 bg-dark-600 border border-neutral-600 rounded-lg px-3 py-2.5 text-sm text-white placeholder-neutral-500 focus:border-gold-400 focus:outline-none transition-colors"
               />
               <button
                 type="submit"
@@ -177,25 +177,44 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-neutral-500">
-          <p>&copy; {currentYear} Fairway Logistics LLC. All rights reserved.</p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy-policy" className="hover:text-gold-400 transition-colors">
-              Privacy Policy
-            </Link>
-            <span className="text-neutral-700">|</span>
-            <Link href="/terms-of-service" className="hover:text-gold-400 transition-colors">
-              Terms of Service
-            </Link>
-            <span className="text-neutral-700">|</span>
-            <Link href="/sitemap.xml" className="hover:text-gold-400 transition-colors">
-              Sitemap
-            </Link>
+      {/* ---- Bottom Bar ---- */}
+      <div className="border-t border-neutral-700 mt-12 pt-8 pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* Copyright */}
+          <p className="text-sm text-neutral-500">
+            &copy; 2026 Fairway Logistics, LLC. All rights reserved.
+          </p>
+
+          {/* Social media placeholder icons */}
+          <div className="flex items-center gap-3">
+            {socialIcons.map(({ letter, label }) => (
+              <a
+                key={label}
+                href="#"
+                aria-label={label}
+                className="border border-neutral-600 rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold text-neutral-400 hover:border-gold-400 hover:text-gold-400 transition-colors"
+              >
+                {letter}
+              </a>
+            ))}
           </div>
         </div>
       </div>
     </footer>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Column Heading                                                     */
+/* ------------------------------------------------------------------ */
+
+function ColumnHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-6">
+      <h3 className="text-white font-heading font-bold text-lg">
+        {children}
+      </h3>
+      <div className="w-10 h-0.5 bg-gold-400 mt-2" />
+    </div>
   );
 }

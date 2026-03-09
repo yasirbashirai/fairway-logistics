@@ -128,8 +128,8 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-dark-700/95 backdrop-blur-md shadow-lg shadow-black/20"
-            : "bg-transparent"
+            ? "bg-dark-700/95 backdrop-blur-md shadow-xl"
+            : "bg-dark-700/80 backdrop-blur-sm"
         }`}
       >
         {/* Top bar — visible on md+ */}
@@ -157,14 +157,16 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-[72px]">
           {/* Logo */}
           <Link href="/" className="relative flex-shrink-0">
-            <Image
-              src="/logo.jpg"
-              alt="Fairway Logistics LLC"
-              width={160}
-              height={48}
-              className="h-11 w-auto object-contain"
-              priority
-            />
+            <div className="bg-black rounded-lg p-1">
+              <Image
+                src="/logo.jpg"
+                alt="Fairway Logistics LLC"
+                width={160}
+                height={48}
+                className="h-10 w-auto object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           {/* Desktop nav */}
@@ -180,7 +182,7 @@ export default function Header() {
               </button>
               {activeDropdown === "services" && (
                 <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-dark-600/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl w-[520px] p-4 grid grid-cols-2 gap-2">
+                  <div className="bg-dark-700 border border-neutral-700 rounded-xl shadow-2xl w-[520px] p-4 grid grid-cols-2 gap-2">
                     {services.map((s) => (
                       <Link
                         key={s.href}
@@ -212,7 +214,7 @@ export default function Header() {
               </button>
               {activeDropdown === "regions" && (
                 <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-dark-600/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl w-64 p-2">
+                  <div className="bg-dark-700 border border-neutral-700 rounded-xl shadow-2xl w-64 p-2">
                     {regions.map((r) => (
                       <Link
                         key={r.href}
@@ -239,7 +241,7 @@ export default function Header() {
               </button>
               {activeDropdown === "industries" && (
                 <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-dark-600/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl w-72 p-2">
+                  <div className="bg-dark-700 border border-neutral-700 rounded-xl shadow-2xl w-72 p-2">
                     {industries.map((ind) => (
                       <Link
                         key={ind.href}
@@ -280,7 +282,7 @@ export default function Header() {
             </a>
             <Link
               href="/request-quote"
-              className="bg-gold-gradient text-dark-700 font-bold text-sm px-5 py-2.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
+              className="bg-gold-gradient text-dark-700 font-bold text-sm px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
             >
               Request a Quote
             </Link>

@@ -1,6 +1,14 @@
 import Link from "next/link";
-import { Factory, HardHat, Zap, Building2, ShoppingCart, ArrowRight } from "lucide-react";
+import {
+  Factory,
+  HardHat,
+  Zap,
+  Building2,
+  ShoppingCart,
+  ArrowRight,
+} from "lucide-react";
 
+/** Industry data used to render each card in the grid. */
 const industries = [
   {
     icon: Factory,
@@ -40,13 +48,17 @@ const industries = [
 ];
 
 export default function IndustryGrid() {
+  /* Split the array so the first 3 cards fill the top row and the last 2 are centred below. */
+  const topRow = industries.slice(0, 3);
+  const bottomRow = industries.slice(3);
+
   return (
-    <section className="py-16 sm:py-20 bg-neutral-50">
+    <section className="py-16 sm:py-24 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Section header */}
+        {/* ── Section heading ── */}
         <div className="text-center mb-12">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
-            Industries We Serve
+            INDUSTRIES WE SERVE
           </p>
           <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
             Logistics Solutions by Industry
@@ -54,31 +66,56 @@ export default function IndustryGrid() {
           <div className="section-divider mx-auto mt-4" />
         </div>
 
-        {/* Grid */}
+        {/* ── Top row (3 cards) ── */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {industries.map((ind) => (
-            <Link
-              key={ind.href}
-              href={ind.href}
-              className="group bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center text-gold-400 mb-4 group-hover:bg-gold-gradient group-hover:text-dark-700 transition-all duration-300">
-                <ind.icon className="w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-heading font-bold text-dark-700 mb-2 group-hover:text-gold-400 transition-colors">
-                {ind.title}
-              </h3>
-              <p className="text-sm text-neutral-600 leading-relaxed mb-4">
-                {ind.description}
-              </p>
-              <span className="flex items-center gap-1.5 text-gold-400 font-semibold text-sm">
-                Learn More
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Link>
+          {topRow.map((ind) => (
+            <IndustryCard key={ind.href} {...ind} />
+          ))}
+        </div>
+
+        {/* ── Bottom row (2 cards, centred) ── */}
+        <div className="flex flex-col sm:flex-row justify-center gap-6 mt-6">
+          {bottomRow.map((ind) => (
+            <div key={ind.href} className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]">
+              <IndustryCard {...ind} />
+            </div>
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+/** Reusable card component for a single industry. */
+function IndustryCard({
+  icon: Icon,
+  title,
+  description,
+  href,
+}: (typeof industries)[number]) {
+  return (
+    <Link
+      href={href}
+      className="group bg-white border border-neutral-200 rounded-2xl p-6 hover:shadow-xl hover:border-gold-400 hover:-translate-y-1 transition-all duration-300 block h-full"
+    >
+      {/* Icon */}
+      <div className="w-12 h-12 rounded-xl bg-gold-400/10 flex items-center justify-center">
+        <Icon className="w-6 h-6 text-gold-400" />
+      </div>
+
+      {/* Title */}
+      <h3 className="font-heading font-bold text-dark-700 text-lg mt-4">
+        {title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-neutral-600 text-sm mt-2">{description}</p>
+
+      {/* Link */}
+      <span className="text-gold-400 font-semibold text-sm mt-4 inline-flex items-center gap-1">
+        Learn More
+        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+      </span>
+    </Link>
   );
 }

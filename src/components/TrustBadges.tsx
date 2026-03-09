@@ -1,12 +1,12 @@
-import { ShieldCheck, FileCheck, Award, Truck } from "lucide-react";
+import { Shield, ShieldCheck, Award, Truck } from "lucide-react";
 
 const badges = [
   {
-    icon: ShieldCheck,
+    icon: Shield,
     label: "FMCSA Registered",
   },
   {
-    icon: FileCheck,
+    icon: ShieldCheck,
     label: "Fully Insured",
   },
   {
@@ -20,33 +20,30 @@ const badges = [
 ];
 
 interface TrustBadgesProps {
-  variant?: "light" | "dark";
+  variant: "light" | "dark";
 }
 
-export default function TrustBadges({ variant = "light" }: TrustBadgesProps) {
+export default function TrustBadges({ variant }: TrustBadgesProps) {
   const isDark = variant === "dark";
 
   return (
-    <section className={`py-10 sm:py-14 ${isDark ? "bg-dark-600" : "bg-neutral-50"}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:gap-16">
+    <section className={`py-6 ${isDark ? "bg-dark-700" : "bg-neutral-50"}`}>
+      {/* Top border line */}
+      <div className="h-px bg-gold-400/30" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6">
+        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-10 lg:gap-12">
           {badges.map((badge) => (
             <div
               key={badge.label}
-              className="flex items-center gap-3 group"
+              className="flex items-center gap-3"
             >
-              <div
-                className={`w-11 h-11 rounded-lg flex items-center justify-center transition-all duration-200 ${
-                  isDark
-                    ? "bg-gold-400/10 text-gold-400 group-hover:bg-gold-gradient group-hover:text-dark-700"
-                    : "bg-gold-400/10 text-gold-400 group-hover:bg-gold-gradient group-hover:text-dark-700"
-                }`}
-              >
-                <badge.icon className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-full bg-gold-400/10 flex items-center justify-center">
+                <badge.icon className="w-6 h-6 text-gold-400" />
               </div>
               <span
                 className={`text-sm font-semibold ${
-                  isDark ? "text-neutral-300" : "text-neutral-700"
+                  isDark ? "text-white" : "text-dark-700"
                 }`}
               >
                 {badge.label}
@@ -55,6 +52,9 @@ export default function TrustBadges({ variant = "light" }: TrustBadgesProps) {
           ))}
         </div>
       </div>
+
+      {/* Bottom border line */}
+      <div className="h-px bg-gold-400/30" />
     </section>
   );
 }
