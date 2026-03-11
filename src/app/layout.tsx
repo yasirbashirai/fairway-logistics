@@ -6,46 +6,51 @@ import StickyCTA from "@/components/StickyCTA";
 
 export const metadata: Metadata = {
   title: {
-    default: "Fairway Logistics LLC | Asset-Based Trucking & Freight Services | Gulf Coast",
+    default:
+      "Fairway Logistics LLC | Asset-Based Trucking & Freight Services | Gulf Coast",
     template: "%s | Fairway Logistics LLC",
   },
   description:
-    "Fairway Logistics LLC is an asset-based logistics company serving the Gulf Coast region from Mobile, AL. Full truckload, drayage, warehousing, freight brokerage, and import/export services.",
+    "Gulf Coast's premier asset-based logistics company. Port of Mobile drayage, trucking, warehousing, freight brokerage & import/export. FMCSA registered, fully insured. Real assets. Real reliability. Call (251) 725-1929.",
   keywords: [
-    "logistics",
-    "freight",
-    "trucking",
     "Gulf Coast logistics",
-    "Mobile AL trucking",
     "Port of Mobile drayage",
-    "asset-based carrier",
-    "freight brokerage",
-    "warehousing Mobile AL",
-    "import export logistics",
-    "container drayage",
+    "asset-based trucking Mobile AL",
+    "freight services Gulf Coast",
+    "container drayage Alabama",
+    "warehousing Mobile Alabama",
+    "freight brokerage Gulf Coast",
+    "import export logistics Mobile",
+    "trucking company Mobile AL",
     "Fairway Logistics",
+    "drayage services Alabama",
+    "freight company Gulf Coast",
+    "logistics company Mobile AL",
+    "container shipping Alabama",
+    "flatbed trucking Gulf Coast",
+    "3PL Gulf Coast",
+    "supply chain Mobile AL",
   ],
   authors: [{ name: "Fairway Logistics LLC" }],
   creator: "Fairway Logistics LLC",
   publisher: "Fairway Logistics LLC",
   metadataBase: new URL("https://fairwaylogisticsllc.com"),
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Fairway Logistics LLC | Asset-Based Trucking & Freight Services",
+    title:
+      "Fairway Logistics LLC | Asset-Based Trucking & Freight Services",
     description:
-      "Gulf Coast logistics solutions including full truckload, drayage, warehousing, and freight brokerage from Mobile, Alabama.",
+      "Gulf Coast logistics solutions: full truckload, drayage, warehousing, and freight brokerage from Mobile, Alabama. Real assets. Real reliability.",
     url: "https://fairwaylogisticsllc.com",
     siteName: "Fairway Logistics LLC",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/logo.jpg",
-        width: 800,
-        height: 600,
-        alt: "Fairway Logistics LLC",
+        url: "/images/hero.jpg",
+        width: 1920,
+        height: 1080,
+        alt: "Fairway Logistics truck at Port of Mobile",
       },
     ],
   },
@@ -54,7 +59,7 @@ export const metadata: Metadata = {
     title: "Fairway Logistics LLC | Gulf Coast Freight & Trucking",
     description:
       "Asset-based logistics serving the Gulf Coast. Full truckload, drayage, warehousing & more.",
-    images: ["/logo.jpg"],
+    images: ["/images/hero.jpg"],
   },
   robots: {
     index: true,
@@ -69,61 +74,111 @@ export const metadata: Metadata = {
   },
 };
 
+/* Comprehensive Schema.org structured data */
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://fairwaylogisticsllc.com",
-  name: "Fairway Logistics LLC",
-  description:
-    "Asset-based logistics company serving the Gulf Coast region with full truckload, drayage, warehousing, freight brokerage, and import/export services.",
-  url: "https://fairwaylogisticsllc.com",
-  telephone: "+1-251-725-1929",
-  email: "info@fairwaylogisticsllc.com",
-  image: "https://fairwaylogisticsllc.com/logo.jpg",
-  logo: "https://fairwaylogisticsllc.com/logo.jpg",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "456 Dauphin Street",
-    addressLocality: "Mobile",
-    addressRegion: "AL",
-    postalCode: "36602",
-    addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 30.6954,
-    longitude: -88.0399,
-  },
-  areaServed: [
-    { "@type": "State", name: "Alabama" },
-    { "@type": "State", name: "Mississippi" },
-    { "@type": "State", name: "Louisiana" },
-    { "@type": "State", name: "Florida" },
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://fairwaylogisticsllc.com/#organization",
+      name: "Fairway Logistics LLC",
+      url: "https://fairwaylogisticsllc.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://fairwaylogisticsllc.com/logo.jpg",
+      },
+      sameAs: [],
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-251-725-1929",
+        contactType: "customer service",
+        email: "info@fairwaylogisticsllc.com",
+        availableLanguage: "English",
+        hoursAvailable: {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday",
+          ],
+          opens: "00:00",
+          closes: "23:59",
+        },
+      },
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://fairwaylogisticsllc.com/#localbusiness",
+      name: "Fairway Logistics LLC",
+      description:
+        "Asset-based logistics company serving the Gulf Coast region with full truckload, drayage, warehousing, freight brokerage, and import/export services.",
+      url: "https://fairwaylogisticsllc.com",
+      telephone: "+1-251-725-1929",
+      email: "info@fairwaylogisticsllc.com",
+      image: "https://fairwaylogisticsllc.com/images/hero.jpg",
+      logo: "https://fairwaylogisticsllc.com/logo.jpg",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "456 Dauphin Street",
+        addressLocality: "Mobile",
+        addressRegion: "AL",
+        postalCode: "36602",
+        addressCountry: "US",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 30.6954,
+        longitude: -88.0399,
+      },
+      areaServed: [
+        { "@type": "State", name: "Alabama" },
+        { "@type": "State", name: "Mississippi" },
+        { "@type": "State", name: "Louisiana" },
+        { "@type": "State", name: "Florida" },
+      ],
+      serviceType: [
+        "Full Truckload Shipping",
+        "Container Drayage",
+        "Freight Brokerage",
+        "Warehousing & Distribution",
+        "Import/Export Logistics",
+        "Flatbed & Specialized Hauling",
+      ],
+      priceRange: "$$",
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday",
+        ],
+        opens: "00:00",
+        closes: "23:59",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://fairwaylogisticsllc.com/#website",
+      url: "https://fairwaylogisticsllc.com",
+      name: "Fairway Logistics LLC",
+      publisher: {
+        "@id": "https://fairwaylogisticsllc.com/#organization",
+      },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://fairwaylogisticsllc.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string",
+      },
+    },
   ],
-  serviceType: [
-    "Full Truckload Shipping",
-    "Container Drayage",
-    "Freight Brokerage",
-    "Warehousing",
-    "Import/Export Logistics",
-    "Flatbed & Specialized Hauling",
-  ],
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
-    ],
-    opens: "00:00",
-    closes: "23:59",
-  },
-  sameAs: [],
-  priceRange: "$$",
 };
 
 export default function RootLayout({
@@ -132,10 +187,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap"
           rel="stylesheet"
@@ -145,7 +204,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased">
+      <body className="antialiased bg-navy-950 text-navy-100">
         <Header />
         <main>{children}</main>
         <Footer />

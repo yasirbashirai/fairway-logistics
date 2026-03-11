@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Phone,
   Menu,
@@ -20,6 +21,8 @@ import {
   Zap,
   Building2,
   ShoppingCart,
+  Mail,
+  Package,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -31,7 +34,7 @@ const services = [
     label: "Asset-Based Trucking",
     href: "/asset-based-trucking",
     icon: Truck,
-    desc: "Full truckload with our own fleet",
+    desc: "Full truckload shipping with our own dedicated fleet",
   },
   {
     label: "Port of Mobile Drayage",
@@ -49,19 +52,19 @@ const services = [
     label: "Warehousing",
     href: "/warehousing-mobile-al",
     icon: Warehouse,
-    desc: "Secure warehousing & distribution",
+    desc: "Secure warehousing & distribution in Mobile",
   },
   {
     label: "Import / Export Logistics",
     href: "/import-export-logistics",
     icon: Globe,
-    desc: "International freight coordination",
+    desc: "International freight coordination & customs",
   },
   {
     label: "Gulf Coast Container Drayage",
     href: "/gulf-coast-container-drayage",
     icon: Container,
-    desc: "Regional container transport",
+    desc: "Regional container transport across the Gulf Coast",
   },
 ];
 
@@ -83,8 +86,64 @@ const industries = [
     href: "/government-municipal-logistics",
     icon: Building2,
   },
-  { label: "Retail & Distribution", href: "/retail-distribution-logistics", icon: ShoppingCart },
+  {
+    label: "Retail & Distribution",
+    href: "/retail-distribution-logistics",
+    icon: ShoppingCart,
+  },
 ];
+
+/* ------------------------------------------------------------------ */
+/*  Animation variants                                                 */
+/* ------------------------------------------------------------------ */
+
+const dropdownVariants = {
+  hidden: { opacity: 0, y: 8, scale: 0.97 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.2, ease: "easeOut" as const },
+  },
+  exit: {
+    opacity: 0,
+    y: 6,
+    scale: 0.97,
+    transition: { duration: 0.15, ease: "easeIn" as const },
+  },
+};
+
+const mobileMenuVariants = {
+  hidden: { x: "100%" },
+  visible: {
+    x: 0,
+    transition: { type: "spring" as const, damping: 30, stiffness: 300 },
+  },
+  exit: {
+    x: "100%",
+    transition: { duration: 0.25, ease: "easeIn" as const },
+  },
+};
+
+const overlayVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.2 } },
+  exit: { opacity: 0, transition: { duration: 0.2 } },
+};
+
+const accordionVariants = {
+  hidden: { height: 0, opacity: 0 },
+  visible: {
+    height: "auto",
+    opacity: 1,
+    transition: { duration: 0.25, ease: "easeOut" as const },
+  },
+  exit: {
+    height: 0,
+    opacity: 0,
+    transition: { duration: 0.2, ease: "easeIn" as const },
+  },
+};
 
 /* ------------------------------------------------------------------ */
 /*  Component                                                          */
@@ -105,193 +164,275 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  /* Lock body when mobile menu open */
+  /* Lock body scroll when mobile menu is open */
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [mobileOpen]);
 
+  /* Desktop dropdown hover handlers with debounce */
   const handleMouseEnter = (key: string) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setActiveDropdown(key);
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setActiveDropdown(null), 150);
+    timeoutRef.current = setTimeout(() => setActiveDropdown(null), 180);
   };
 
+  /* Mobile accordion toggle */
   const toggleMobileSubmenu = (key: string) =>
     setMobileSubmenu((prev) => (prev === key ? null : key));
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-dark-700/95 backdrop-blur-md shadow-xl"
-            : "bg-dark-700/80 backdrop-blur-sm"
+            ? "bg-navy-950/95 backdrop-blur-xl shadow-2xl shadow-black/30"
+            : "bg-transparent"
         }`}
       >
-        {/* Top bar — visible on md+ */}
+        {/* -------------------------------------------------------- */}
+        {/*  Top Utility Bar                                         */}
+        {/* -------------------------------------------------------- */}
         <div
-          className={`hidden md:block border-b border-white/10 transition-all duration-300 ${
-            scrolled ? "max-h-0 overflow-hidden opacity-0 border-none" : "max-h-12 opacity-100"
+          className={`hidden md:block border-b border-white/10 transition-all duration-500 ease-in-out ${
+            scrolled
+              ? "max-h-0 overflow-hidden opacity-0 border-transparent"
+              : "max-h-12 opacity-100"
           }`}
         >
-          <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm text-neutral-300">
-            <span className="flex items-center gap-2">
-              <MapPin className="w-3.5 h-3.5 text-gold-400" />
-              456 Dauphin Street, Mobile, AL 36602
-            </span>
-            <a
-              href="tel:+12517251929"
-              className="flex items-center gap-2 hover:text-gold-400 transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5 text-gold-400" />
-              (251) 725-1929
-            </a>
+          <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-xs font-body text-neutral-400">
+            {/* Left: Credentials */}
+            <div className="flex items-center gap-4">
+              <span className="flex items-center gap-1.5">
+                <Package className="w-3.5 h-3.5 text-gold-400" />
+                FMCSA Licensed
+              </span>
+              <span className="text-white/20">|</span>
+              <span>DOT Registered</span>
+            </div>
+
+            {/* Right: Phone + Email */}
+            <div className="flex items-center gap-5">
+              <a
+                href="tel:+12517251929"
+                className="flex items-center gap-1.5 hover:text-gold-400 transition-colors duration-200"
+              >
+                <Phone className="w-3.5 h-3.5 text-gold-400" />
+                (251) 725-1929
+              </a>
+              <span className="text-white/20">|</span>
+              <a
+                href="mailto:info@fairwaylogisticsllc.com"
+                className="flex items-center gap-1.5 hover:text-gold-400 transition-colors duration-200"
+              >
+                <Mail className="w-3.5 h-3.5 text-gold-400" />
+                info@fairwaylogisticsllc.com
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Main nav bar */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-[72px]">
+        {/* -------------------------------------------------------- */}
+        {/*  Main Navigation Bar                                      */}
+        {/* -------------------------------------------------------- */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="relative flex-shrink-0">
-            <div className="bg-black rounded-lg p-1">
-              <Image
-                src="/logo.jpg"
-                alt="Fairway Logistics LLC"
-                width={160}
-                height={48}
-                className="h-10 w-auto object-contain"
-                priority
-              />
-            </div>
+          <Link href="/" className="relative flex-shrink-0 group">
+            <Image
+              src="/logo.jpg"
+              alt="Fairway Logistics LLC"
+              width={160}
+              height={48}
+              className="h-12 w-auto object-contain rounded-lg transition-transform duration-200 group-hover:scale-105"
+              priority
+            />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1 text-sm font-medium text-white">
-            {/* Services dropdown */}
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-0.5 font-heading text-sm font-semibold text-white">
+            {/* Services — Mega Dropdown */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("services")}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-gold-400 transition-colors">
-                Services <ChevronDown className="w-4 h-4" />
+              <button className="flex items-center gap-1 px-3.5 py-2.5 rounded-lg hover:text-gold-400 transition-colors duration-200">
+                Services
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    activeDropdown === "services" ? "rotate-180" : ""
+                  }`}
+                />
               </button>
-              {activeDropdown === "services" && (
-                <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-dark-700 border border-neutral-700 rounded-xl shadow-2xl w-[520px] p-4 grid grid-cols-2 gap-2">
-                    {services.map((s) => (
-                      <Link
-                        key={s.href}
-                        href={s.href}
-                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors group"
-                      >
-                        <s.icon className="w-5 h-5 text-gold-400 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span className="block text-white group-hover:text-gold-400 transition-colors font-semibold text-sm">
-                            {s.label}
-                          </span>
-                          <span className="text-neutral-400 text-xs">{s.desc}</span>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
+
+              <AnimatePresence>
+                {activeDropdown === "services" && (
+                  <motion.div
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <div className="glass-card bg-navy-950/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl shadow-black/40 w-[560px] p-5 grid grid-cols-2 gap-2">
+                      {services.map((s) => (
+                        <Link
+                          key={s.href}
+                          href={s.href}
+                          className="flex items-start gap-3 p-3 rounded-xl hover:bg-white/5 transition-all duration-200 group"
+                        >
+                          <div className="flex-shrink-0 mt-0.5 w-9 h-9 rounded-lg bg-gold-400/10 flex items-center justify-center group-hover:bg-gold-400/20 transition-colors duration-200">
+                            <s.icon className="w-5 h-5 text-gold-400" />
+                          </div>
+                          <div>
+                            <span className="block text-white font-heading font-semibold text-sm group-hover:text-gold-400 transition-colors duration-200">
+                              {s.label}
+                            </span>
+                            <span className="text-neutral-400 text-xs leading-relaxed font-body font-normal">
+                              {s.desc}
+                            </span>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
-            {/* Regions dropdown */}
+            {/* Regions — Dropdown List */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("regions")}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-gold-400 transition-colors">
-                Regions <ChevronDown className="w-4 h-4" />
+              <button className="flex items-center gap-1 px-3.5 py-2.5 rounded-lg hover:text-gold-400 transition-colors duration-200">
+                Regions
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    activeDropdown === "regions" ? "rotate-180" : ""
+                  }`}
+                />
               </button>
-              {activeDropdown === "regions" && (
-                <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-dark-700 border border-neutral-700 rounded-xl shadow-2xl w-64 p-2">
-                    {regions.map((r) => (
-                      <Link
-                        key={r.href}
-                        href={r.href}
-                        className="flex items-center gap-2 px-4 py-2.5 rounded-lg hover:bg-white/5 text-white hover:text-gold-400 transition-colors text-sm"
-                      >
-                        <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                        {r.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
+
+              <AnimatePresence>
+                {activeDropdown === "regions" && (
+                  <motion.div
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <div className="glass-card bg-navy-950/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl shadow-black/40 w-64 p-2">
+                      {regions.map((r) => (
+                        <Link
+                          key={r.href}
+                          href={r.href}
+                          className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-white/5 text-white hover:text-gold-400 transition-all duration-200 text-sm font-body font-normal"
+                        >
+                          <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                          {r.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
-            {/* Industries dropdown */}
+            {/* Industries — Dropdown List */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("industries")}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center gap-1 px-3 py-2 rounded-md hover:text-gold-400 transition-colors">
-                Industries <ChevronDown className="w-4 h-4" />
+              <button className="flex items-center gap-1 px-3.5 py-2.5 rounded-lg hover:text-gold-400 transition-colors duration-200">
+                Industries
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform duration-200 ${
+                    activeDropdown === "industries" ? "rotate-180" : ""
+                  }`}
+                />
               </button>
-              {activeDropdown === "industries" && (
-                <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-dark-700 border border-neutral-700 rounded-xl shadow-2xl w-72 p-2">
-                    {industries.map((ind) => (
-                      <Link
-                        key={ind.href}
-                        href={ind.href}
-                        className="flex items-center gap-3 px-4 py-2.5 rounded-lg hover:bg-white/5 text-white hover:text-gold-400 transition-colors text-sm"
-                      >
-                        <ind.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                        {ind.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
+
+              <AnimatePresence>
+                {activeDropdown === "industries" && (
+                  <motion.div
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
+                    variants={dropdownVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                  >
+                    <div className="glass-card bg-navy-950/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl shadow-black/40 w-72 p-2">
+                      {industries.map((ind) => (
+                        <Link
+                          key={ind.href}
+                          href={ind.href}
+                          className="flex items-center gap-3 px-4 py-2.5 rounded-xl hover:bg-white/5 text-white hover:text-gold-400 transition-all duration-200 text-sm font-body font-normal"
+                        >
+                          <ind.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                          {ind.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
+            {/* Simple Links */}
             <Link
               href="/about"
-              className="px-3 py-2 rounded-md hover:text-gold-400 transition-colors"
+              className="px-3.5 py-2.5 rounded-lg hover:text-gold-400 transition-colors duration-200"
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="px-3 py-2 rounded-md hover:text-gold-400 transition-colors"
+              className="px-3.5 py-2.5 rounded-lg hover:text-gold-400 transition-colors duration-200"
             >
               Contact
             </Link>
           </nav>
 
-          {/* Right side — phone + CTA */}
-          <div className="hidden lg:flex items-center gap-4">
+          {/* Right Side — Phone + CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-3">
             <a
               href="tel:+12517251929"
-              className="flex items-center gap-2 text-sm text-white hover:text-gold-400 transition-colors"
+              className="flex items-center gap-2 text-sm text-white hover:text-gold-400 transition-colors duration-200 font-body"
             >
               <Phone className="w-4 h-4 text-gold-400" />
               <span className="font-semibold">(251) 725-1929</span>
             </a>
+
+            {/* Track Shipment — Ghost Button */}
+            <Link
+              href="/track-shipment"
+              className="border border-white/20 hover:border-gold-400 text-white hover:text-gold-400 text-xs font-heading font-semibold px-4 py-2 rounded-lg transition-all duration-200"
+            >
+              Track Shipment
+            </Link>
+
+            {/* Get a Quote — Gold CTA */}
             <Link
               href="/request-quote"
-              className="bg-gold-gradient text-dark-700 font-bold text-sm px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
+              className="btn-primary bg-gradient-to-r from-gold-400 to-amber-500 text-navy-950 font-heading font-bold text-sm px-6 py-2.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/25 hover:scale-105 transition-all duration-200"
             >
-              Request a Quote
+              Get a Quote
             </Link>
           </div>
 
-          {/* Mobile hamburger */}
+          {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white p-2"
+            className="lg:hidden text-white p-2 rounded-lg hover:bg-white/5 transition-colors duration-200"
             aria-label="Toggle navigation menu"
           >
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -299,184 +440,239 @@ export default function Header() {
         </div>
       </header>
 
-      {/* Mobile slide-out */}
-      <div
-        className={`fixed inset-0 z-[60] lg:hidden transition-all duration-300 ${
-          mobileOpen ? "visible" : "invisible"
-        }`}
-      >
-        {/* Overlay */}
-        <div
-          className={`absolute inset-0 bg-black/60 transition-opacity duration-300 ${
-            mobileOpen ? "opacity-100" : "opacity-0"
-          }`}
-          onClick={() => setMobileOpen(false)}
-        />
+      {/* ------------------------------------------------------------ */}
+      {/*  Mobile Slide-In Menu                                         */}
+      {/* ------------------------------------------------------------ */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <div className="fixed inset-0 z-[60] lg:hidden">
+            {/* Overlay */}
+            <motion.div
+              className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+              variants={overlayVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
+              onClick={() => setMobileOpen(false)}
+            />
 
-        {/* Panel */}
-        <div
-          className={`absolute top-0 right-0 h-full w-[85%] max-w-sm bg-dark-700 shadow-2xl transition-transform duration-300 overflow-y-auto ${
-            mobileOpen ? "translate-x-0" : "translate-x-full"
-          }`}
-        >
-          <div className="p-6">
-            {/* Close + logo */}
-            <div className="flex items-center justify-between mb-8">
-              <Image
-                src="/logo.jpg"
-                alt="Fairway Logistics LLC"
-                width={130}
-                height={40}
-                className="h-9 w-auto"
-              />
-              <button onClick={() => setMobileOpen(false)} aria-label="Close menu">
-                <X className="w-6 h-6 text-white" />
-              </button>
-            </div>
-
-            {/* Phone */}
-            <a
-              href="tel:+12517251929"
-              className="flex items-center gap-3 text-white mb-6 pb-6 border-b border-white/10"
+            {/* Panel */}
+            <motion.div
+              className="absolute top-0 right-0 h-full w-[85%] max-w-sm bg-navy-950/98 backdrop-blur-2xl border-l border-white/10 shadow-2xl shadow-black/50 overflow-y-auto"
+              variants={mobileMenuVariants}
+              initial="hidden"
+              animate="visible"
+              exit="exit"
             >
-              <div className="bg-gold-gradient p-2 rounded-lg">
-                <Phone className="w-4 h-4 text-dark-700" />
-              </div>
-              <div>
-                <p className="text-xs text-neutral-400">Call Us 24/7</p>
-                <p className="font-semibold">(251) 725-1929</p>
-              </div>
-            </a>
-
-            {/* Nav items */}
-            <nav className="space-y-1">
-              {/* Services */}
-              <div>
-                <button
-                  onClick={() => toggleMobileSubmenu("services")}
-                  className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-                >
-                  Services
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform ${
-                      mobileSubmenu === "services" ? "rotate-180" : ""
-                    }`}
+              <div className="p-6 min-h-full flex flex-col">
+                {/* Close + Logo */}
+                <div className="flex items-center justify-between mb-8">
+                  <Image
+                    src="/logo.jpg"
+                    alt="Fairway Logistics LLC"
+                    width={130}
+                    height={40}
+                    className="h-10 w-auto object-contain rounded-lg"
                   />
-                </button>
-                {mobileSubmenu === "services" && (
-                  <div className="pl-4 space-y-0.5 mb-1">
-                    {services.map((s) => (
-                      <Link
-                        key={s.href}
-                        href={s.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="flex items-center gap-2 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-                      >
-                        <s.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                        {s.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+                  <button
+                    onClick={() => setMobileOpen(false)}
+                    className="p-2 rounded-lg hover:bg-white/5 transition-colors duration-200"
+                    aria-label="Close menu"
+                  >
+                    <X className="w-6 h-6 text-white" />
+                  </button>
+                </div>
 
-              {/* Regions */}
-              <div>
-                <button
-                  onClick={() => toggleMobileSubmenu("regions")}
-                  className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
+                {/* Phone CTA Card */}
+                <a
+                  href="tel:+12517251929"
+                  className="flex items-center gap-3 text-white mb-6 pb-6 border-b border-white/10"
                 >
-                  Regions
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform ${
-                      mobileSubmenu === "regions" ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {mobileSubmenu === "regions" && (
-                  <div className="pl-4 space-y-0.5 mb-1">
-                    {regions.map((r) => (
-                      <Link
-                        key={r.href}
-                        href={r.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="flex items-center gap-2 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-                      >
-                        <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                        {r.label}
-                      </Link>
-                    ))}
+                  <div className="bg-gradient-to-r from-gold-400 to-amber-500 p-2.5 rounded-xl">
+                    <Phone className="w-4 h-4 text-navy-950" />
                   </div>
-                )}
-              </div>
-
-              {/* Industries */}
-              <div>
-                <button
-                  onClick={() => toggleMobileSubmenu("industries")}
-                  className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-                >
-                  Industries
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform ${
-                      mobileSubmenu === "industries" ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-                {mobileSubmenu === "industries" && (
-                  <div className="pl-4 space-y-0.5 mb-1">
-                    {industries.map((ind) => (
-                      <Link
-                        key={ind.href}
-                        href={ind.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="flex items-center gap-2 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-                      >
-                        <ind.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                        {ind.label}
-                      </Link>
-                    ))}
+                  <div>
+                    <p className="text-xs text-neutral-400 font-body">Call Us 24/7</p>
+                    <p className="font-heading font-bold text-sm">(251) 725-1929</p>
                   </div>
-                )}
+                </a>
+
+                {/* Navigation Items */}
+                <nav className="space-y-1 flex-1">
+                  {/* Services Accordion */}
+                  <div>
+                    <button
+                      onClick={() => toggleMobileSubmenu("services")}
+                      className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-heading font-semibold text-sm"
+                    >
+                      Services
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          mobileSubmenu === "services" ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {mobileSubmenu === "services" && (
+                        <motion.div
+                          className="overflow-hidden"
+                          variants={accordionVariants}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                        >
+                          <div className="pl-3 space-y-0.5 pb-2">
+                            {services.map((s) => (
+                              <Link
+                                key={s.href}
+                                href={s.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-body"
+                              >
+                                <s.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                                {s.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Regions Accordion */}
+                  <div>
+                    <button
+                      onClick={() => toggleMobileSubmenu("regions")}
+                      className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-heading font-semibold text-sm"
+                    >
+                      Regions
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          mobileSubmenu === "regions" ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {mobileSubmenu === "regions" && (
+                        <motion.div
+                          className="overflow-hidden"
+                          variants={accordionVariants}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                        >
+                          <div className="pl-3 space-y-0.5 pb-2">
+                            {regions.map((r) => (
+                              <Link
+                                key={r.href}
+                                href={r.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-body"
+                              >
+                                <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                                {r.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Industries Accordion */}
+                  <div>
+                    <button
+                      onClick={() => toggleMobileSubmenu("industries")}
+                      className="w-full flex items-center justify-between px-3 py-3 text-white hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-heading font-semibold text-sm"
+                    >
+                      Industries
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-300 ${
+                          mobileSubmenu === "industries" ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {mobileSubmenu === "industries" && (
+                        <motion.div
+                          className="overflow-hidden"
+                          variants={accordionVariants}
+                          initial="hidden"
+                          animate="visible"
+                          exit="exit"
+                        >
+                          <div className="pl-3 space-y-0.5 pb-2">
+                            {industries.map((ind) => (
+                              <Link
+                                key={ind.href}
+                                href={ind.href}
+                                onClick={() => setMobileOpen(false)}
+                                className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-body"
+                              >
+                                <ind.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                                {ind.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Simple Links */}
+                  <Link
+                    href="/about"
+                    onClick={() => setMobileOpen(false)}
+                    className="block px-3 py-3 text-white hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-heading font-semibold text-sm"
+                  >
+                    About
+                  </Link>
+                  <Link
+                    href="/contact"
+                    onClick={() => setMobileOpen(false)}
+                    className="block px-3 py-3 text-white hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-heading font-semibold text-sm"
+                  >
+                    Contact
+                  </Link>
+                </nav>
+
+                {/* Bottom CTA Section */}
+                <div className="mt-8 space-y-3 pt-6 border-t border-white/10">
+                  <Link
+                    href="/request-quote"
+                    onClick={() => setMobileOpen(false)}
+                    className="block text-center bg-gradient-to-r from-gold-400 to-amber-500 text-navy-950 font-heading font-bold text-sm px-6 py-3.5 rounded-xl hover:shadow-lg hover:shadow-gold-400/25 transition-all duration-200"
+                  >
+                    Get a Quote
+                  </Link>
+                  <Link
+                    href="/track-shipment"
+                    onClick={() => setMobileOpen(false)}
+                    className="block text-center border border-white/20 text-white font-heading font-semibold text-sm px-6 py-3 rounded-xl hover:border-gold-400 hover:text-gold-400 transition-all duration-200"
+                  >
+                    Track Shipment
+                  </Link>
+                </div>
+
+                {/* Credentials Footer */}
+                <div className="mt-6 pt-4 border-t border-white/10 text-neutral-500 text-xs font-body space-y-2">
+                  <p className="flex items-center gap-2">
+                    <Package className="w-3.5 h-3.5 text-gold-400 flex-shrink-0" />
+                    FMCSA Licensed &bull; DOT Registered
+                  </p>
+                  <a
+                    href="mailto:info@fairwaylogisticsllc.com"
+                    className="flex items-center gap-2 hover:text-gold-400 transition-colors duration-200"
+                  >
+                    <Mail className="w-3.5 h-3.5 text-gold-400 flex-shrink-0" />
+                    info@fairwaylogisticsllc.com
+                  </a>
+                </div>
               </div>
-
-              <Link
-                href="/about"
-                onClick={() => setMobileOpen(false)}
-                className="block px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                onClick={() => setMobileOpen(false)}
-                className="block px-3 py-3 text-white hover:text-gold-400 rounded-lg hover:bg-white/5 transition-colors"
-              >
-                Contact
-              </Link>
-            </nav>
-
-            {/* CTA */}
-            <div className="mt-8">
-              <Link
-                href="/request-quote"
-                onClick={() => setMobileOpen(false)}
-                className="block text-center bg-gold-gradient text-dark-700 font-bold px-6 py-3.5 rounded-lg hover:shadow-lg transition-all"
-              >
-                Request a Quote
-              </Link>
-            </div>
-
-            {/* Address */}
-            <div className="mt-8 pt-6 border-t border-white/10 text-neutral-400 text-xs">
-              <p className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0 mt-0.5" />
-                456 Dauphin Street, Mobile, AL 36602
-              </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
-      </div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

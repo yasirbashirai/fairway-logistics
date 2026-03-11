@@ -1,10 +1,16 @@
 @import "tailwindcss";
 
+/* ================================================================
+   FAIRWAY LOGISTICS — Premium Design System (Tailwind v4)
+   Dark-mode-first, gold accent, glass-morphism, modern SaaS style
+   ================================================================ */
+
 @theme {
+  /* ── Gold Palette ── */
   --color-gold-50: #fdf8e8;
-  --color-gold-100: #f5df8c;
-  --color-gold-200: #e8c65e;
-  --color-gold-300: #d4a243;
+  --color-gold-100: #faefc5;
+  --color-gold-200: #f5df8c;
+  --color-gold-300: #e8c65e;
   --color-gold-400: #d4a243;
   --color-gold-500: #b8862e;
   --color-gold-600: #a07428;
@@ -12,17 +18,20 @@
   --color-gold-800: #604618;
   --color-gold-900: #402f10;
 
-  --color-dark-50: #f5f5f5;
-  --color-dark-100: #e0e0e0;
-  --color-dark-200: #a0a0a0;
-  --color-dark-300: #737373;
-  --color-dark-400: #525252;
-  --color-dark-500: #3a3a3a;
-  --color-dark-600: #2d2d2d;
-  --color-dark-700: #1a1a1a;
-  --color-dark-800: #141414;
-  --color-dark-900: #0a0a0a;
+  /* ── Navy / Dark Palette ── */
+  --color-navy-50: #f0f4f8;
+  --color-navy-100: #d9e2ec;
+  --color-navy-200: #bcccdc;
+  --color-navy-300: #9fb3c8;
+  --color-navy-400: #627d98;
+  --color-navy-500: #486581;
+  --color-navy-600: #334e68;
+  --color-navy-700: #243b53;
+  --color-navy-800: #102a43;
+  --color-navy-900: #0a1628;
+  --color-navy-950: #060f1d;
 
+  /* ── Fairway Green ── */
   --color-fwgreen-50: #f0fce8;
   --color-fwgreen-100: #d4f5b8;
   --color-fwgreen-200: #a8e87a;
@@ -34,16 +43,25 @@
   --color-fwgreen-800: #143d05;
   --color-fwgreen-900: #0a1f03;
 
+  /* ── Surface Colors (for glass-morphism) ── */
+  --color-surface-dark: #0d1b2a;
+  --color-surface-card: #112240;
+  --color-surface-elevated: #1a2d4a;
+  --color-surface-glass: rgba(17, 34, 64, 0.7);
+  --color-surface-glass-light: rgba(255, 255, 255, 0.05);
+
+  /* ── Typography ── */
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-accent: 'Oswald', sans-serif;
 
+  /* ── Breakpoints ── */
   --breakpoint-xs: 480px;
 }
 
-/* ============================================================= */
-/* BASE LAYER — lower priority than Tailwind utilities            */
-/* ============================================================= */
+/* ================================================================
+   BASE LAYER — lower priority than Tailwind utilities
+   ================================================================ */
 @layer base {
   * {
     margin: 0;
@@ -57,8 +75,8 @@
 
   body {
     font-family: var(--font-body);
-    color: #1a1a1a;
-    background: #ffffff;
+    color: #e2e8f0;
+    background: var(--color-navy-950);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -66,159 +84,241 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    line-height: 1.2;
+    line-height: 1.15;
   }
 
+  /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #1a1a1a;
+    background: var(--color-navy-950);
   }
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #d4a243, #b8862e);
-    border-radius: 4px;
+    background: linear-gradient(180deg, var(--color-gold-400), var(--color-gold-600));
+    border-radius: 3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #f5df8c, #d4a243);
+    background: linear-gradient(180deg, var(--color-gold-300), var(--color-gold-400));
+  }
+
+  ::selection {
+    background: rgba(212, 162, 67, 0.3);
+    color: #fff;
   }
 }
 
-/* ============================================================= */
-/* COMPONENTS LAYER — between base and utilities                  */
-/* ============================================================= */
+/* ================================================================
+   COMPONENTS LAYER
+   ================================================================ */
 @layer components {
-  /* Gold Gradient Text */
+  /* ── Gradient Utilities ── */
   .text-gold-gradient {
-    background: linear-gradient(135deg, #f5df8c 0%, #d4a243 100%);
+    background: linear-gradient(135deg, #f5df8c 0%, #d4a243 50%, #b8862e 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Green Gradient Text */
-  .text-green-gradient {
-    background: linear-gradient(135deg, #80cf4c 0%, #3b990f 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Gold Gradient Background */
   .bg-gold-gradient {
-    background: linear-gradient(135deg, #f5df8c 0%, #d4a243 100%);
+    background: linear-gradient(135deg, #f5df8c 0%, #d4a243 50%, #b8862e 100%);
   }
 
-  /* Green Gradient Background */
-  .bg-green-gradient {
-    background: linear-gradient(135deg, #80cf4c 0%, #3b990f 100%);
+  .bg-gold-gradient-hover {
+    background: linear-gradient(135deg, #faefc5 0%, #e8c65e 50%, #d4a243 100%);
   }
 
-  /* Dark Gradient Background */
-  .bg-dark-gradient {
-    background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+  .bg-navy-gradient {
+    background: linear-gradient(180deg, #0a1628 0%, #102a43 100%);
   }
 
-  /* Hero Overlay */
+  .bg-navy-radial {
+    background: radial-gradient(ellipse at 50% 0%, rgba(212, 162, 67, 0.08) 0%, transparent 60%),
+                linear-gradient(180deg, #0a1628 0%, #060f1d 100%);
+  }
+
+  /* ── Glass-morphism Cards ── */
+  .glass-card {
+    background: rgba(17, 34, 64, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-card-gold {
+    background: rgba(212, 162, 67, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(212, 162, 67, 0.15);
+  }
+
+  /* ── Overlays ── */
   .hero-overlay {
-    background: linear-gradient(135deg, rgba(26,26,26,0.88) 0%, rgba(26,26,26,0.55) 100%);
+    background: linear-gradient(135deg, rgba(6, 15, 29, 0.92) 0%, rgba(10, 22, 40, 0.7) 50%, rgba(6, 15, 29, 0.85) 100%);
   }
 
-  /* Page Hero Overlay */
   .page-hero-overlay {
-    background: linear-gradient(135deg, rgba(26,26,26,0.92) 0%, rgba(26,26,26,0.7) 100%);
+    background: linear-gradient(135deg, rgba(6, 15, 29, 0.95) 0%, rgba(10, 22, 40, 0.8) 100%);
   }
 
-  /* Quote form styling */
-  .quote-form input,
-  .quote-form select,
-  .quote-form textarea {
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  /* ── Glow Effects ── */
+  .glow-gold {
+    box-shadow: 0 0 40px rgba(212, 162, 67, 0.15),
+                0 0 80px rgba(212, 162, 67, 0.05);
   }
 
-  .quote-form input:focus,
-  .quote-form select:focus,
-  .quote-form textarea:focus {
-    border-color: #d4a243;
-    box-shadow: 0 0 0 3px rgba(212, 162, 67, 0.15);
-    outline: none;
+  .glow-gold-sm {
+    box-shadow: 0 0 20px rgba(212, 162, 67, 0.1);
   }
 
-  /* Service card hover */
-  .service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .glow-gold-text {
+    text-shadow: 0 0 30px rgba(212, 162, 67, 0.3);
   }
 
-  .service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-  }
-
-  /* Gold border accent */
-  .gold-border-left {
-    border-left: 4px solid #d4a243;
-  }
-
-  /* Section divider */
+  /* ── Decorative Elements ── */
   .section-divider {
     width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #d4a243, #f5df8c);
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-gold-400), var(--color-gold-200));
     border-radius: 2px;
   }
 
-  /* Map container */
-  .map-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
+  .gold-border-left {
+    border-left: 3px solid var(--color-gold-400);
   }
 
-  /* Metric counter */
+  .dot-pattern {
+    background-image: radial-gradient(rgba(212, 162, 67, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .line-pattern {
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(212, 162, 67, 0.03) 0px,
+      rgba(212, 162, 67, 0.03) 1px,
+      transparent 1px,
+      transparent 80px
+    );
+  }
+
+  /* ── Button Styles ── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #f5df8c 0%, #d4a243 50%, #b8862e 100%);
+    color: #0a1628;
+    font-weight: 700;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 162, 67, 0.3),
+                0 2px 8px rgba(212, 162, 67, 0.2);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid rgba(212, 162, 67, 0.4);
+    color: var(--color-gold-400);
+    font-weight: 600;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--color-gold-400);
+    background: rgba(212, 162, 67, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(212, 162, 67, 0.15);
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.875rem 2rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  /* ── Logo Marquee ── */
+  .marquee-track {
+    display: flex;
+    animation: marquee 40s linear infinite;
+    width: max-content;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* ── Quote Form ── */
+  .quote-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 0.875rem 1rem;
+    color: #fff;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+  }
+
+  .quote-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .quote-input:focus {
+    border-color: var(--color-gold-400);
+    box-shadow: 0 0 0 3px rgba(212, 162, 67, 0.1);
+    outline: none;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  /* ── Metric Counter ── */
   .metric-counter {
     font-family: var(--font-accent);
   }
-
-  /* Animations */
-  .animate-fade-in-up {
-    animation: fadeInUp 0.7s ease-out forwards;
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-
-  .animate-slide-left {
-    animation: slideInLeft 0.7s ease-out forwards;
-  }
-
-  .animate-slide-right {
-    animation: slideInRight 0.7s ease-out forwards;
-  }
-
-  .animate-pulse-glow {
-    animation: pulseGlow 3s ease-in-out infinite;
-  }
-
-  /* Stagger animations */
-  .stagger-1 { animation-delay: 0.1s; }
-  .stagger-2 { animation-delay: 0.2s; }
-  .stagger-3 { animation-delay: 0.3s; }
-  .stagger-4 { animation-delay: 0.4s; }
-  .stagger-5 { animation-delay: 0.5s; }
-  .stagger-6 { animation-delay: 0.6s; }
 }
 
-/* Keyframes (outside layers — they don't participate in cascade) */
+/* ================================================================
+   KEYFRAMES (outside layers — don't participate in cascade)
+   ================================================================ */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
@@ -226,34 +326,22 @@
   to { opacity: 1; }
 }
 
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
 }
 
-@keyframes countUp {
-  from { opacity: 0; transform: scale(0.5); }
-  to { opacity: 1; transform: scale(1); }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-@keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 20px rgba(212, 162, 67, 0.3); }
-  50% { box-shadow: 0 0 40px rgba(212, 162, 67, 0.6); }
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }

@@ -1,6 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Shield,
+  Award,
+  ShieldCheck,
+  Truck,
+} from "lucide-react";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -11,7 +20,7 @@ const serviceLinks = [
   { label: "Port of Mobile Drayage", href: "/port-of-mobile-drayage" },
   { label: "Freight Brokerage", href: "/freight-brokerage" },
   { label: "Warehousing", href: "/warehousing-mobile-al" },
-  { label: "Import / Export Logistics", href: "/import-export-logistics" },
+  { label: "Import / Export", href: "/import-export-logistics" },
   { label: "Gulf Coast Drayage", href: "/gulf-coast-container-drayage" },
 ];
 
@@ -26,10 +35,18 @@ const quickLinks = [
   { label: "Resources", href: "/resources" },
 ];
 
-const socialIcons = [
-  { letter: "F", label: "Facebook" },
-  { letter: "L", label: "LinkedIn" },
-  { letter: "I", label: "Instagram" },
+const socialLinks = [
+  { letter: "F", label: "Facebook", href: "#" },
+  { letter: "in", label: "LinkedIn", href: "#" },
+  { letter: "I", label: "Instagram", href: "#" },
+  { letter: "X", label: "Twitter", href: "#" },
+];
+
+const trustBadges = [
+  { icon: Shield, label: "FMCSA Registered" },
+  { icon: ShieldCheck, label: "DOT Compliant" },
+  { icon: Award, label: "Fully Insured" },
+  { icon: Truck, label: "SmartWay Partner" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -38,165 +55,190 @@ const socialIcons = [
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-700 text-neutral-300">
+    <footer className="bg-navy-950 text-navy-300">
       {/* Gold gradient accent line */}
-      <div className="h-1 bg-gold-gradient" />
+      <div className="h-px bg-gold-gradient" />
 
-      {/* Main footer content */}
-      <div className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+      {/* ============================================================ */}
+      {/*  Main Footer Content                                         */}
+      {/* ============================================================ */}
+      <div className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
 
-          {/* ---- Column 1: Company ---- */}
-          <div>
-            <Link href="/" className="inline-block mb-5">
-              <Image
-                src="/logo.jpg"
-                alt="Fairway Logistics LLC"
-                width={160}
-                height={40}
-                className="h-10 w-auto"
-              />
-            </Link>
-            <p className="text-sm leading-relaxed text-neutral-400 mb-6">
-              Fairway Logistics LLC is an asset-based logistics company
-              headquartered in Mobile, Alabama. We deliver reliable freight
-              and transportation solutions across the Gulf Coast region.
-            </p>
+            {/* ---- Column 1: Company ---- */}
+            <div>
+              <Link href="/" className="inline-block mb-6">
+                <Image
+                  src="/logo.jpg"
+                  alt="Fairway Logistics LLC"
+                  width={160}
+                  height={48}
+                  className="h-12 w-auto"
+                />
+              </Link>
 
-            {/* Contact info with gold icons */}
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3 text-sm">
-                <MapPin className="w-4 h-4 text-gold-400 mt-0.5 flex-shrink-0" />
-                <span>456 Dauphin Street, Mobile, AL 36602</span>
-              </li>
-              <li>
-                <a
-                  href="tel:+12517251929"
-                  className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                  (251) 725-1929
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@fairwaylogisticsllc.com"
-                  className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors"
-                >
-                  <Mail className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                  info@fairwaylogisticsllc.com
-                </a>
-              </li>
-            </ul>
-          </div>
+              <p className="text-navy-300 text-sm leading-relaxed mb-6">
+                Fairway Logistics LLC is a premier asset-based logistics company
+                headquartered in Mobile, Alabama. We deliver reliable freight
+                solutions and world-class transportation services across the
+                entire Gulf Coast region and beyond.
+              </p>
 
-          {/* ---- Column 2: Our Services ---- */}
-          <div>
-            <ColumnHeading>Our Services</ColumnHeading>
-            <ul className="space-y-3">
-              {serviceLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-neutral-400 hover:text-gold-400 transition-colors"
+              {/* Social icons */}
+              <div className="flex items-center gap-3">
+                {socialLinks.map(({ letter, label, href }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    className="w-10 h-10 rounded-full border border-navy-600 flex items-center justify-center text-sm font-semibold text-navy-300 hover:border-gold-400 hover:text-gold-400 transition-colors duration-300"
                   >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                    {letter}
+                  </a>
+                ))}
+              </div>
+            </div>
 
-          {/* ---- Column 3: Quick Links ---- */}
-          <div>
-            <ColumnHeading>Quick Links</ColumnHeading>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-neutral-400 hover:text-gold-400 transition-colors"
+            {/* ---- Column 2: Our Services ---- */}
+            <div>
+              <SectionHeading>Our Services</SectionHeading>
+              <ul className="space-y-3">
+                {serviceLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-navy-300 hover:text-gold-400 transition-colors duration-300"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* ---- Column 3: Quick Links ---- */}
+            <div>
+              <SectionHeading>Quick Links</SectionHeading>
+              <ul className="space-y-3">
+                {quickLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-navy-300 hover:text-gold-400 transition-colors duration-300"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* ---- Column 4: Contact Us ---- */}
+            <div>
+              <SectionHeading>Contact Us</SectionHeading>
+
+              {/* Contact details */}
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3 text-sm">
+                  <MapPin className="w-4 h-4 text-gold-400 mt-0.5 flex-shrink-0" />
+                  <span>456 Dauphin Street, Mobile, AL 36602</span>
+                </li>
+                <li>
+                  <a
+                    href="tel:+12517251929"
+                    className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors duration-300"
                   >
-                    {link.label}
-                  </Link>
+                    <Phone className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                    (251) 725-1929
+                  </a>
                 </li>
-              ))}
-            </ul>
-          </div>
+                <li>
+                  <a
+                    href="mailto:info@fairwaylogisticsllc.com"
+                    className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors duration-300"
+                  >
+                    <Mail className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                    info@fairwaylogisticsllc.com
+                  </a>
+                </li>
+                <li className="flex items-center gap-3 text-sm">
+                  <Clock className="w-4 h-4 text-gold-400 flex-shrink-0" />
+                  <span>24/7 Operations</span>
+                </li>
+              </ul>
 
-          {/* ---- Column 4: Contact Us ---- */}
-          <div>
-            <ColumnHeading>Contact Us</ColumnHeading>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-3 text-sm">
-                <MapPin className="w-4 h-4 text-gold-400 mt-0.5 flex-shrink-0" />
-                <span>456 Dauphin Street, Mobile, AL 36602</span>
-              </li>
-              <li>
-                <a
-                  href="tel:+12517251929"
-                  className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                  (251) 725-1929
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:info@fairwaylogisticsllc.com"
-                  className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors"
-                >
-                  <Mail className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                  info@fairwaylogisticsllc.com
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-sm">
-                <Clock className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                24/7 Operations
-              </li>
-            </ul>
-
-            {/* Newsletter signup */}
-            <h4 className="text-white font-heading font-semibold text-sm mb-3">
-              Newsletter
-            </h4>
-            <form className="flex gap-2">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 bg-dark-600 border border-neutral-600 rounded-lg px-3 py-2.5 text-sm text-white placeholder-neutral-500 focus:border-gold-400 focus:outline-none transition-colors"
-              />
-              <button
-                type="submit"
-                className="bg-gold-gradient text-dark-700 font-bold px-4 py-2.5 rounded-lg text-sm hover:shadow-lg hover:shadow-gold-400/20 transition-all flex-shrink-0"
-              >
-                Join
-              </button>
-            </form>
+              {/* Newsletter signup with glass-card effect */}
+              <div className="rounded-xl border border-navy-700/50 bg-navy-900/40 backdrop-blur-sm p-4">
+                <h4 className="text-white font-semibold text-sm mb-3">
+                  Subscribe to Our Newsletter
+                </h4>
+                <form className="flex gap-2">
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    aria-label="Email address for newsletter"
+                    className="flex-1 min-w-0 bg-navy-800/60 border border-navy-600 rounded-lg px-3 py-2.5 text-sm text-white placeholder-navy-400 focus:border-gold-400 focus:ring-1 focus:ring-gold-400/30 focus:outline-none transition-all duration-300"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-gold-gradient text-navy-950 font-bold px-4 py-2.5 rounded-lg text-sm hover:shadow-lg hover:shadow-gold-400/20 transition-all duration-300 flex-shrink-0"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* ---- Bottom Bar ---- */}
-      <div className="border-t border-neutral-700 mt-12 pt-8 pb-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          {/* Copyright */}
-          <p className="text-sm text-neutral-500">
-            &copy; 2026 Fairway Logistics, LLC. All rights reserved.
-          </p>
-
-          {/* Social media placeholder icons */}
-          <div className="flex items-center gap-3">
-            {socialIcons.map(({ letter, label }) => (
-              <a
+      {/* ============================================================ */}
+      {/*  Trust Badges Bar                                             */}
+      {/* ============================================================ */}
+      <div className="border-t border-navy-800/60 border-b border-b-navy-800/60">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-0 sm:divide-x sm:divide-navy-700">
+            {trustBadges.map(({ icon: Icon, label }) => (
+              <div
                 key={label}
-                href="#"
-                aria-label={label}
-                className="border border-neutral-600 rounded-full w-10 h-10 flex items-center justify-center text-sm font-bold text-neutral-400 hover:border-gold-400 hover:text-gold-400 transition-colors"
+                className="flex items-center gap-2.5 px-6 text-sm text-navy-300"
               >
-                {letter}
-              </a>
+                <Icon className="w-5 h-5 text-gold-400 flex-shrink-0" />
+                <span className="whitespace-nowrap">{label}</span>
+              </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ============================================================ */}
+      {/*  Bottom Bar                                                   */}
+      {/* ============================================================ */}
+      <div className="border-t border-navy-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            {/* Copyright */}
+            <p className="text-sm text-navy-400">
+              &copy; 2026 Fairway Logistics, LLC. All rights reserved.
+            </p>
+
+            {/* Legal links */}
+            <div className="flex items-center gap-2 text-sm text-navy-400">
+              <Link
+                href="/privacy-policy"
+                className="hover:text-gold-400 transition-colors duration-300"
+              >
+                Privacy Policy
+              </Link>
+              <span className="text-navy-600">|</span>
+              <Link
+                href="/terms-of-service"
+                className="hover:text-gold-400 transition-colors duration-300"
+              >
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -205,16 +247,16 @@ export default function Footer() {
 }
 
 /* ------------------------------------------------------------------ */
-/*  Column Heading                                                     */
+/*  Section Heading with gold underline accent                         */
 /* ------------------------------------------------------------------ */
 
-function ColumnHeading({ children }: { children: React.ReactNode }) {
+function SectionHeading({ children }: { children: React.ReactNode }) {
   return (
     <div className="mb-6">
-      <h3 className="text-white font-heading font-bold text-lg">
+      <h3 className="text-white font-bold text-lg tracking-tight">
         {children}
       </h3>
-      <div className="w-10 h-0.5 bg-gold-400 mt-2" />
+      <div className="w-10 h-0.5 bg-gold-400 mt-2 rounded-full" />
     </div>
   );
 }
