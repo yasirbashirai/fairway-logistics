@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
+@theme {
   --color-gold-50: #fdf8e8;
   --color-gold-100: #f5df8c;
   --color-gold-200: #e8c65e;
@@ -37,6 +37,8 @@
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-accent: 'Oswald', sans-serif;
+
+  --breakpoint-xs: 480px;
 }
 
 * {
