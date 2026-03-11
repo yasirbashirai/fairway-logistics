@@ -159,26 +159,26 @@ export default function SafetyCompliancePage() {
         title="Safety & Compliance"
         subtitle="Safety is not a priority — it's a core value. Every policy, every inspection, and every training hour exists to protect our drivers, our clients' freight, and the public."
         breadcrumbs={[{ label: "Safety & Compliance" }]}
-        backgroundImage="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80"
+        backgroundImage="/images/truckings.jpg"
       />
 
       {/* ============================================================= */}
       {/* COMMITMENT OVERVIEW                                            */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Our Commitment
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Safety Is{" "}
                 <span className="text-gold-gradient">Non-Negotiable</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   At Fairway Logistics, safety isn&apos;t a department — it&apos;s a
                   culture. From the front office to the driver&apos;s seat, every
                   team member is empowered and expected to uphold our safety
@@ -186,14 +186,14 @@ export default function SafetyCompliancePage() {
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 Our safety program is built on three pillars: prevention through
                 rigorous training and maintenance, compliance through systematic
                 processes and documentation, and continuous improvement through
                 data analysis and feedback loops.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 We invest significantly in driver training, equipment maintenance,
                 and safety technology because we believe the best safety record is
                 one built on proactive measures — not reactive fixes.
@@ -209,7 +209,7 @@ export default function SafetyCompliancePage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -218,7 +218,7 @@ export default function SafetyCompliancePage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80"
+                  src="/images/truckings.jpg"
                   alt="Safety-focused logistics operations at Fairway Logistics"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -232,16 +232,16 @@ export default function SafetyCompliancePage() {
       {/* ============================================================= */}
       {/* COMPLIANCE CERTIFICATIONS                                      */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Regulatory Compliance
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Certifications & Compliance
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               We maintain full compliance with all federal and state
               transportation regulations, exceeding minimum requirements in every
               category.
@@ -253,17 +253,17 @@ export default function SafetyCompliancePage() {
             {certifications.map((cert, i) => (
               <div
                 key={cert.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-8 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-8 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-start gap-4">
                   <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center flex-shrink-0">
                     <cert.icon className="w-7 h-7 text-gold-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-heading font-bold text-dark-700 mb-2">
+                    <h3 className="text-xl font-heading font-bold text-white mb-2">
                       {cert.title}
                     </h3>
-                    <p className="text-neutral-600 leading-relaxed">
+                    <p className="text-navy-300 leading-relaxed">
                       {cert.description}
                     </p>
                   </div>
@@ -277,16 +277,16 @@ export default function SafetyCompliancePage() {
       {/* ============================================================= */}
       {/* SAFETY PROGRAM DETAILS                                         */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Safety Programs
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Proactive Safety Management
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Our comprehensive safety program covers every aspect of operations
               from driver behavior monitoring to hazardous materials handling.
             </p>
@@ -297,15 +297,15 @@ export default function SafetyCompliancePage() {
             {safetyPrograms.map((program, i) => (
               <div
                 key={program.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-100 p-8 hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-8 hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-5">
                   <program.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {program.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-navy-300 leading-relaxed">
                   {program.description}
                 </p>
               </div>
@@ -317,13 +317,13 @@ export default function SafetyCompliancePage() {
       {/* ============================================================= */}
       {/* DRIVER TRAINING & STANDARDS                                    */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative lg:order-2">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80"
+                  src="/images/truck-road.jpg"
                   alt="Professional truck drivers at Fairway Logistics"
                   className="w-full h-[400px] object-cover"
                 />
@@ -334,18 +334,18 @@ export default function SafetyCompliancePage() {
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Driver Excellence
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Driver Training & Standards
               </h2>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 Our drivers are the backbone of our safety program. We recruit
                 experienced professionals, provide comprehensive training, and
                 maintain rigorous qualification standards that exceed federal
                 minimums.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Every Fairway driver completes our orientation program covering
                 defensive driving, cargo securement, hazmat awareness, customer
                 service, and company-specific procedures before their first
@@ -356,7 +356,7 @@ export default function SafetyCompliancePage() {
                 {driverStandards.map((standard) => (
                   <div key={standard} className="flex items-center gap-3">
                     <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm text-neutral-700">{standard}</span>
+                    <span className="text-sm text-navy-200">{standard}</span>
                   </div>
                 ))}
               </div>
@@ -368,16 +368,16 @@ export default function SafetyCompliancePage() {
       {/* ============================================================= */}
       {/* EQUIPMENT MAINTENANCE                                          */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Fleet Maintenance
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Equipment Maintenance Program
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Well-maintained equipment is safe equipment. Our preventive
               maintenance program keeps every truck and trailer in peak
               operating condition.
@@ -389,15 +389,15 @@ export default function SafetyCompliancePage() {
             {maintenanceItems.map((item, i) => (
               <div
                 key={item.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-100 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-16 h-16 rounded-full bg-gold-400/10 flex items-center justify-center mx-auto mb-5">
                   <item.icon className="w-8 h-8 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {item.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-navy-300 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -409,21 +409,21 @@ export default function SafetyCompliancePage() {
       {/* ============================================================= */}
       {/* INCIDENT REPORTING                                             */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
                 Transparency
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
                 Incident Reporting & Response
               </h2>
               <div className="section-divider mx-auto mt-6" />
             </div>
 
-            <div className="bg-white rounded-2xl border border-neutral-200 p-8 sm:p-10">
-              <p className="text-neutral-600 leading-relaxed mb-6">
+            <div className="bg-navy-950 rounded-2xl border border-navy-800 p-8 sm:p-10">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 In the event of any incident — no matter how minor — Fairway
                 Logistics follows a structured reporting and response protocol
                 designed to protect all parties, preserve evidence, and prevent
@@ -459,15 +459,15 @@ export default function SafetyCompliancePage() {
                 ].map((item) => (
                   <div key={item.step} className="flex gap-4">
                     <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center flex-shrink-0">
-                      <span className="text-dark-700 font-bold text-sm">
+                      <span className="text-white font-bold text-sm">
                         {item.step}
                       </span>
                     </div>
                     <div>
-                      <h4 className="font-heading font-bold text-dark-700 mb-1">
+                      <h4 className="font-heading font-bold text-white mb-1">
                         {item.title}
                       </h4>
-                      <p className="text-sm text-neutral-600 leading-relaxed">
+                      <p className="text-sm text-navy-300 leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -507,7 +507,7 @@ export default function SafetyCompliancePage() {
                 <span className="text-4xl sm:text-5xl font-bold text-gold-gradient">
                   {stat.value}
                 </span>
-                <p className="text-neutral-400 text-sm mt-2 font-medium">
+                <p className="text-navy-300 text-sm mt-2 font-medium">
                   {stat.label}
                 </p>
               </div>

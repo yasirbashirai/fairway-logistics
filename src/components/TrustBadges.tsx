@@ -27,7 +27,7 @@ export default function TrustBadges({ variant }: TrustBadgesProps) {
   const isDark = variant === "dark";
 
   return (
-    <section className={`py-6 ${isDark ? "bg-dark-700" : "bg-neutral-50"}`}>
+    <section className={`py-6 ${isDark ? "bg-navy-950" : "bg-navy-900"}`}>
       {/* Top border line */}
       <div className="h-px bg-gold-400/30" />
 
@@ -41,11 +41,7 @@ export default function TrustBadges({ variant }: TrustBadgesProps) {
               <div className="w-10 h-10 rounded-full bg-gold-400/10 flex items-center justify-center">
                 <badge.icon className="w-6 h-6 text-gold-400" />
               </div>
-              <span
-                className={`text-sm font-semibold ${
-                  isDark ? "text-white" : "text-dark-700"
-                }`}
-              >
+              <span className="text-sm font-semibold text-white">
                 {badge.label}
               </span>
             </div>

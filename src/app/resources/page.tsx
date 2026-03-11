@@ -26,7 +26,7 @@ const articles = [
       "Learn what port drayage is, how it works, and why choosing the right drayage provider can make or break your supply chain efficiency at Gulf Coast ports.",
     category: "Drayage",
     image:
-      "https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=800&q=80",
+      "/images/gulf-coast.jpg",
     date: "March 5, 2026",
     readTime: "8 min read",
     href: "#",
@@ -37,7 +37,7 @@ const articles = [
       "Everything shippers need to know about moving freight through Gulf Coast ports in 2026 — from port updates and capacity trends to rate forecasts and regulatory changes.",
     category: "Industry Guide",
     image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
+      "/images/trucks.jpg",
     date: "February 20, 2026",
     readTime: "12 min read",
     href: "#",
@@ -48,7 +48,7 @@ const articles = [
       "Compare the advantages and trade-offs of working with an asset-based carrier versus a broker-only model. Understand which approach best fits your shipping needs.",
     category: "Logistics Strategy",
     image:
-      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=800&q=80",
+      "/images/truck-road.jpg",
     date: "February 10, 2026",
     readTime: "6 min read",
     href: "#",
@@ -59,7 +59,7 @@ const articles = [
       "Discover practical, actionable strategies to reduce your freight spend without sacrificing service quality. From lane optimization to consolidation tactics.",
     category: "Cost Optimization",
     image:
-      "https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&q=80",
+      "/images/warehouse.jpg",
     date: "January 28, 2026",
     readTime: "7 min read",
     href: "#",
@@ -70,7 +70,7 @@ const articles = [
       "Navigate the paperwork of international shipping with this comprehensive guide to customs documentation, compliance requirements, and common pitfalls to avoid.",
     category: "Import/Export",
     image:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80",
+      "/images/hero.jpg",
     date: "January 15, 2026",
     readTime: "10 min read",
     href: "#",
@@ -81,7 +81,7 @@ const articles = [
       "A structured approach to evaluating and selecting the right logistics partner for your business. Key criteria, red flags, and questions every shipper should ask.",
     category: "Business Guide",
     image:
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+      "/images/truckings.jpg",
     date: "January 5, 2026",
     readTime: "9 min read",
     href: "#",
@@ -125,22 +125,22 @@ export default function ResourcesPage() {
         title="Resources & Industry Insights"
         subtitle="Expert guides, industry analysis, and practical tips to help you navigate Gulf Coast logistics with confidence."
         breadcrumbs={[{ label: "Resources" }]}
-        backgroundImage="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
+        backgroundImage="/images/hero.jpg"
       />
 
       {/* ============================================================= */}
       {/* ARTICLES GRID                                                  */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Latest Articles
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Featured Resources
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Stay informed with the latest insights on Gulf Coast freight,
               logistics best practices, and industry trends from the Fairway
               Logistics team.
@@ -156,8 +156,8 @@ export default function ResourcesPage() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   activeCategory === cat
-                    ? "bg-gold-gradient text-dark-700"
-                    : "border border-neutral-200 text-neutral-600 hover:border-gold-400 hover:text-gold-400"
+                    ? "bg-gold-gradient text-white"
+                    : "border border-navy-800 text-navy-300 hover:border-gold-400 hover:text-gold-400"
                 }`}
               >
                 {cat}
@@ -173,7 +173,7 @@ export default function ResourcesPage() {
                 href={article.href}
                 className={`group block animate-fade-in-up stagger-${(i % 6) + 1}`}
               >
-                <div className="bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
+                <div className="bg-navy-950 rounded-xl border border-navy-800 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -183,7 +183,7 @@ export default function ResourcesPage() {
                     />
                     {/* Category badge */}
                     <div className="absolute top-3 left-3">
-                      <span className="inline-flex items-center gap-1 bg-dark-700/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
+                      <span className="inline-flex items-center gap-1 bg-navy-950/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1 rounded-full">
                         <Tag className="w-3 h-3 text-gold-400" />
                         {article.category}
                       </span>
@@ -195,17 +195,17 @@ export default function ResourcesPage() {
 
                   {/* Content */}
                   <div className="p-6 flex-1 flex flex-col">
-                    <div className="flex items-center gap-3 text-xs text-neutral-400 mb-3">
+                    <div className="flex items-center gap-3 text-xs text-navy-300 mb-3">
                       <span>{article.date}</span>
-                      <span className="w-1 h-1 rounded-full bg-neutral-300" />
+                      <span className="w-1 h-1 rounded-full bg-navy-700" />
                       <span>{article.readTime}</span>
                     </div>
 
-                    <h3 className="text-lg font-heading font-bold text-dark-700 mb-3 group-hover:text-gold-400 transition-colors line-clamp-2">
+                    <h3 className="text-lg font-heading font-bold text-white mb-3 group-hover:text-gold-400 transition-colors line-clamp-2">
                       {article.title}
                     </h3>
 
-                    <p className="text-sm text-neutral-600 leading-relaxed mb-4 flex-1 line-clamp-3">
+                    <p className="text-sm text-navy-300 leading-relaxed mb-4 flex-1 line-clamp-3">
                       {article.excerpt}
                     </p>
 
@@ -221,7 +221,7 @@ export default function ResourcesPage() {
 
           {filteredArticles.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-neutral-500 text-lg">
+              <p className="text-navy-400 text-lg">
                 No articles found in this category. Check back soon for new
                 content.
               </p>
@@ -233,7 +233,7 @@ export default function ResourcesPage() {
       {/* ============================================================= */}
       {/* NEWSLETTER SIGNUP                                              */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-dark-700">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-2xl mx-auto text-center">
             <div className="w-16 h-16 rounded-full bg-gold-400/10 flex items-center justify-center mx-auto mb-6">
@@ -243,21 +243,21 @@ export default function ResourcesPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Stay Ahead of the Curve
             </h2>
-            <p className="text-neutral-400 mb-8 max-w-lg mx-auto">
+            <p className="text-navy-300 mb-8 max-w-lg mx-auto">
               Subscribe to our newsletter for monthly logistics insights,
               industry updates, and Gulf Coast shipping tips delivered straight
               to your inbox.
             </p>
 
             {subscribed ? (
-              <div className="bg-dark-600 rounded-xl border border-white/10 p-8">
-                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="bg-navy-900 rounded-xl border border-white/10 p-8">
+                <div className="w-12 h-12 bg-fwgreen-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-white mb-2">
                   You&apos;re Subscribed!
                 </h3>
-                <p className="text-neutral-400 text-sm">
+                <p className="text-navy-300 text-sm">
                   Thank you for subscribing. You&apos;ll receive our next
                   newsletter in your inbox.
                 </p>
@@ -273,18 +273,18 @@ export default function ResourcesPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-neutral-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                  className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                 />
                 <button
                   type="submit"
-                  className="bg-gold-gradient text-dark-700 font-bold text-sm px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all whitespace-nowrap"
+                  className="bg-gold-gradient text-white font-bold text-sm px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all whitespace-nowrap"
                 >
                   Subscribe
                 </button>
               </form>
             )}
 
-            <p className="text-neutral-500 text-xs mt-4">
+            <p className="text-navy-400 text-xs mt-4">
               No spam, ever. Unsubscribe at any time.
             </p>
           </div>
@@ -294,13 +294,13 @@ export default function ResourcesPage() {
       {/* ============================================================= */}
       {/* RESOURCE CATEGORIES                                            */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Browse By Topic
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Resource Categories
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -353,15 +353,15 @@ export default function ResourcesPage() {
             ].map((cat, i) => (
               <div
                 key={cat.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <cat.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {cat.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-3">
+                <p className="text-sm text-navy-300 leading-relaxed mb-3">
                   {cat.description}
                 </p>
                 <span className="text-xs text-gold-400 font-semibold">

@@ -133,13 +133,13 @@ export default function ContactPage() {
         title="Contact Us"
         subtitle="Have questions about our logistics services? Need a freight quote? Our team is ready to help. Reach out today."
         breadcrumbs={[{ label: "Contact" }]}
-        backgroundImage="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
+        backgroundImage="/images/truck-road.jpg"
       />
 
       {/* ============================================================= */}
       {/* CONTACT FORM + INFO (TWO COLUMN)                               */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* LEFT — Contact Form (3 cols) */}
@@ -147,23 +147,23 @@ export default function ContactPage() {
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Send Us a Message
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Get in Touch
               </h2>
 
               {submitted ? (
-                <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-8 sm:p-12 text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="bg-navy-900 rounded-2xl border border-navy-800 p-8 sm:p-12 text-center">
+                  <div className="w-16 h-16 bg-fwgreen-500 rounded-full flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-heading font-bold text-dark-700 mb-3">
+                  <h3 className="text-2xl font-heading font-bold text-white mb-3">
                     Message Sent!
                   </h3>
-                  <p className="text-neutral-600 mb-6 max-w-md mx-auto">
+                  <p className="text-navy-300 mb-6 max-w-md mx-auto">
                     Thank you, {formData.name}. We&apos;ve received your message and
                     will get back to you within 1 business day.
                   </p>
-                  <p className="text-sm text-neutral-500">
+                  <p className="text-sm text-navy-400">
                     Need immediate help? Call{" "}
                     <a
                       href="tel:+12517251929"
@@ -178,18 +178,18 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Name */}
                     <div>
-                      <label className="block text-sm font-medium text-dark-700 mb-1.5">
-                        Full Name <span className="text-red-500">*</span>
+                      <label className="block text-sm font-medium text-white mb-1.5">
+                        Full Name <span className="text-red-400">*</span>
                       </label>
                       <input
                         type="text"
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => update("name", e.target.value)}
-                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm placeholder-neutral-400 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                       />
                       {errors.name && (
-                        <p className="flex items-center gap-1 text-red-500 text-xs mt-1">
+                        <p className="flex items-center gap-1 text-red-400 text-xs mt-1">
                           <AlertCircle className="w-3 h-3" />
                           {errors.name}
                         </p>
@@ -198,18 +198,18 @@ export default function ContactPage() {
 
                     {/* Email */}
                     <div>
-                      <label className="block text-sm font-medium text-dark-700 mb-1.5">
-                        Email Address <span className="text-red-500">*</span>
+                      <label className="block text-sm font-medium text-white mb-1.5">
+                        Email Address <span className="text-red-400">*</span>
                       </label>
                       <input
                         type="email"
                         placeholder="john@company.com"
                         value={formData.email}
                         onChange={(e) => update("email", e.target.value)}
-                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm placeholder-neutral-400 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                       />
                       {errors.email && (
-                        <p className="flex items-center gap-1 text-red-500 text-xs mt-1">
+                        <p className="flex items-center gap-1 text-red-400 text-xs mt-1">
                           <AlertCircle className="w-3 h-3" />
                           {errors.email}
                         </p>
@@ -220,7 +220,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Phone */}
                     <div>
-                      <label className="block text-sm font-medium text-dark-700 mb-1.5">
+                      <label className="block text-sm font-medium text-white mb-1.5">
                         Phone Number
                       </label>
                       <input
@@ -228,19 +228,19 @@ export default function ContactPage() {
                         placeholder="(251) 555-0123"
                         value={formData.phone}
                         onChange={(e) => update("phone", e.target.value)}
-                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm placeholder-neutral-400 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                       />
                     </div>
 
                     {/* Subject */}
                     <div>
-                      <label className="block text-sm font-medium text-dark-700 mb-1.5">
+                      <label className="block text-sm font-medium text-white mb-1.5">
                         Subject
                       </label>
                       <select
                         value={formData.subject}
                         onChange={(e) => update("subject", e.target.value)}
-                        className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm appearance-none focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm appearance-none focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
                       >
                         <option value="">Select a subject</option>
                         {subjects.map((s) => (
@@ -254,18 +254,18 @@ export default function ContactPage() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-sm font-medium text-dark-700 mb-1.5">
-                      Message <span className="text-red-500">*</span>
+                    <label className="block text-sm font-medium text-white mb-1.5">
+                      Message <span className="text-red-400">*</span>
                     </label>
                     <textarea
                       rows={5}
                       placeholder="Tell us how we can help..."
                       value={formData.message}
                       onChange={(e) => update("message", e.target.value)}
-                      className="w-full border border-neutral-300 rounded-lg px-4 py-3 text-dark-700 text-sm placeholder-neutral-400 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors resize-none"
+                      className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors resize-none"
                     />
                     {errors.message && (
-                      <p className="flex items-center gap-1 text-red-500 text-xs mt-1">
+                      <p className="flex items-center gap-1 text-red-400 text-xs mt-1">
                         <AlertCircle className="w-3 h-3" />
                         {errors.message}
                       </p>
@@ -274,7 +274,7 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="flex items-center gap-2 bg-gold-gradient text-dark-700 font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
+                    className="flex items-center gap-2 bg-gold-gradient text-navy-950 font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
                   >
                     Send Message
                     <ArrowRight className="w-4 h-4" />
@@ -288,7 +288,7 @@ export default function ContactPage() {
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Contact Information
               </p>
-              <h2 className="text-2xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-2xl font-heading font-bold text-white mb-6">
                 Reach Us Directly
               </h2>
 
@@ -299,7 +299,7 @@ export default function ContactPage() {
                       <detail.icon className="w-6 h-6 text-gold-400" />
                     </div>
                     <div>
-                      <h3 className="font-heading font-bold text-dark-700 mb-1">
+                      <h3 className="font-heading font-bold text-white mb-1">
                         {detail.title}
                       </h3>
                       {detail.lines.map((line) =>
@@ -307,14 +307,14 @@ export default function ContactPage() {
                           <a
                             key={line}
                             href={detail.href}
-                            className="block text-sm text-neutral-600 hover:text-gold-400 transition-colors"
+                            className="block text-sm text-navy-300 hover:text-gold-400 transition-colors"
                             target={detail.href.startsWith("http") ? "_blank" : undefined}
                             rel={detail.href.startsWith("http") ? "noopener noreferrer" : undefined}
                           >
                             {line}
                           </a>
                         ) : (
-                          <p key={line} className="text-sm text-neutral-600">
+                          <p key={line} className="text-sm text-navy-300">
                             {line}
                           </p>
                         )
@@ -325,8 +325,8 @@ export default function ContactPage() {
               </div>
 
               {/* Quick Links */}
-              <div className="bg-neutral-50 rounded-xl border border-neutral-200 p-6">
-                <h3 className="font-heading font-bold text-dark-700 mb-4">
+              <div className="bg-navy-900 rounded-xl border border-navy-800 p-6">
+                <h3 className="font-heading font-bold text-white mb-4">
                   Quick Links
                 </h3>
                 <div className="space-y-3">
@@ -339,7 +339,7 @@ export default function ContactPage() {
                     <Link
                       key={link.label}
                       href={link.href}
-                      className="flex items-center gap-2 text-sm text-neutral-600 hover:text-gold-400 transition-colors group"
+                      className="flex items-center gap-2 text-sm text-navy-300 hover:text-gold-400 transition-colors group"
                     >
                       <ArrowRight className="w-3.5 h-3.5 text-gold-400 group-hover:translate-x-1 transition-transform" />
                       {link.label}
@@ -355,23 +355,23 @@ export default function ContactPage() {
       {/* ============================================================= */}
       {/* GOOGLE MAPS                                                    */}
       {/* ============================================================= */}
-      <section className="bg-neutral-50">
+      <section className="bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <div className="text-center mb-10">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Location
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Find Us in Mobile, Alabama
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Conveniently located on Dauphin Street in downtown Mobile, with
               easy access to the Port of Mobile, I-65, and I-10.
             </p>
             <div className="section-divider mx-auto mt-6" />
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-xl border border-neutral-200">
+          <div className="rounded-2xl overflow-hidden shadow-xl border border-navy-800">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3440.5!2d-88.0435!3d30.6879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x889a4d3a6de5e3f7%3A0x0!2s456+Dauphin+St%2C+Mobile%2C+AL+36602!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
               width="100%"
@@ -389,13 +389,13 @@ export default function ContactPage() {
       {/* ============================================================= */}
       {/* OFFICE DETAILS                                                 */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Office
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Mobile, Alabama Headquarters
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -405,15 +405,15 @@ export default function ContactPage() {
             {officeFeatures.map((feature, i) => (
               <div
                 key={feature.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-100 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center mx-auto mb-5">
                   <feature.icon className="w-7 h-7 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-navy-300 leading-relaxed">
                   {feature.description}
                 </p>
               </div>

@@ -193,20 +193,20 @@ export default function WarehousingMobileALPage() {
           { label: "Services", href: "/gulf-coast-logistics" },
           { label: "Warehousing & Distribution" },
         ]}
-        backgroundImage="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=80"
+        backgroundImage="/images/warehouse.jpg"
       />
 
       {/* TRUST BADGES */}
       <TrustBadges variant="light" />
 
       {/* SERVICE OVERVIEW */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=80"
+                  src="/images/warehouse.jpg"
                   alt="Fairway Logistics warehouse and distribution center in Mobile AL"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -218,20 +218,20 @@ export default function WarehousingMobileALPage() {
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Mobile Warehousing
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Warehousing That{" "}
                 <span className="text-gold-gradient">Works With Your Fleet</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   Most warehouses store your goods. Fairway Logistics stores,
                   distributes, and transports them — all under one roof with one
                   company-owned operation.
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 Our warehouse facilities in Mobile, Alabama, are strategically
                 located minutes from the Port of Mobile and major interstate
                 corridors. This positioning allows us to receive import containers
@@ -240,7 +240,7 @@ export default function WarehousingMobileALPage() {
                 fleet — all without third-party handoffs.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Whether you need short-term storage during peak seasons, long-term
                 warehousing for ongoing inventory, cross-docking for time-sensitive
                 freight, or full pick-pack-ship fulfillment, our technology-enabled
@@ -259,7 +259,7 @@ export default function WarehousingMobileALPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -269,16 +269,16 @@ export default function WarehousingMobileALPage() {
       </section>
 
       {/* CAPABILITIES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Capabilities
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Warehouse & Distribution Services
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Comprehensive warehousing capabilities designed for importers,
               manufacturers, distributors, and retailers on the Gulf Coast.
             </p>
@@ -289,15 +289,15 @@ export default function WarehousingMobileALPage() {
             {capabilities.map((cap, i) => (
               <div
                 key={cap.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <cap.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {cap.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {cap.description}
                 </p>
               </div>
@@ -307,13 +307,13 @@ export default function WarehousingMobileALPage() {
       </section>
 
       {/* KEY ADVANTAGES */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               The Fairway Advantage
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Why Choose Fairway Warehousing
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -329,10 +329,10 @@ export default function WarehousingMobileALPage() {
                   <adv.icon className="w-7 h-7 text-gold-400" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                  <h3 className="text-lg font-heading font-bold text-white mb-2">
                     {adv.title}
                   </h3>
-                  <p className="text-neutral-600 leading-relaxed text-sm">
+                  <p className="text-navy-300 leading-relaxed text-sm">
                     {adv.description}
                   </p>
                 </div>
@@ -343,13 +343,13 @@ export default function WarehousingMobileALPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Getting Started
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               How Our Warehousing Works
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -361,10 +361,10 @@ export default function WarehousingMobileALPage() {
                 <div className="text-5xl font-heading font-bold text-gold-400/20 mb-3">
                   {item.step}
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {item.description}
                 </p>
                 {i < processSteps.length - 1 && (
@@ -379,17 +379,17 @@ export default function WarehousingMobileALPage() {
       </section>
 
       {/* STRATEGIC LOCATION */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Strategic Location
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Perfectly Positioned in Mobile, AL
               </h2>
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 Our warehouse location in Mobile provides exceptional access to
                 the Port of Mobile, Interstate 10, Interstate 65, and the Gulf
                 Coast&apos;s major commercial corridors. This strategic positioning
@@ -405,10 +405,10 @@ export default function WarehousingMobileALPage() {
                   { label: "Mobile Regional Airport", time: "20 minutes" },
                   { label: "CSX Intermodal Terminal", time: "15 minutes" },
                 ].map((item) => (
-                  <div key={item.label} className="flex items-center justify-between border-b border-neutral-100 pb-2">
+                  <div key={item.label} className="flex items-center justify-between border-b border-navy-800 pb-2">
                     <div className="flex items-center gap-2">
                       <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                      <span className="text-sm text-neutral-700">{item.label}</span>
+                      <span className="text-sm text-navy-200">{item.label}</span>
                     </div>
                     <span className="text-sm font-semibold text-gold-400">{item.time}</span>
                   </div>
@@ -419,7 +419,7 @@ export default function WarehousingMobileALPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1511578194003-00c80e42dc9b?w=1920&q=80"
+                  src="/images/warehouse.jpg"
                   alt="Strategic warehouse location near Port of Mobile"
                   className="w-full h-[400px] object-cover"
                 />
@@ -430,13 +430,13 @@ export default function WarehousingMobileALPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Warehousing FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -446,12 +446,12 @@ export default function WarehousingMobileALPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-navy-300 leading-relaxed text-sm">
                   {faq.answer}
                 </p>
               </div>
@@ -470,7 +470,7 @@ export default function WarehousingMobileALPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request a Warehousing Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Tell us about your storage and distribution needs. Our team will
               design a customized warehousing solution and respond within one
               business day.
@@ -481,13 +481,13 @@ export default function WarehousingMobileALPage() {
       </section>
 
       {/* RELATED SERVICES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Explore More
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Related Services
             </h2>
             <div className="section-divider mx-auto mt-6" />

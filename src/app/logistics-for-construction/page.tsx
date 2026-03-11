@@ -189,27 +189,27 @@ export default function LogisticsForConstructionPage() {
           { label: "Industries" },
           { label: "Construction & Materials" },
         ]}
-        backgroundImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
+        backgroundImage="/images/truck-road.jpg"
       />
 
       {/* TRUST BADGES */}
       <TrustBadges variant="light" />
 
       {/* INDUSTRY OVERVIEW */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Construction Industry
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 The Gulf Coast Construction Boom{" "}
                 <span className="text-gold-gradient">Needs Reliable Freight.</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   From commercial developments in downtown Mobile to
                   infrastructure projects along the I-10 corridor, the Gulf
                   Coast is in the middle of a sustained construction boom —
@@ -217,7 +217,7 @@ export default function LogisticsForConstructionPage() {
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 The construction industry across Alabama, Mississippi, and the
                 broader Gulf Coast region is experiencing record activity.
                 New commercial developments, residential subdivisions,
@@ -230,7 +230,7 @@ export default function LogisticsForConstructionPage() {
                 critical importance of material sequencing.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Fairway Logistics provides asset-based construction freight
                 services throughout the Gulf Coast. Our company-owned fleet
                 includes the flatbed, step deck, and dry van trailers that
@@ -250,7 +250,7 @@ export default function LogisticsForConstructionPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -259,7 +259,7 @@ export default function LogisticsForConstructionPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
+                  src="/images/truck-road.jpg"
                   alt="Construction site receiving material delivery"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -271,16 +271,16 @@ export default function LogisticsForConstructionPage() {
       </section>
 
       {/* CHALLENGES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Construction Challenges
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Freight Challenges in Construction
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Construction freight is unlike standard commercial shipping.
               Here are the challenges we solve for contractors and material
               suppliers every day.
@@ -292,15 +292,15 @@ export default function LogisticsForConstructionPage() {
             {challenges.map((challenge, i) => (
               <div
                 key={challenge.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${Math.min(i + 1, 6)}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${Math.min(i + 1, 6)}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <challenge.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {challenge.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {challenge.description}
                 </p>
               </div>
@@ -310,16 +310,16 @@ export default function LogisticsForConstructionPage() {
       </section>
 
       {/* SPECIALIZED SERVICES */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Services
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Specialized Construction Freight Services
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Purpose-built logistics for the construction industry, from bulk
               aggregates to precision-scheduled material deliveries.
             </p>
@@ -330,24 +330,24 @@ export default function LogisticsForConstructionPage() {
             {services.map((service, i) => (
               <div
                 key={service.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
                     <service.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {service.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                <p className="text-sm text-navy-300 leading-relaxed mb-4">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                      <span className="text-sm text-neutral-700">{feature}</span>
+                      <span className="text-sm text-navy-200">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -358,13 +358,13 @@ export default function LogisticsForConstructionPage() {
       </section>
 
       {/* MATERIAL TYPES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               What We Haul
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Construction Materials We Transport
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -374,10 +374,10 @@ export default function LogisticsForConstructionPage() {
             {materialTypes.map((material, i) => (
               <div
                 key={material}
-                className="bg-white rounded-xl border border-neutral-200 p-4 flex items-center gap-3 hover:shadow-lg hover:border-gold/30 transition-all duration-300"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-4 flex items-center gap-3 hover:shadow-lg hover:border-gold/30 transition-all duration-300"
               >
                 <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                <span className="text-sm font-medium text-dark-700">{material}</span>
+                <span className="text-sm font-medium text-white">{material}</span>
               </div>
             ))}
           </div>
@@ -385,13 +385,13 @@ export default function LogisticsForConstructionPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Construction Freight FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -401,12 +401,12 @@ export default function LogisticsForConstructionPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-neutral-50 rounded-xl border border-neutral-200 p-6"
+                className="bg-navy-900 rounded-xl border border-navy-800 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-navy-300 leading-relaxed text-sm">
                   {faq.answer}
                 </p>
               </div>
@@ -425,7 +425,7 @@ export default function LogisticsForConstructionPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request a Construction Freight Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Tell us about your construction project freight needs. We will
               provide a competitive rate and delivery plan tailored to your
               build schedule.

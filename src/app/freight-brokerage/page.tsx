@@ -194,34 +194,34 @@ export default function FreightBrokeragePage() {
           { label: "Services", href: "/gulf-coast-logistics" },
           { label: "Freight Brokerage" },
         ]}
-        backgroundImage="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80"
+        backgroundImage="/images/truck-road.jpg"
       />
 
       {/* TRUST BADGES */}
       <TrustBadges variant="light" />
 
       {/* SERVICE OVERVIEW */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Freight Brokerage
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Not Just a Broker.{" "}
                 <span className="text-gold-gradient">A Carrier That Brokers.</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   Most freight brokers have never loaded a truck, managed a
                   driver, or maintained a piece of equipment. Fairway Logistics
                   has. That experience makes us a fundamentally better brokerage.
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 As an asset-based logistics company that also operates a freight
                 brokerage, Fairway Logistics brings a unique perspective to carrier
                 selection and load management. We understand what it takes to
@@ -231,7 +231,7 @@ export default function FreightBrokeragePage() {
                 network.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Our hybrid model means you always get the best option: when our
                 fleet has capacity on your lane, you get the reliability of
                 asset-based service. When you need additional capacity, specialized
@@ -251,7 +251,7 @@ export default function FreightBrokeragePage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -260,7 +260,7 @@ export default function FreightBrokeragePage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80"
+                  src="/images/truckings.jpg"
                   alt="Freight brokerage operations and fleet management"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -272,16 +272,16 @@ export default function FreightBrokeragePage() {
       </section>
 
       {/* FREIGHT MODES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Coverage
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Freight Modes We Broker
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Access to the right equipment for every type of freight, sourced
               from a carrier network we have built and vetted ourselves.
             </p>
@@ -292,17 +292,17 @@ export default function FreightBrokeragePage() {
             {modes.map((mode, i) => (
               <div
                 key={mode.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
                     <mode.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {mode.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {mode.description}
                 </p>
               </div>
@@ -312,13 +312,13 @@ export default function FreightBrokeragePage() {
       </section>
 
       {/* BENEFITS */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Why Fairway
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               The Asset-Backed Brokerage Advantage
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -328,15 +328,15 @@ export default function FreightBrokeragePage() {
             {benefits.map((benefit, i) => (
               <div
                 key={benefit.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <benefit.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -346,13 +346,13 @@ export default function FreightBrokeragePage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Process
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               How Our Freight Brokerage Works
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -364,10 +364,10 @@ export default function FreightBrokeragePage() {
                 <div className="text-5xl font-heading font-bold text-gold-400/20 mb-3">
                   {item.step}
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {item.description}
                 </p>
                 {i < processSteps.length - 1 && (
@@ -382,13 +382,13 @@ export default function FreightBrokeragePage() {
       </section>
 
       {/* SERVICE AREA */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80"
+                  src="/images/truck-road.jpg"
                   alt="Freight brokerage coverage across the United States"
                   className="w-full h-[400px] object-cover"
                 />
@@ -399,10 +399,10 @@ export default function FreightBrokeragePage() {
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Nationwide Reach
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Gulf Coast Roots, National Coverage
               </h2>
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 While our asset-based fleet focuses on the Gulf Coast region, our
                 brokerage network provides carrier coverage across all 48
                 contiguous states. Whether your freight needs to move locally or
@@ -417,7 +417,7 @@ export default function FreightBrokeragePage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm text-neutral-700">{item}</span>
+                    <span className="text-sm text-navy-200">{item}</span>
                   </div>
                 ))}
               </div>
@@ -427,13 +427,13 @@ export default function FreightBrokeragePage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Freight Brokerage FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -443,12 +443,12 @@ export default function FreightBrokeragePage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-navy-300 leading-relaxed text-sm">
                   {faq.answer}
                 </p>
               </div>
@@ -467,7 +467,7 @@ export default function FreightBrokeragePage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request a Freight Brokerage Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Submit your shipment details and our team will match you with the
               optimal carrier at a competitive rate — typically within 30 minutes.
             </p>
@@ -477,13 +477,13 @@ export default function FreightBrokeragePage() {
       </section>
 
       {/* RELATED SERVICES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Explore More
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Related Services
             </h2>
             <div className="section-divider mx-auto mt-6" />

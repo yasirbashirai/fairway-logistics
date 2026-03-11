@@ -222,34 +222,34 @@ export default function ImportExportLogisticsPage() {
           { label: "Services", href: "/gulf-coast-logistics" },
           { label: "Import & Export Logistics" },
         ]}
-        backgroundImage="https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=1920&q=80"
+        backgroundImage="/images/gulf-coast.jpg"
       />
 
       {/* TRUST BADGES */}
       <TrustBadges variant="light" />
 
       {/* SERVICE OVERVIEW */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 International Logistics
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 From the Vessel to{" "}
                 <span className="text-gold-gradient">Your Customer&apos;s Door</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   International trade through the Gulf Coast is growing rapidly.
                   Fairway Logistics provides the domestic logistics infrastructure
                   that connects global trade routes to regional markets.
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 When your containers arrive at a Gulf Coast port, the complexity is
                 just beginning. Customs clearance, terminal coordination, chassis
                 availability, drayage, transloading, warehousing, and final
@@ -259,7 +259,7 @@ export default function ImportExportLogisticsPage() {
                 own team at the port.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Unlike freight forwarders who subcontract every domestic leg, our
                 asset-based model means your import containers are picked up on our
                 drayage fleet, transloaded at our warehouse, and distributed on our
@@ -279,7 +279,7 @@ export default function ImportExportLogisticsPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -288,7 +288,7 @@ export default function ImportExportLogisticsPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1920&q=80"
+                  src="/images/gulf-coast.jpg"
                   alt="Aerial view of Gulf Coast port with import export container operations"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -300,16 +300,16 @@ export default function ImportExportLogisticsPage() {
       </section>
 
       {/* SERVICES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Services
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Import & Export Logistics Services
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Comprehensive international trade logistics covering every
               domestic touchpoint from port arrival to final delivery.
             </p>
@@ -320,15 +320,15 @@ export default function ImportExportLogisticsPage() {
             {services.map((service, i) => (
               <div
                 key={service.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <service.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {service.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -338,16 +338,16 @@ export default function ImportExportLogisticsPage() {
       </section>
 
       {/* TRADE LANES */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Trade Lanes
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Key Trade Routes Through the Gulf Coast
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               The Gulf Coast connects global trade routes to the American
               Southeast, Midwest, and beyond.
             </p>
@@ -358,17 +358,17 @@ export default function ImportExportLogisticsPage() {
             {tradeLanes.map((lane, i) => (
               <div
                 key={lane.region}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
                     <Globe className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {lane.region}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                <p className="text-sm text-navy-300 leading-relaxed mb-4">
                   {lane.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -388,13 +388,13 @@ export default function ImportExportLogisticsPage() {
       </section>
 
       {/* KEY ADVANTAGES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Why Fairway
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               The Integrated Logistics Advantage
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -410,10 +410,10 @@ export default function ImportExportLogisticsPage() {
                   <adv.icon className="w-7 h-7 text-gold-400" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                  <h3 className="text-lg font-heading font-bold text-white mb-2">
                     {adv.title}
                   </h3>
-                  <p className="text-neutral-600 leading-relaxed text-sm">
+                  <p className="text-navy-300 leading-relaxed text-sm">
                     {adv.description}
                   </p>
                 </div>
@@ -424,13 +424,13 @@ export default function ImportExportLogisticsPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Process
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               How Import & Export Logistics Works
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -442,10 +442,10 @@ export default function ImportExportLogisticsPage() {
                 <div className="text-5xl font-heading font-bold text-gold-400/20 mb-3">
                   {item.step}
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {item.description}
                 </p>
                 {i < processSteps.length - 1 && (
@@ -460,13 +460,13 @@ export default function ImportExportLogisticsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Import & Export Logistics FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -476,12 +476,12 @@ export default function ImportExportLogisticsPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-navy-300 leading-relaxed text-sm">
                   {faq.answer}
                 </p>
               </div>
@@ -500,7 +500,7 @@ export default function ImportExportLogisticsPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request an Import/Export Logistics Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Tell us about your international freight needs and our team will
               design a comprehensive logistics solution for your trade lane.
             </p>
@@ -510,13 +510,13 @@ export default function ImportExportLogisticsPage() {
       </section>
 
       {/* RELATED SERVICES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Explore More
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Related Services
             </h2>
             <div className="section-divider mx-auto mt-6" />

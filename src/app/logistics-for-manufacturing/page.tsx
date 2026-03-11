@@ -196,27 +196,27 @@ export default function LogisticsForManufacturingPage() {
           { label: "Industries" },
           { label: "Manufacturing Logistics" },
         ]}
-        backgroundImage="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80"
+        backgroundImage="/images/warehouse.jpg"
       />
 
       {/* TRUST BADGES */}
       <TrustBadges variant="light" />
 
       {/* INDUSTRY OVERVIEW */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Manufacturing Industry
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 The Gulf Coast Manufacturing Economy{" "}
                 <span className="text-gold-gradient">Runs on Reliable Freight.</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   From automotive assembly plants in Alabama to petrochemical
                   facilities along the I-10 corridor, Gulf Coast manufacturing
                   depends on logistics partners who can deliver raw materials on
@@ -224,7 +224,7 @@ export default function LogisticsForManufacturingPage() {
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 The Gulf Coast region has experienced significant growth in
                 advanced manufacturing over the past decade. Major automotive
                 OEMs, aerospace companies including Airbus, steel producers,
@@ -235,7 +235,7 @@ export default function LogisticsForManufacturingPage() {
                 production-driven supply chains.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Fairway Logistics serves this sector as an asset-based carrier
                 with deep roots in the Gulf Coast industrial economy. We do not
                 simply move freight — we integrate into your production workflow
@@ -256,7 +256,7 @@ export default function LogisticsForManufacturingPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -265,7 +265,7 @@ export default function LogisticsForManufacturingPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80"
+                  src="/images/warehouse.jpg"
                   alt="Manufacturing facility receiving freight delivery"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -277,16 +277,16 @@ export default function LogisticsForManufacturingPage() {
       </section>
 
       {/* CHALLENGES WE SOLVE */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Manufacturing Challenges
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Logistics Challenges We Solve for Manufacturers
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Manufacturing supply chains face unique pressures that generic
               freight providers are not equipped to handle. Here is how Fairway
               addresses them.
@@ -298,15 +298,15 @@ export default function LogisticsForManufacturingPage() {
             {challenges.map((challenge, i) => (
               <div
                 key={challenge.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${Math.min(i + 1, 6)}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${Math.min(i + 1, 6)}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <challenge.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {challenge.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {challenge.description}
                 </p>
               </div>
@@ -316,16 +316,16 @@ export default function LogisticsForManufacturingPage() {
       </section>
 
       {/* SERVICES FOR MANUFACTURERS */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Services
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Freight Services for Manufacturers
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Tailored logistics solutions designed for the unique demands of
               manufacturing operations — from inbound raw materials to outbound
               finished goods.
@@ -337,24 +337,24 @@ export default function LogisticsForManufacturingPage() {
             {services.map((service, i) => (
               <div
                 key={service.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
                     <service.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {service.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                <p className="text-sm text-navy-300 leading-relaxed mb-4">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                      <span className="text-sm text-neutral-700">{feature}</span>
+                      <span className="text-sm text-navy-200">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -365,13 +365,13 @@ export default function LogisticsForManufacturingPage() {
       </section>
 
       {/* MANUFACTURING SECTORS */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Sectors We Serve
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Gulf Coast Manufacturing Sectors
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -381,15 +381,15 @@ export default function LogisticsForManufacturingPage() {
             {sectors.map((sector, i) => (
               <div
                 key={sector.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <Factory className="w-6 h-6 text-gold-400" />
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {sector.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {sector.description}
                 </p>
               </div>
@@ -399,16 +399,16 @@ export default function LogisticsForManufacturingPage() {
       </section>
 
       {/* CASE STUDY PLACEHOLDER */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-neutral-50 rounded-2xl border border-neutral-200 p-8 sm:p-12">
+          <div className="bg-navy-900 rounded-2xl border border-navy-800 p-8 sm:p-12">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
               Case Study
             </p>
-            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-dark-700 mb-4">
+            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-4">
               How a Gulf Coast Auto Parts Manufacturer Reduced Logistics Costs by 18%
             </h2>
-            <p className="text-neutral-600 leading-relaxed mb-6">
+            <p className="text-navy-300 leading-relaxed mb-6">
               A tier-two automotive supplier in Mobile was experiencing frequent
               delivery delays and unpredictable costs through their previous
               broker-based logistics arrangement. After switching to Fairway
@@ -420,15 +420,15 @@ export default function LogisticsForManufacturingPage() {
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center">
                 <p className="text-2xl font-bold text-gold-gradient">98.5%</p>
-                <p className="text-sm text-neutral-500 mt-1">On-Time Rate</p>
+                <p className="text-sm text-navy-400 mt-1">On-Time Rate</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-gold-gradient">18%</p>
-                <p className="text-sm text-neutral-500 mt-1">Cost Reduction</p>
+                <p className="text-sm text-navy-400 mt-1">Cost Reduction</p>
               </div>
               <div className="text-center">
                 <p className="text-2xl font-bold text-gold-gradient">0</p>
-                <p className="text-sm text-neutral-500 mt-1">Line Stoppages</p>
+                <p className="text-sm text-navy-400 mt-1">Line Stoppages</p>
               </div>
             </div>
           </div>
@@ -436,13 +436,13 @@ export default function LogisticsForManufacturingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Manufacturing Logistics FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -452,12 +452,12 @@ export default function LogisticsForManufacturingPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-navy-300 leading-relaxed text-sm">
                   {faq.answer}
                 </p>
               </div>
@@ -476,7 +476,7 @@ export default function LogisticsForManufacturingPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request a Manufacturing Logistics Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Tell us about your manufacturing freight needs and our team will
               provide a competitive, all-inclusive rate within 2 business hours.
             </p>

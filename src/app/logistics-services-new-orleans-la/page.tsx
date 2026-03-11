@@ -107,7 +107,7 @@ export default function LogisticsServicesNewOrleansLA() {
       <PageHero
         title="Logistics Services in New Orleans, Louisiana"
         subtitle="Connecting the Port of New Orleans, the Mississippi River petrochemical corridor, and the Crescent City's vibrant hospitality economy with asset-based Gulf Coast logistics."
-        backgroundImage="https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=1920&q=80"
+        backgroundImage="/images/trucks.jpg"
         breadcrumbs={[
           { label: "Gulf Coast Logistics", href: "/gulf-coast-logistics" },
           { label: "New Orleans, LA" },
@@ -115,17 +115,17 @@ export default function LogisticsServicesNewOrleansLA() {
       />
 
       {/* ---------- Regional Overview ---------- */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="animate-fade-in-up">
               <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
                 New Orleans Coverage
               </span>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2 mb-6">
                 New Orleans: America&apos;s Most Strategic Port City
               </h2>
-              <div className="space-y-4 text-neutral-600 leading-relaxed">
+              <div className="space-y-4 text-navy-300 leading-relaxed">
                 <p>
                   New Orleans occupies what may be the most strategically important
                   logistics position in North America. Situated at the mouth of the
@@ -159,8 +159,8 @@ export default function LogisticsServicesNewOrleansLA() {
             </div>
 
             <div className="animate-fade-in-up stagger-2">
-              <div className="bg-neutral-50 rounded-xl p-8 border border-neutral-200">
-                <h3 className="text-xl font-heading font-bold text-dark-700 mb-6 flex items-center gap-2">
+              <div className="bg-navy-900 rounded-xl p-8 border border-navy-800">
+                <h3 className="text-xl font-heading font-bold text-white mb-6 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-gold-400" />
                   New Orleans Logistics Snapshot
                 </h3>
@@ -177,7 +177,7 @@ export default function LogisticsServicesNewOrleansLA() {
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700 text-sm">{item}</span>
+                      <span className="text-navy-200 text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -188,16 +188,16 @@ export default function LogisticsServicesNewOrleansLA() {
       </section>
 
       {/* ---------- Services ---------- */}
-      <section className="py-16 sm:py-20 bg-neutral-50">
+      <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Our Services
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Logistics & Freight Services in New Orleans
             </h2>
-            <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-300 mt-4 max-w-2xl mx-auto">
               Comprehensive logistics solutions for one of America&apos;s busiest port
               cities — from container drayage to petrochemical freight and hospitality
               supply chains.
@@ -285,16 +285,16 @@ export default function LogisticsServicesNewOrleansLA() {
       <MetricsSection />
 
       {/* ---------- Local Advantages ---------- */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Strategic Value
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Why New Orleans Is a Critical Logistics Market
             </h2>
-            <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-300 mt-4 max-w-2xl mx-auto">
               The Crescent City&apos;s position at the mouth of the Mississippi River
               and the junction of major interstates makes it indispensable to Gulf
               Coast and national supply chains.
@@ -307,10 +307,10 @@ export default function LogisticsServicesNewOrleansLA() {
                 key={i}
                 className={`gold-border-left pl-6 py-4 animate-fade-in-up stagger-${i + 1}`}
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {advantage.title}
                 </h3>
-                <p className="text-neutral-600 text-sm leading-relaxed">
+                <p className="text-navy-300 text-sm leading-relaxed">
                   {advantage.description}
                 </p>
               </div>
@@ -323,13 +323,13 @@ export default function LogisticsServicesNewOrleansLA() {
       <TrustBadges variant="light" />
 
       {/* ---------- FAQ ---------- */}
-      <section className="py-16 sm:py-20 bg-neutral-50">
+      <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Common Questions
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               New Orleans Logistics FAQs
             </h2>
           </div>
@@ -338,12 +338,12 @@ export default function LogisticsServicesNewOrleansLA() {
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl border border-neutral-200 p-6 animate-fade-in-up"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6 animate-fade-in-up"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">{faq.answer}</p>
+                <p className="text-navy-300 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -351,16 +351,16 @@ export default function LogisticsServicesNewOrleansLA() {
       </section>
 
       {/* ---------- Quote Form ---------- */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Get Started
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Request a Quote for New Orleans Logistics
             </h2>
-            <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-300 mt-4 max-w-2xl mx-auto">
               Whether you need containers drayed from Port NOLA, chemicals hauled along
               the river corridor, or supplies delivered to a French Quarter restaurant,
               Fairway Logistics has the capacity and expertise. Call{" "}

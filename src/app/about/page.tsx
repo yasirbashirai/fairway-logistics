@@ -88,8 +88,7 @@ const whyChooseUs = [
       "Fleet maintained to DOT standards",
       "Driver teams available for expedited freight",
     ],
-    image:
-      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80",
+    image: "/images/trucks.jpg",
     imageAlt: "Fairway Logistics fleet trucks on highway",
   },
   {
@@ -103,8 +102,7 @@ const whyChooseUs = [
       "Knowledge of Gulf Coast routes & regulations",
       "Established relationships with port authorities",
     ],
-    image:
-      "https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=1920&q=80",
+    image: "/images/truck-road.jpg",
     imageAlt: "Port of Mobile container operations",
   },
   {
@@ -118,8 +116,7 @@ const whyChooseUs = [
       "Automated status notifications",
       "Digital documentation & PODs",
     ],
-    image:
-      "https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=80",
+    image: "/images/warehouse.jpg",
     imageAlt: "Modern warehouse with logistics technology",
   },
   {
@@ -133,8 +130,7 @@ const whyChooseUs = [
       "Rigorous driver qualification program",
       "Regular safety audits & inspections",
     ],
-    image:
-      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80",
+    image: "/images/truckings.jpg",
     imageAlt: "Fairway Logistics team and safety operations",
   },
 ];
@@ -145,29 +141,25 @@ const team = [
     name: "James Carter",
     title: "Founder & CEO",
     bio: "20+ years in Gulf Coast freight and port operations. Founded Fairway Logistics to bring asset-based reliability to the regional market.",
-    image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80",
+    image: "/images/main.jpg",
   },
   {
     name: "Michelle Torres",
     title: "VP of Operations",
     bio: "Former port operations manager with deep expertise in drayage, intermodal logistics, and carrier management across the Gulf Coast.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
+    image: "/images/main.jpg",
   },
   {
     name: "Robert Williams",
     title: "Director of Safety & Compliance",
     bio: "15 years ensuring FMCSA compliance, driver safety programs, and DOT audit readiness. Maintains Fairway's impeccable safety record.",
-    image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80",
+    image: "/images/main.jpg",
   },
   {
     name: "Angela Davis",
     title: "Director of Business Development",
     bio: "Specializes in building long-term logistics partnerships across manufacturing, construction, and energy industries on the Gulf Coast.",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&q=80",
+    image: "/images/main.jpg",
   },
 ];
 
@@ -181,20 +173,20 @@ export default function AboutPage() {
         title="About Fairway Logistics"
         subtitle="Asset-based logistics solutions built on Gulf Coast expertise, company-owned equipment, and an unwavering commitment to reliability."
         breadcrumbs={[{ label: "About" }]}
-        backgroundImage="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80"
+        backgroundImage="/images/hero.jpg"
       />
 
       {/* ============================================================= */}
       {/* SECTION 2 — COMPANY STORY                                      */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Image */}
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=1920&q=80"
+                  src="/images/trucks.jpg"
                   alt="Port of Mobile operations - Fairway Logistics"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -208,20 +200,20 @@ export default function AboutPage() {
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Our Story
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Built on the Gulf Coast.{" "}
                 <span className="text-gold-gradient">Built to Deliver.</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   Fairway Logistics was founded with a simple belief: shippers
                   deserve a logistics partner who actually owns the trucks, knows
                   the ports, and picks up the phone when it matters.
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 Headquartered at 456 Dauphin Street in Mobile, Alabama, we
                 started as a single-truck drayage operation at the Port of
                 Mobile. Over the years, we&apos;ve grown into a full-service,
@@ -229,7 +221,7 @@ export default function AboutPage() {
                 region and beyond.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Today, our fleet handles everything from container drayage and
                 full truckload shipping to warehousing and specialized freight.
                 But our mission remains the same: provide reliable, transparent,
@@ -248,7 +240,7 @@ export default function AboutPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">
+                    <span className="text-sm font-medium text-white">
                       {item}
                     </span>
                   </div>
@@ -262,17 +254,17 @@ export default function AboutPage() {
       {/* ============================================================= */}
       {/* SECTION 3 — OUR VALUES                                         */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               What Drives Us
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Our Core Values
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               These are the principles that guide every decision we make,
               every load we haul, and every relationship we build.
             </p>
@@ -284,15 +276,15 @@ export default function AboutPage() {
             {values.map((value, i) => (
               <div
                 key={value.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center mx-auto mb-5">
                   <value.icon className="w-7 h-7 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {value.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {value.description}
                 </p>
               </div>
@@ -304,14 +296,14 @@ export default function AboutPage() {
       {/* ============================================================= */}
       {/* SECTION 4 — WHY CHOOSE US                                      */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               The Fairway Advantage
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Why Choose Fairway Logistics
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -345,12 +337,12 @@ export default function AboutPage() {
                     <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
                       <item.icon className="w-6 h-6 text-gold-400" />
                     </div>
-                    <h3 className="text-2xl font-heading font-bold text-dark-700">
+                    <h3 className="text-2xl font-heading font-bold text-white">
                       {item.title}
                     </h3>
                   </div>
 
-                  <p className="text-neutral-600 leading-relaxed mb-6">
+                  <p className="text-navy-300 leading-relaxed mb-6">
                     {item.description}
                   </p>
 
@@ -361,7 +353,7 @@ export default function AboutPage() {
                         className="flex items-center gap-3"
                       >
                         <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                        <span className="text-sm text-neutral-700">
+                        <span className="text-sm text-navy-200">
                           {bullet}
                         </span>
                       </li>
@@ -377,17 +369,17 @@ export default function AboutPage() {
       {/* ============================================================= */}
       {/* SECTION 5 — LEADERSHIP / TEAM                                  */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           {/* Header */}
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Team
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Leadership That Delivers
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Our leadership team brings decades of combined experience in
               freight, port operations, and supply chain management.
             </p>
@@ -399,7 +391,7 @@ export default function AboutPage() {
             {team.map((member, i) => (
               <div
                 key={member.name}
-                className={`bg-white rounded-xl border border-neutral-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 {/* Photo */}
                 <div className="h-56 overflow-hidden">
@@ -413,13 +405,13 @@ export default function AboutPage() {
                 <div className="h-1 bg-gold-gradient" />
                 {/* Info */}
                 <div className="p-5">
-                  <h3 className="font-heading font-bold text-dark-700 text-lg">
+                  <h3 className="font-heading font-bold text-white text-lg">
                     {member.name}
                   </h3>
                   <p className="text-gold-400 text-sm font-semibold mb-2">
                     {member.title}
                   </p>
-                  <p className="text-neutral-600 text-sm leading-relaxed">
+                  <p className="text-navy-300 text-sm leading-relaxed">
                     {member.bio}
                   </p>
                 </div>

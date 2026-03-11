@@ -18,7 +18,7 @@ export default function CTASection({
   secondaryButtonHref,
 }: CTASectionProps) {
   return (
-    <section className="bg-dark-700 relative overflow-hidden py-16 sm:py-24">
+    <section className="bg-navy-950 relative overflow-hidden py-16 sm:py-24">
       {/* Gold decorative gradient line at top */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gold-gradient" />
 
@@ -34,14 +34,14 @@ export default function CTASection({
         {/* Section divider */}
         <div className="section-divider mx-auto mt-4 mb-8" />
 
-        <p className="text-neutral-400 mt-4 text-lg max-w-2xl mx-auto">
+        <p className="text-navy-300 mt-4 text-lg max-w-2xl mx-auto">
           {description}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
           <Link
             href={primaryButtonHref}
-            className="bg-gold-gradient text-dark-700 font-bold px-8 py-4 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
+            className="bg-gold-gradient text-navy-950 font-bold px-8 py-4 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
           >
             {primaryButtonText}
           </Link>

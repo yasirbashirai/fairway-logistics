@@ -190,26 +190,26 @@ export default function GovernmentMunicipalLogisticsPage() {
           { label: "Industries" },
           { label: "Government & Municipal" },
         ]}
-        backgroundImage="https://images.unsplash.com/photo-1523292562811-8fa7962a78c8?w=1920&q=80"
+        backgroundImage="/images/hero.jpg"
       />
 
       {/* TRUST BADGES */}
       <TrustBadges variant="light" />
 
       {/* CAPABILITIES OVERVIEW */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
               Government Logistics
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
               Reliable Freight for{" "}
               <span className="text-gold-gradient">Government Operations.</span>
             </h2>
 
             <div className="gold-border-left pl-6 mb-6">
-              <p className="text-neutral-600 leading-relaxed text-lg">
+              <p className="text-navy-300 leading-relaxed text-lg">
                 Government agencies at every level need logistics partners
                 who deliver on time, maintain full compliance, and provide
                 the accountability that public-sector operations demand.
@@ -219,7 +219,7 @@ export default function GovernmentMunicipalLogisticsPage() {
               </p>
             </div>
 
-            <p className="text-neutral-600 leading-relaxed mb-6">
+            <p className="text-navy-300 leading-relaxed mb-6">
               The Southeast United States is home to dozens of federal
               agencies, military installations, state departments, and
               municipal governments that require consistent, reliable freight
@@ -230,7 +230,7 @@ export default function GovernmentMunicipalLogisticsPage() {
               taxpayer-funded operations require.
             </p>
 
-            <p className="text-neutral-600 leading-relaxed">
+            <p className="text-navy-300 leading-relaxed">
               Fairway Logistics is uniquely positioned to serve government
               clients as an asset-based carrier headquartered in Mobile,
               Alabama — a city with deep connections to military operations,
@@ -247,24 +247,24 @@ export default function GovernmentMunicipalLogisticsPage() {
             {capabilities.map((cap, i) => (
               <div
                 key={cap.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
                     <cap.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {cap.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                <p className="text-sm text-navy-300 leading-relaxed mb-4">
                   {cap.description}
                 </p>
                 <ul className="space-y-2">
                   {cap.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                      <span className="text-sm text-neutral-700">{feature}</span>
+                      <span className="text-sm text-navy-200">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -275,16 +275,16 @@ export default function GovernmentMunicipalLogisticsPage() {
       </section>
 
       {/* COMPLIANCE & SECURITY */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Compliance & Security
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Meeting Government Standards
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Government logistics requires a higher standard of compliance,
               documentation, and accountability. Here is how Fairway meets
               these requirements.
@@ -296,15 +296,15 @@ export default function GovernmentMunicipalLogisticsPage() {
             {complianceItems.map((item, i) => (
               <div
                 key={item.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -314,13 +314,13 @@ export default function GovernmentMunicipalLogisticsPage() {
       </section>
 
       {/* GOVERNMENT EXPERIENCE */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Experience
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Government Sector Experience
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -330,15 +330,15 @@ export default function GovernmentMunicipalLogisticsPage() {
             {governmentExperience.map((exp, i) => (
               <div
                 key={exp.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <Landmark className="w-6 h-6 text-gold-400" />
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {exp.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {exp.description}
                 </p>
               </div>
@@ -348,13 +348,13 @@ export default function GovernmentMunicipalLogisticsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Government Logistics FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -364,12 +364,12 @@ export default function GovernmentMunicipalLogisticsPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-navy-300 leading-relaxed text-sm">
                   {faq.answer}
                 </p>
               </div>
@@ -388,7 +388,7 @@ export default function GovernmentMunicipalLogisticsPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request a Government Logistics Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Tell us about your government agency&apos;s freight requirements.
               We will provide a compliant, competitive solution tailored to
               your needs.

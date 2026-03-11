@@ -3,23 +3,16 @@
 import { useState } from "react";
 import { CheckCircle, ArrowRight, ArrowLeft, AlertCircle } from "lucide-react";
 
-/* ------------------------------------------------------------------ */
-/*  Types                                                              */
-/* ------------------------------------------------------------------ */
-
 interface FormData {
-  /* Step 1 — Shipment */
   origin: string;
   destination: string;
   freightType: string;
   equipmentNeeds: string;
-  /* Step 2 — Cargo */
   weight: string;
   dimensions: string;
   commodity: string;
   specialRequirements: string;
   hazmat: boolean;
-  /* Step 3 — Contact */
   fullName: string;
   company: string;
   email: string;
@@ -57,28 +50,16 @@ const freightTypes = [
 
 const contactMethods = ["Phone", "Email", "Either"];
 
-/* ------------------------------------------------------------------ */
-/*  Step Configuration                                                 */
-/* ------------------------------------------------------------------ */
-
 const steps = [
   { num: 1, label: "Shipment" },
   { num: 2, label: "Cargo" },
   { num: 3, label: "Contact" },
 ];
 
-/* ------------------------------------------------------------------ */
-/*  Shared Styles                                                      */
-/* ------------------------------------------------------------------ */
-
 const inputClass =
-  "w-full bg-dark-700 border border-neutral-600 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:border-gold-400 focus:ring-1 focus:ring-gold-400/30 transition";
+  "w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold-400/30 transition outline-none";
 
-const labelClass = "text-sm font-semibold text-neutral-300 mb-1.5 block";
-
-/* ------------------------------------------------------------------ */
-/*  Component                                                          */
-/* ------------------------------------------------------------------ */
+const labelClass = "text-sm font-semibold text-navy-200 mb-1.5 block";
 
 export default function QuoteForm() {
   const [step, setStep] = useState(1);
@@ -86,13 +67,11 @@ export default function QuoteForm() {
   const [errors, setErrors] = useState<Partial<Record<string, string>>>({});
   const [submitted, setSubmitted] = useState(false);
 
-  /* Update a text field */
   const update = (field: keyof FormData, value: string | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
-  /* Per-step validation */
   const validate = (): boolean => {
     const errs: Record<string, string> = {};
 
@@ -138,14 +117,9 @@ export default function QuoteForm() {
     setErrors({});
   };
 
-  /* ---------------------------------------------------------------- */
-  /*  Success State                                                    */
-  /* ---------------------------------------------------------------- */
-
   if (submitted) {
     return (
-      <div className="bg-dark-600 rounded-2xl p-8 sm:p-10 max-w-3xl mx-auto border border-neutral-700 text-center">
-        {/* Green checkmark circle */}
+      <div className="glass-card rounded-2xl p-8 sm:p-10 max-w-3xl mx-auto text-center">
         <div className="w-20 h-20 bg-fwgreen-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle className="w-10 h-10 text-white" />
         </div>
@@ -153,11 +127,11 @@ export default function QuoteForm() {
         <h3 className="text-2xl sm:text-3xl font-heading font-bold text-white mb-4">
           Quote Request Submitted!
         </h3>
-        <p className="text-neutral-400 mb-2 max-w-lg mx-auto leading-relaxed">
+        <p className="text-navy-300 mb-2 max-w-lg mx-auto leading-relaxed">
           Thank you, {formData.fullName}. Our logistics team will review your
           shipment details and respond within 2 business hours.
         </p>
-        <p className="text-sm text-neutral-500 mb-8">
+        <p className="text-sm text-navy-400 mb-8">
           Need immediate assistance? Call{" "}
           <a href="tel:+12517251929" className="text-gold-400 hover:underline">
             (251) 725-1929
@@ -166,7 +140,7 @@ export default function QuoteForm() {
 
         <button
           onClick={resetForm}
-          className="bg-gold-gradient text-dark-700 font-bold px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all"
+          className="bg-gold-gradient text-navy-950 font-bold px-8 py-3 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all"
         >
           Submit Another
         </button>
@@ -174,28 +148,23 @@ export default function QuoteForm() {
     );
   }
 
-  /* ---------------------------------------------------------------- */
-  /*  Form                                                             */
-  /* ---------------------------------------------------------------- */
-
   return (
     <form
-      className="quote-form bg-dark-600 rounded-2xl p-8 sm:p-10 max-w-3xl mx-auto border border-neutral-700"
+      className="quote-form glass-card rounded-2xl p-8 sm:p-10 max-w-3xl mx-auto"
       onSubmit={(e) => e.preventDefault()}
     >
       {/* ---- Progress Bar ---- */}
       <div className="flex items-center justify-center mb-10">
         {steps.map((s, i) => (
           <div key={s.num} className="flex items-center">
-            {/* Step circle */}
             <div className="flex flex-col items-center">
               <div
                 className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
                   step > s.num
                     ? "bg-fwgreen-500 text-white"
                     : step === s.num
-                    ? "bg-gold-400 text-dark-700"
-                    : "bg-neutral-600 text-neutral-400"
+                    ? "bg-gold-400 text-navy-950"
+                    : "bg-navy-700 text-navy-400"
                 }`}
               >
                 {step > s.num ? (
@@ -206,16 +175,15 @@ export default function QuoteForm() {
               </div>
               <span
                 className={`mt-2 text-xs font-semibold transition-colors ${
-                  step >= s.num ? "text-white" : "text-neutral-500"
+                  step >= s.num ? "text-white" : "text-navy-500"
                 }`}
               >
                 {s.label}
               </span>
             </div>
 
-            {/* Connecting line */}
             {i < steps.length - 1 && (
-              <div className="w-16 sm:w-24 h-0.5 mx-3 mb-6 rounded-full overflow-hidden bg-neutral-600">
+              <div className="w-16 sm:w-24 h-0.5 mx-3 mb-6 rounded-full overflow-hidden bg-navy-700">
                 <div
                   className={`h-full bg-fwgreen-500 transition-all duration-500 ${
                     step > s.num ? "w-full" : "w-0"
@@ -234,13 +202,12 @@ export default function QuoteForm() {
             <h3 className="text-xl font-heading font-bold text-white mb-1">
               Shipment Details
             </h3>
-            <p className="text-sm text-neutral-400">
+            <p className="text-sm text-navy-400">
               Tell us where your freight needs to go.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {/* Origin */}
             <div>
               <label className={labelClass}>
                 Origin <span className="text-gold-400">*</span>
@@ -255,7 +222,6 @@ export default function QuoteForm() {
               {errors.origin && <FieldError msg={errors.origin} />}
             </div>
 
-            {/* Destination */}
             <div>
               <label className={labelClass}>
                 Destination <span className="text-gold-400">*</span>
@@ -271,7 +237,6 @@ export default function QuoteForm() {
             </div>
           </div>
 
-          {/* Freight Type */}
           <div>
             <label className={labelClass}>
               Freight Type <span className="text-gold-400">*</span>
@@ -281,11 +246,11 @@ export default function QuoteForm() {
               onChange={(e) => update("freightType", e.target.value)}
               className={inputClass + " appearance-none"}
             >
-              <option value="" className="bg-dark-700">
+              <option value="" className="bg-navy-950">
                 Select freight type
               </option>
               {freightTypes.map((ft) => (
-                <option key={ft} value={ft} className="bg-dark-700">
+                <option key={ft} value={ft} className="bg-navy-950">
                   {ft}
                 </option>
               ))}
@@ -293,7 +258,6 @@ export default function QuoteForm() {
             {errors.freightType && <FieldError msg={errors.freightType} />}
           </div>
 
-          {/* Equipment Needs */}
           <div>
             <label className={labelClass}>Equipment Needs</label>
             <input
@@ -314,13 +278,12 @@ export default function QuoteForm() {
             <h3 className="text-xl font-heading font-bold text-white mb-1">
               Cargo Details
             </h3>
-            <p className="text-sm text-neutral-400">
+            <p className="text-sm text-navy-400">
               Provide details about your cargo for an accurate quote.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {/* Weight */}
             <div>
               <label className={labelClass}>
                 Weight (lbs) <span className="text-gold-400">*</span>
@@ -335,7 +298,6 @@ export default function QuoteForm() {
               {errors.weight && <FieldError msg={errors.weight} />}
             </div>
 
-            {/* Dimensions */}
             <div>
               <label className={labelClass}>Dimensions</label>
               <input
@@ -348,7 +310,6 @@ export default function QuoteForm() {
             </div>
           </div>
 
-          {/* Commodity Description */}
           <div>
             <label className={labelClass}>
               Commodity Description <span className="text-gold-400">*</span>
@@ -363,7 +324,6 @@ export default function QuoteForm() {
             {errors.commodity && <FieldError msg={errors.commodity} />}
           </div>
 
-          {/* Special Requirements */}
           <div>
             <label className={labelClass}>Special Requirements</label>
             <textarea
@@ -375,16 +335,15 @@ export default function QuoteForm() {
             />
           </div>
 
-          {/* Hazmat Checkbox */}
           <div className="flex items-center gap-3 pt-1">
             <input
               id="hazmat"
               type="checkbox"
               checked={formData.hazmat}
               onChange={(e) => update("hazmat", e.target.checked)}
-              className="w-5 h-5 rounded border-neutral-600 bg-dark-700 text-gold-400 focus:ring-gold-400/30 focus:ring-offset-0 accent-gold-400"
+              className="w-5 h-5 rounded border-navy-700 bg-navy-950 text-gold-400 focus:ring-gold-400/30 focus:ring-offset-0 accent-gold-400"
             />
-            <label htmlFor="hazmat" className="text-sm font-semibold text-neutral-300 cursor-pointer">
+            <label htmlFor="hazmat" className="text-sm font-semibold text-navy-200 cursor-pointer">
               This shipment contains hazardous materials (Hazmat)
             </label>
           </div>
@@ -398,13 +357,12 @@ export default function QuoteForm() {
             <h3 className="text-xl font-heading font-bold text-white mb-1">
               Contact Information
             </h3>
-            <p className="text-sm text-neutral-400">
+            <p className="text-sm text-navy-400">
               How can we reach you with your quote?
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {/* Full Name */}
             <div>
               <label className={labelClass}>
                 Full Name <span className="text-gold-400">*</span>
@@ -419,7 +377,6 @@ export default function QuoteForm() {
               {errors.fullName && <FieldError msg={errors.fullName} />}
             </div>
 
-            {/* Company Name */}
             <div>
               <label className={labelClass}>Company Name</label>
               <input
@@ -433,7 +390,6 @@ export default function QuoteForm() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {/* Email */}
             <div>
               <label className={labelClass}>
                 Email <span className="text-gold-400">*</span>
@@ -448,7 +404,6 @@ export default function QuoteForm() {
               {errors.email && <FieldError msg={errors.email} />}
             </div>
 
-            {/* Phone */}
             <div>
               <label className={labelClass}>
                 Phone <span className="text-gold-400">*</span>
@@ -464,7 +419,6 @@ export default function QuoteForm() {
             </div>
           </div>
 
-          {/* Preferred Contact Method */}
           <div>
             <label className={labelClass}>Preferred Contact Method</label>
             <select
@@ -472,18 +426,17 @@ export default function QuoteForm() {
               onChange={(e) => update("preferredContact", e.target.value)}
               className={inputClass + " appearance-none"}
             >
-              <option value="" className="bg-dark-700">
+              <option value="" className="bg-navy-950">
                 Select preference
               </option>
               {contactMethods.map((m) => (
-                <option key={m} value={m} className="bg-dark-700">
+                <option key={m} value={m} className="bg-navy-950">
                   {m}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Additional Notes */}
           <div>
             <label className={labelClass}>Additional Notes</label>
             <textarea
@@ -498,12 +451,12 @@ export default function QuoteForm() {
       )}
 
       {/* ---- Navigation Buttons ---- */}
-      <div className="flex items-center justify-between mt-10 pt-6 border-t border-neutral-700">
+      <div className="flex items-center justify-between mt-10 pt-6 border-t border-navy-800">
         {step > 1 ? (
           <button
             type="button"
             onClick={prevStep}
-            className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors px-4 py-3 rounded-lg"
+            className="flex items-center gap-2 text-navy-300 hover:text-white transition-colors px-4 py-3 rounded-lg"
           >
             <ArrowLeft className="w-4 h-4" />
             Back
@@ -516,7 +469,7 @@ export default function QuoteForm() {
           <button
             type="button"
             onClick={nextStep}
-            className="flex items-center gap-2 bg-gold-gradient text-dark-700 font-bold px-8 py-3 rounded-lg w-full sm:w-auto justify-center hover:shadow-lg hover:shadow-gold-400/20 transition-all"
+            className="flex items-center gap-2 bg-gold-gradient text-navy-950 font-bold px-8 py-3 rounded-lg w-full sm:w-auto justify-center hover:shadow-lg hover:shadow-gold-400/20 transition-all"
           >
             Continue
             <ArrowRight className="w-4 h-4" />
@@ -525,7 +478,7 @@ export default function QuoteForm() {
           <button
             type="button"
             onClick={handleSubmit}
-            className="flex items-center gap-2 bg-gold-gradient text-dark-700 font-bold px-8 py-3 rounded-lg w-full sm:w-auto justify-center hover:shadow-lg hover:shadow-gold-400/20 transition-all"
+            className="flex items-center gap-2 bg-gold-gradient text-navy-950 font-bold px-8 py-3 rounded-lg w-full sm:w-auto justify-center hover:shadow-lg hover:shadow-gold-400/20 transition-all"
           >
             Submit Quote Request
             <ArrowRight className="w-4 h-4" />
@@ -535,10 +488,6 @@ export default function QuoteForm() {
     </form>
   );
 }
-
-/* ------------------------------------------------------------------ */
-/*  Field Error (inline validation message)                            */
-/* ------------------------------------------------------------------ */
 
 function FieldError({ msg }: { msg: string }) {
   return (

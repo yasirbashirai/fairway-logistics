@@ -105,7 +105,7 @@ export default function LogisticsServicesBiloxiMS() {
       <PageHero
         title="Container Trucking & Logistics in Biloxi, Mississippi"
         subtitle="Asset-based container trucking, military logistics, and casino resort supply chain solutions serving Biloxi and the Mississippi Gulf Coast."
-        backgroundImage="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80"
+        backgroundImage="/images/main.jpg"
         breadcrumbs={[
           { label: "Gulf Coast Logistics", href: "/gulf-coast-logistics" },
           { label: "Biloxi, MS" },
@@ -113,17 +113,17 @@ export default function LogisticsServicesBiloxiMS() {
       />
 
       {/* ---------- Regional Overview ---------- */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="animate-fade-in-up">
               <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
                 Biloxi Coverage
               </span>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2 mb-6">
                 Biloxi: Gaming Capital Meets Military Stronghold
               </h2>
-              <div className="space-y-4 text-neutral-600 leading-relaxed">
+              <div className="space-y-4 text-navy-300 leading-relaxed">
                 <p>
                   Biloxi, Mississippi, is a city of contrasts that converge on logistics.
                   On one side of town, the glittering casino resorts of the Highway 90
@@ -157,8 +157,8 @@ export default function LogisticsServicesBiloxiMS() {
             </div>
 
             <div className="animate-fade-in-up stagger-2">
-              <div className="bg-neutral-50 rounded-xl p-8 border border-neutral-200">
-                <h3 className="text-xl font-heading font-bold text-dark-700 mb-6 flex items-center gap-2">
+              <div className="bg-navy-900 rounded-xl p-8 border border-navy-800">
+                <h3 className="text-xl font-heading font-bold text-white mb-6 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-gold-400" />
                   Biloxi Logistics Profile
                 </h3>
@@ -175,7 +175,7 @@ export default function LogisticsServicesBiloxiMS() {
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700 text-sm">{item}</span>
+                      <span className="text-navy-200 text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -186,16 +186,16 @@ export default function LogisticsServicesBiloxiMS() {
       </section>
 
       {/* ---------- Services ---------- */}
-      <section className="py-16 sm:py-20 bg-neutral-50">
+      <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Our Services
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Container Trucking & Logistics in Biloxi
             </h2>
-            <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-300 mt-4 max-w-2xl mx-auto">
               Specialized logistics for Biloxi&apos;s gaming industry, military
               installations, and commercial businesses — with container trucking from
               the Port of Gulfport.
@@ -283,16 +283,16 @@ export default function LogisticsServicesBiloxiMS() {
       <MetricsSection />
 
       {/* ---------- Local Advantages ---------- */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Local Expertise
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Why Biloxi Businesses Trust Fairway Logistics
             </h2>
-            <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-300 mt-4 max-w-2xl mx-auto">
               We understand the unique logistics demands of Biloxi&apos;s diverse
               economy — from military precision to hospitality flexibility.
             </p>
@@ -304,10 +304,10 @@ export default function LogisticsServicesBiloxiMS() {
                 key={i}
                 className={`gold-border-left pl-6 py-4 animate-fade-in-up stagger-${i + 1}`}
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {advantage.title}
                 </h3>
-                <p className="text-neutral-600 text-sm leading-relaxed">
+                <p className="text-navy-300 text-sm leading-relaxed">
                   {advantage.description}
                 </p>
               </div>
@@ -320,13 +320,13 @@ export default function LogisticsServicesBiloxiMS() {
       <TrustBadges variant="light" />
 
       {/* ---------- FAQ ---------- */}
-      <section className="py-16 sm:py-20 bg-neutral-50">
+      <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Common Questions
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Biloxi Container Trucking FAQs
             </h2>
           </div>
@@ -335,12 +335,12 @@ export default function LogisticsServicesBiloxiMS() {
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl border border-neutral-200 p-6 animate-fade-in-up"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6 animate-fade-in-up"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">{faq.answer}</p>
+                <p className="text-navy-300 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -348,16 +348,16 @@ export default function LogisticsServicesBiloxiMS() {
       </section>
 
       {/* ---------- Quote Form ---------- */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Get Started
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Request a Quote for Biloxi Logistics
             </h2>
-            <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-300 mt-4 max-w-2xl mx-auto">
               From container trucking off the Port of Gulfport to supply chain
               deliveries at Keesler AFB and the casino resorts, we&apos;re ready to
               serve Biloxi. Call{" "}

@@ -197,27 +197,27 @@ export default function EnergyIndustrialFreightPage() {
           { label: "Industries" },
           { label: "Energy & Industrial" },
         ]}
-        backgroundImage="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1920&q=80"
+        backgroundImage="/images/gulf-coast.jpg"
       />
 
       {/* TRUST BADGES */}
       <TrustBadges variant="light" />
 
       {/* INDUSTRY OVERVIEW */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Energy & Industrial
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Powering the Gulf Coast{" "}
                 <span className="text-gold-gradient">Energy Corridor.</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   The Gulf Coast from Mobile to New Orleans is one of the most
                   critical energy and petrochemical corridors in North America.
                   Fairway Logistics provides the specialized freight services
@@ -225,7 +225,7 @@ export default function EnergyIndustrialFreightPage() {
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 The Gulf Coast energy sector encompasses some of the largest
                 refineries, chemical manufacturing complexes, natural gas
                 processing facilities, and offshore support operations in
@@ -236,7 +236,7 @@ export default function EnergyIndustrialFreightPage() {
                 operational tempo of continuous industrial processes.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Fairway Logistics serves the Gulf Coast energy sector as an
                 asset-based carrier with hazmat-certified drivers, specialized
                 equipment, and deep familiarity with the refineries,
@@ -258,7 +258,7 @@ export default function EnergyIndustrialFreightPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -267,7 +267,7 @@ export default function EnergyIndustrialFreightPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1513828583688-c52646db42da?w=1920&q=80"
+                  src="/images/gulf-coast.jpg"
                   alt="Energy and industrial facilities on the Gulf Coast"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -279,16 +279,16 @@ export default function EnergyIndustrialFreightPage() {
       </section>
 
       {/* ENERGY SECTOR CHALLENGES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Industry Challenges
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Energy Sector Freight Challenges
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Energy and industrial logistics demand capabilities that standard
               freight carriers cannot provide. Here is how Fairway meets these
               challenges.
@@ -300,15 +300,15 @@ export default function EnergyIndustrialFreightPage() {
             {challenges.map((challenge, i) => (
               <div
                 key={challenge.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${Math.min(i + 1, 6)}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${Math.min(i + 1, 6)}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <challenge.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {challenge.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {challenge.description}
                 </p>
               </div>
@@ -318,16 +318,16 @@ export default function EnergyIndustrialFreightPage() {
       </section>
 
       {/* SPECIALIZED CAPABILITIES */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Capabilities
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Specialized Energy Freight Services
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Purpose-built logistics for oil and gas, petrochemical, refinery,
               and heavy industrial operations across the Gulf Coast.
             </p>
@@ -338,24 +338,24 @@ export default function EnergyIndustrialFreightPage() {
             {capabilities.map((cap, i) => (
               <div
                 key={cap.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
                     <cap.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {cap.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                <p className="text-sm text-navy-300 leading-relaxed mb-4">
                   {cap.description}
                 </p>
                 <ul className="space-y-2">
                   {cap.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                      <span className="text-sm text-neutral-700">{feature}</span>
+                      <span className="text-sm text-navy-200">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -366,16 +366,16 @@ export default function EnergyIndustrialFreightPage() {
       </section>
 
       {/* SAFETY IN ENERGY LOGISTICS */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Safety First
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Safety in Energy Logistics
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               In the energy sector, safety is not a feature — it is a
               requirement. Our safety protocols exceed industry standards.
             </p>
@@ -386,15 +386,15 @@ export default function EnergyIndustrialFreightPage() {
             {safetyProtocols.map((protocol, i) => (
               <div
                 key={protocol.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <Shield className="w-6 h-6 text-gold-400" />
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {protocol.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {protocol.description}
                 </p>
               </div>
@@ -404,13 +404,13 @@ export default function EnergyIndustrialFreightPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Energy Freight FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -420,12 +420,12 @@ export default function EnergyIndustrialFreightPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-neutral-50 rounded-xl border border-neutral-200 p-6"
+                className="bg-navy-900 rounded-xl border border-navy-800 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-navy-300 leading-relaxed text-sm">
                   {faq.answer}
                 </p>
               </div>
@@ -444,7 +444,7 @@ export default function EnergyIndustrialFreightPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request an Energy & Industrial Freight Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Tell us about your energy-sector freight requirements and our
               specialized team will provide a detailed logistics plan and
               competitive rate.

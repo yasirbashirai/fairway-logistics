@@ -101,22 +101,22 @@ export default function RequestQuotePage() {
         title="Request a Freight Quote"
         subtitle="Get a competitive, no-obligation quote for your next shipment. Our team responds within 2 hours."
         breadcrumbs={[{ label: "Request a Quote" }]}
-        backgroundImage="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80"
+        backgroundImage="/images/trucks.jpg"
       />
 
       {/* ============================================================= */}
       {/* WHY GET A QUOTE                                                */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Why Request a Quote
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Simple, Fast & Transparent
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               We make getting a freight quote as easy as possible. No
               runaround, no sales pressure — just honest pricing from an
               asset-based carrier.
@@ -128,15 +128,15 @@ export default function RequestQuotePage() {
             {whyQuote.map((item, i) => (
               <div
                 key={item.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-100 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-16 h-16 rounded-full bg-gold-400/10 flex items-center justify-center mx-auto mb-5">
                   <item.icon className="w-8 h-8 text-gold-400" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-xl font-heading font-bold text-white mb-3">
                   {item.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-navy-300 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -148,7 +148,7 @@ export default function RequestQuotePage() {
       {/* ============================================================= */}
       {/* QUOTE FORM — PROMINENT                                         */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-dark-700">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
@@ -157,7 +157,7 @@ export default function RequestQuotePage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Tell Us About Your Shipment
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Fill out the form below with your shipment details and our team
               will provide a competitive quote within 2 business hours. For
               urgent requests, call{" "}
@@ -173,7 +173,7 @@ export default function RequestQuotePage() {
           </div>
 
           {/* Additional info below form */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-neutral-400 text-sm">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-navy-300 text-sm">
             {[
               "Free, no-obligation quote",
               "Response within 2 hours",
@@ -202,16 +202,16 @@ export default function RequestQuotePage() {
       {/* ============================================================= */}
       {/* WHAT HAPPENS NEXT                                              */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Process
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               What Happens Next
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Once you submit your quote request, here&apos;s what to expect from
               the Fairway Logistics team.
             </p>
@@ -222,21 +222,21 @@ export default function RequestQuotePage() {
             {nextSteps.map((step, i) => (
               <div
                 key={step.title}
-                className={`relative bg-neutral-50 rounded-xl border border-neutral-100 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`relative bg-navy-900 rounded-xl border border-navy-800 p-8 text-center hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 {/* Step number */}
                 <div className="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center mx-auto mb-4">
-                  <span className="text-dark-700 font-bold text-sm">{i + 1}</span>
+                  <span className="text-white font-bold text-sm">{i + 1}</span>
                 </div>
 
                 <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center mx-auto mb-5">
                   <step.icon className="w-7 h-7 text-gold-400" />
                 </div>
 
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {step.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-navy-300 leading-relaxed">
                   {step.description}
                 </p>
 

@@ -8,7 +8,6 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-/** Industry data used to render each card in the grid. */
 const industries = [
   {
     icon: Factory,
@@ -48,19 +47,18 @@ const industries = [
 ];
 
 export default function IndustryGrid() {
-  /* Split the array so the first 3 cards fill the top row and the last 2 are centred below. */
   const topRow = industries.slice(0, 3);
   const bottomRow = industries.slice(3);
 
   return (
-    <section className="py-16 sm:py-24 bg-neutral-50">
+    <section className="py-16 sm:py-24 bg-navy-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* ── Section heading ── */}
         <div className="text-center mb-12">
           <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
             INDUSTRIES WE SERVE
           </p>
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
             Logistics Solutions by Industry
           </h2>
           <div className="section-divider mx-auto mt-4" />
@@ -86,7 +84,6 @@ export default function IndustryGrid() {
   );
 }
 
-/** Reusable card component for a single industry. */
 function IndustryCard({
   icon: Icon,
   title,
@@ -96,7 +93,7 @@ function IndustryCard({
   return (
     <Link
       href={href}
-      className="group bg-white border border-neutral-200 rounded-2xl p-6 hover:shadow-xl hover:border-gold-400 hover:-translate-y-1 transition-all duration-300 block h-full"
+      className="group glass-card rounded-2xl p-6 hover:border-gold-400/40 hover:shadow-xl hover:shadow-gold-400/5 hover:-translate-y-1 transition-all duration-300 block h-full"
     >
       {/* Icon */}
       <div className="w-12 h-12 rounded-xl bg-gold-400/10 flex items-center justify-center">
@@ -104,12 +101,12 @@ function IndustryCard({
       </div>
 
       {/* Title */}
-      <h3 className="font-heading font-bold text-dark-700 text-lg mt-4">
+      <h3 className="font-heading font-bold text-white text-lg mt-4">
         {title}
       </h3>
 
       {/* Description */}
-      <p className="text-neutral-600 text-sm mt-2">{description}</p>
+      <p className="text-navy-300 text-sm mt-2">{description}</p>
 
       {/* Link */}
       <span className="text-gold-400 font-semibold text-sm mt-4 inline-flex items-center gap-1">

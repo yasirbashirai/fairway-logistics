@@ -149,20 +149,20 @@ export default function CareersPage() {
         title="Build Your Career at Fairway Logistics"
         subtitle="Join a growing, asset-based logistics company on the Gulf Coast. We are looking for driven professionals who want to build a career — not just fill a position."
         breadcrumbs={[{ label: "Careers" }]}
-        backgroundImage="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80"
+        backgroundImage="/images/truck-road.jpg"
       />
 
       {/* WHY WORK HERE - BENEFITS GRID */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Why Fairway
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Why Work at Fairway Logistics?
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               We offer more than a paycheck. At Fairway, you get the benefits,
               culture, and growth opportunities that make a career worth
               building.
@@ -174,15 +174,15 @@ export default function CareersPage() {
             {benefits.map((benefit, i) => (
               <div
                 key={benefit.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <benefit.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {benefit.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {benefit.description}
                 </p>
               </div>
@@ -192,16 +192,16 @@ export default function CareersPage() {
       </section>
 
       {/* CURRENT OPENINGS */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Open Positions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Current Openings
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               We are growing and looking for talented people to join our team.
               Explore our current openings below.
             </p>
@@ -212,10 +212,10 @@ export default function CareersPage() {
             {openings.map((job, i) => (
               <div
                 key={job.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:border-gold/30 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:border-gold/30 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {job.title}
                   </h3>
                   <span className="text-xs font-semibold bg-gold-400/10 text-gold-400 px-3 py-1 rounded-full whitespace-nowrap">
@@ -223,12 +223,12 @@ export default function CareersPage() {
                   </span>
                 </div>
                 <div className="flex items-center gap-4 mb-3">
-                  <div className="flex items-center gap-1.5 text-sm text-neutral-500">
+                  <div className="flex items-center gap-1.5 text-sm text-navy-400">
                     <MapPin className="w-4 h-4" />
                     {job.location}
                   </div>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                <p className="text-sm text-navy-300 leading-relaxed mb-4">
                   {job.description}
                 </p>
                 <a
@@ -245,13 +245,13 @@ export default function CareersPage() {
       </section>
 
       {/* COMPANY CULTURE */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80"
+                  src="/images/trucks.jpg"
                   alt="Fairway Logistics team and fleet"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -263,20 +263,20 @@ export default function CareersPage() {
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Our Culture
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 More Than a Workplace —{" "}
                 <span className="text-gold-gradient">A Team.</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   At Fairway Logistics, we believe the best logistics companies
                   are built by people who are respected, supported, and given
                   the opportunity to grow.
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 We are not a faceless corporation. Fairway is a Gulf Coast
                 company built by people who live and work in this community.
                 Our team members are not employee numbers — they are the
@@ -286,7 +286,7 @@ export default function CareersPage() {
                 freight with care — every person at Fairway matters.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 We invest in our people because that is what builds a great
                 company. Professional development, safety training, modern
                 equipment, competitive compensation, and genuine respect for
@@ -305,7 +305,7 @@ export default function CareersPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -324,26 +324,26 @@ export default function CareersPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Submit Your Application
             </h2>
-            <p className="text-neutral-400 max-w-xl mx-auto">
+            <p className="text-navy-300 max-w-xl mx-auto">
               Interested in joining the Fairway team? Fill out the form below
               and our hiring team will be in touch.
             </p>
           </div>
 
           {submitted ? (
-            <div className="bg-dark-600 rounded-2xl border border-white/10 p-8 sm:p-12 text-center">
-              <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="bg-navy-900 rounded-2xl border border-white/10 p-8 sm:p-12 text-center">
+              <div className="w-16 h-16 bg-fwgreen-500 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-heading font-bold text-white mb-3">
                 Application Submitted!
               </h3>
-              <p className="text-neutral-400 mb-6 max-w-md mx-auto">
+              <p className="text-navy-300 mb-6 max-w-md mx-auto">
                 Thank you, {formData.name}. We have received your application
                 and our hiring team will review it shortly. We will contact you
                 if your qualifications match our current needs.
               </p>
-              <p className="text-sm text-neutral-500">
+              <p className="text-sm text-navy-400">
                 Questions? Call{" "}
                 <a href="tel:+12517251929" className="text-gold-400 hover:underline">
                   (251) 725-1929
@@ -353,11 +353,11 @@ export default function CareersPage() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="bg-dark-600 rounded-2xl border border-white/10 p-6 sm:p-8 space-y-5"
+              className="bg-navy-900 rounded-2xl border border-white/10 p-6 sm:p-8 space-y-5"
             >
               {/* Name */}
               <div>
-                <label className="block text-sm text-neutral-300 mb-1.5">
+                <label className="block text-sm text-navy-200 mb-1.5">
                   Full Name <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -365,14 +365,14 @@ export default function CareersPage() {
                   placeholder="Your full name"
                   value={formData.name}
                   onChange={(e) => update("name", e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-neutral-500 focus:border-gold/50 focus:outline-none transition-colors"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold/50 focus:outline-none transition-colors"
                 />
                 {errors.name && <FieldError msg={errors.name} />}
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-sm text-neutral-300 mb-1.5">
+                <label className="block text-sm text-navy-200 mb-1.5">
                   Email Address <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -380,14 +380,14 @@ export default function CareersPage() {
                   placeholder="your@email.com"
                   value={formData.email}
                   onChange={(e) => update("email", e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-neutral-500 focus:border-gold/50 focus:outline-none transition-colors"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold/50 focus:outline-none transition-colors"
                 />
                 {errors.email && <FieldError msg={errors.email} />}
               </div>
 
               {/* Phone */}
               <div>
-                <label className="block text-sm text-neutral-300 mb-1.5">
+                <label className="block text-sm text-navy-200 mb-1.5">
                   Phone Number <span className="text-red-400">*</span>
                 </label>
                 <input
@@ -395,14 +395,14 @@ export default function CareersPage() {
                   placeholder="(251) 555-0123"
                   value={formData.phone}
                   onChange={(e) => update("phone", e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-neutral-500 focus:border-gold/50 focus:outline-none transition-colors"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold/50 focus:outline-none transition-colors"
                 />
                 {errors.phone && <FieldError msg={errors.phone} />}
               </div>
 
               {/* Position */}
               <div>
-                <label className="block text-sm text-neutral-300 mb-1.5">
+                <label className="block text-sm text-navy-200 mb-1.5">
                   Position of Interest <span className="text-red-400">*</span>
                 </label>
                 <select
@@ -410,11 +410,11 @@ export default function CareersPage() {
                   onChange={(e) => update("position", e.target.value)}
                   className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm appearance-none focus:border-gold/50 focus:outline-none transition-colors"
                 >
-                  <option value="" className="bg-dark-700">
+                  <option value="" className="bg-navy-950">
                     Select a position
                   </option>
                   {positions.map((pos) => (
-                    <option key={pos} value={pos} className="bg-dark-700">
+                    <option key={pos} value={pos} className="bg-navy-950">
                       {pos}
                     </option>
                   ))}
@@ -424,15 +424,15 @@ export default function CareersPage() {
 
               {/* Resume Upload Placeholder */}
               <div>
-                <label className="block text-sm text-neutral-300 mb-1.5">
+                <label className="block text-sm text-navy-200 mb-1.5">
                   Resume / CV
                 </label>
                 <div className="w-full bg-white/5 border border-dashed border-white/20 rounded-lg px-4 py-6 text-center cursor-pointer hover:border-gold/40 transition-colors">
-                  <Upload className="w-6 h-6 text-neutral-500 mx-auto mb-2" />
-                  <p className="text-sm text-neutral-400">
+                  <Upload className="w-6 h-6 text-navy-400 mx-auto mb-2" />
+                  <p className="text-sm text-navy-300">
                     Click to upload your resume
                   </p>
-                  <p className="text-xs text-neutral-500 mt-1">
+                  <p className="text-xs text-navy-400 mt-1">
                     PDF, DOC, or DOCX (max 5MB)
                   </p>
                 </div>
@@ -440,7 +440,7 @@ export default function CareersPage() {
 
               {/* Message */}
               <div>
-                <label className="block text-sm text-neutral-300 mb-1.5">
+                <label className="block text-sm text-navy-200 mb-1.5">
                   Message (Optional)
                 </label>
                 <textarea
@@ -448,14 +448,14 @@ export default function CareersPage() {
                   placeholder="Tell us why you would be a great fit for Fairway Logistics..."
                   value={formData.message}
                   onChange={(e) => update("message", e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-neutral-500 resize-none focus:border-gold/50 focus:outline-none transition-colors"
+                  className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 resize-none focus:border-gold/50 focus:outline-none transition-colors"
                 />
               </div>
 
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-gold-gradient text-dark-700 font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all"
+                className="w-full flex items-center justify-center gap-2 bg-gold-gradient text-white font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all"
               >
                 <Send className="w-4 h-4" />
                 Submit Application

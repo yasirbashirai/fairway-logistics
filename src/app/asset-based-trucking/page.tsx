@@ -216,34 +216,34 @@ export default function AssetBasedTruckingPage() {
           { label: "Services", href: "/gulf-coast-logistics" },
           { label: "Asset-Based Trucking" },
         ]}
-        backgroundImage="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80"
+        backgroundImage="/images/truck-road.jpg"
       />
 
       {/* TRUST BADGES */}
       <TrustBadges variant="light" />
 
       {/* SERVICE OVERVIEW */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Asset-Based Trucking
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 We Own the Trucks.{" "}
                 <span className="text-gold-gradient">That Changes Everything.</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   In a freight market flooded with brokers, Fairway Logistics
                   stands apart. We own and operate our fleet — which means when we
                   commit to your load, it gets moved. Period.
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 The difference between asset-based trucking and broker-dependent
                 shipping is the difference between certainty and hope. Brokers
                 scramble to find available carriers; we dispatch our own trucks.
@@ -253,7 +253,7 @@ export default function AssetBasedTruckingPage() {
                 highest standards.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Based in Mobile, Alabama, our fleet serves the entire Gulf Coast
                 region and beyond with full truckload, less-than-truckload,
                 dedicated route, and regional/OTR services. Whether you need a
@@ -272,7 +272,7 @@ export default function AssetBasedTruckingPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -281,7 +281,7 @@ export default function AssetBasedTruckingPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80"
+                  src="/images/trucks.jpg"
                   alt="Fairway Logistics company-owned fleet trucks"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -293,16 +293,16 @@ export default function AssetBasedTruckingPage() {
       </section>
 
       {/* SERVICE TYPES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Trucking Services
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Trucking Solutions for Every Need
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               From single shipments to dedicated fleet solutions, our
               asset-based trucking covers the full range of freight requirements.
             </p>
@@ -313,24 +313,24 @@ export default function AssetBasedTruckingPage() {
             {services.map((service, i) => (
               <div
                 key={service.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
                     <service.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {service.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                <p className="text-sm text-navy-300 leading-relaxed mb-4">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                      <span className="text-sm text-neutral-700">{feature}</span>
+                      <span className="text-sm text-navy-200">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -341,13 +341,13 @@ export default function AssetBasedTruckingPage() {
       </section>
 
       {/* ASSET-BASED ADVANTAGES */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               The Difference
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Asset-Based vs. Broker-Only: Why It Matters
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -357,15 +357,15 @@ export default function AssetBasedTruckingPage() {
             {advantages.map((adv, i) => (
               <div
                 key={adv.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <adv.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {adv.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {adv.description}
                 </p>
               </div>
@@ -375,13 +375,13 @@ export default function AssetBasedTruckingPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Simple Process
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               How It Works
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -393,10 +393,10 @@ export default function AssetBasedTruckingPage() {
                 <div className="text-5xl font-heading font-bold text-gold-400/20 mb-3">
                   {item.step}
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {item.description}
                 </p>
                 {i < processSteps.length - 1 && (
@@ -411,13 +411,13 @@ export default function AssetBasedTruckingPage() {
       </section>
 
       {/* SERVICE AREA */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1920&q=80"
+                  src="/images/truck-road.jpg"
                   alt="Fairway Logistics trucks on Gulf Coast highway"
                   className="w-full h-[400px] object-cover"
                 />
@@ -428,10 +428,10 @@ export default function AssetBasedTruckingPage() {
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Coverage
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Service Area
               </h2>
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 Our primary trucking service area covers the Gulf Coast region,
                 with expanding coverage across the Southeast. For dedicated lanes
                 and high-volume accounts, we service routes throughout the
@@ -440,7 +440,7 @@ export default function AssetBasedTruckingPage() {
 
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-heading font-bold text-dark-700 mb-2">
+                  <h3 className="font-heading font-bold text-white mb-2">
                     Primary Service Area
                   </h3>
                   <div className="grid grid-cols-2 gap-2">
@@ -454,17 +454,17 @@ export default function AssetBasedTruckingPage() {
                     ].map((area) => (
                       <div key={area} className="flex items-center gap-2">
                         <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                        <span className="text-sm text-neutral-700">{area}</span>
+                        <span className="text-sm text-navy-200">{area}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="font-heading font-bold text-dark-700 mb-2">
+                  <h3 className="font-heading font-bold text-white mb-2">
                     Extended Coverage
                   </h3>
-                  <p className="text-sm text-neutral-600">
+                  <p className="text-sm text-navy-300">
                     OTR and dedicated routes available throughout the Southeast,
                     Mid-Atlantic, and Midwest. Contact us for specific lane
                     availability and pricing.
@@ -477,13 +477,13 @@ export default function AssetBasedTruckingPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Asset-Based Trucking FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -493,12 +493,12 @@ export default function AssetBasedTruckingPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-navy-300 leading-relaxed text-sm">
                   {faq.answer}
                 </p>
               </div>
@@ -517,7 +517,7 @@ export default function AssetBasedTruckingPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request an Asset-Based Trucking Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Skip the brokers. Get a direct quote from the carrier that owns
               the trucks and employs the drivers.
             </p>
@@ -527,13 +527,13 @@ export default function AssetBasedTruckingPage() {
       </section>
 
       {/* RELATED SERVICES */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Explore More
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Related Services
             </h2>
             <div className="section-divider mx-auto mt-6" />

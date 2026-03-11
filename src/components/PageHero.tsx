@@ -27,10 +27,10 @@ export default function PageHero({
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
       ) : (
-        <div className="absolute inset-0 bg-dark-700" />
+        <div className="absolute inset-0 bg-navy-950" />
       )}
 
-      {/* Overlay (uses page-hero-overlay from globals.css) */}
+      {/* Overlay */}
       <div className="absolute inset-0 page-hero-overlay" />
 
       {/* ── Content (positioned at the bottom) ── */}
@@ -39,14 +39,14 @@ export default function PageHero({
         {breadcrumbs.length > 0 && (
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 text-sm text-neutral-300 mb-4"
+            className="flex items-center gap-2 text-sm text-navy-300 mb-4"
           >
             {breadcrumbs.map((crumb, index) => {
               const isLast = index === breadcrumbs.length - 1;
               return (
                 <span key={crumb.label + index} className="flex items-center gap-2">
                   {index > 0 && (
-                    <span className="text-neutral-500" aria-hidden="true">
+                    <span className="text-navy-500" aria-hidden="true">
                       /
                     </span>
                   )}
@@ -75,7 +75,7 @@ export default function PageHero({
         <div className="section-divider mt-4" />
 
         {/* Subtitle */}
-        <p className="text-lg text-neutral-300 mt-3 max-w-2xl">{subtitle}</p>
+        <p className="text-lg text-navy-200 mt-3 max-w-2xl">{subtitle}</p>
       </div>
 
       {/* Gold accent line at bottom */}

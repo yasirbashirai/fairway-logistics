@@ -190,26 +190,26 @@ export default function RetailDistributionLogisticsPage() {
           { label: "Industries" },
           { label: "Retail & Distribution" },
         ]}
-        backgroundImage="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&q=80"
+        backgroundImage="/images/truckings.jpg"
       />
 
       {/* TRUST BADGES */}
       <TrustBadges variant="light" />
 
       {/* RETAIL CHALLENGES */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
               Retail Industry
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
               Retail Logistics{" "}
               <span className="text-gold-gradient">Demands Precision.</span>
             </h2>
 
             <div className="gold-border-left pl-6 mb-6">
-              <p className="text-neutral-600 leading-relaxed text-lg">
+              <p className="text-navy-300 leading-relaxed text-lg">
                 In retail, empty shelves mean lost sales. The modern retail
                 supply chain runs on tight delivery schedules, lean inventory,
                 and the ability to scale freight capacity with seasonal
@@ -218,7 +218,7 @@ export default function RetailDistributionLogisticsPage() {
               </p>
             </div>
 
-            <p className="text-neutral-600 leading-relaxed mb-6">
+            <p className="text-navy-300 leading-relaxed mb-6">
               The Gulf Coast retail landscape is diverse and growing. From
               national chain stores and regional retailers to e-commerce
               fulfillment operations and wholesale distributors, the retail
@@ -230,7 +230,7 @@ export default function RetailDistributionLogisticsPage() {
               took years to build.
             </p>
 
-            <p className="text-neutral-600 leading-relaxed">
+            <p className="text-navy-300 leading-relaxed">
               Fairway Logistics provides retail and distribution freight
               services as an asset-based carrier with a company-owned fleet
               stationed in Mobile, Alabama. Our model eliminates the capacity
@@ -247,15 +247,15 @@ export default function RetailDistributionLogisticsPage() {
             {retailChallenges.map((challenge, i) => (
               <div
                 key={challenge.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center mb-4">
                   <challenge.icon className="w-6 h-6 text-gold-400" />
                 </div>
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {challenge.title}
                 </h3>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {challenge.description}
                 </p>
               </div>
@@ -265,16 +265,16 @@ export default function RetailDistributionLogisticsPage() {
       </section>
 
       {/* SOLUTIONS */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Solutions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Retail Freight Solutions
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               Purpose-built logistics for the retail and distribution sector,
               from store replenishment to e-commerce fulfillment support.
             </p>
@@ -285,24 +285,24 @@ export default function RetailDistributionLogisticsPage() {
             {solutions.map((solution, i) => (
               <div
                 key={solution.title}
-                className={`bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gold-400/10 flex items-center justify-center">
                     <solution.icon className="w-6 h-6 text-gold-400" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {solution.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                <p className="text-sm text-navy-300 leading-relaxed mb-4">
                   {solution.description}
                 </p>
                 <ul className="space-y-2">
                   {solution.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                      <span className="text-sm text-neutral-700">{feature}</span>
+                      <span className="text-sm text-navy-200">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -313,13 +313,13 @@ export default function RetailDistributionLogisticsPage() {
       </section>
 
       {/* FULFILLMENT CAPABILITIES */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Capabilities
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Fulfillment & Distribution Capabilities
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -329,15 +329,15 @@ export default function RetailDistributionLogisticsPage() {
             {fulfillmentCapabilities.map((cap, i) => (
               <div
                 key={cap.title}
-                className={`bg-neutral-50 rounded-xl border border-neutral-200 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl border border-navy-800 p-6 hover:shadow-xl transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <Warehouse className="w-6 h-6 text-gold-400" />
-                  <h3 className="text-lg font-heading font-bold text-dark-700">
+                  <h3 className="text-lg font-heading font-bold text-white">
                     {cap.title}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed">
+                <p className="text-sm text-navy-300 leading-relaxed">
                   {cap.description}
                 </p>
               </div>
@@ -347,13 +347,13 @@ export default function RetailDistributionLogisticsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Common Questions
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Retail Logistics FAQ
             </h2>
             <div className="section-divider mx-auto mt-6" />
@@ -363,12 +363,12 @@ export default function RetailDistributionLogisticsPage() {
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-navy-300 leading-relaxed text-sm">
                   {faq.answer}
                 </p>
               </div>
@@ -387,7 +387,7 @@ export default function RetailDistributionLogisticsPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request a Retail Distribution Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Tell us about your retail freight requirements and we will build
               a distribution solution that keeps your shelves stocked and your
               customers happy.

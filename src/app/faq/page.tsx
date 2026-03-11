@@ -171,13 +171,13 @@ function AccordionItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border border-neutral-200 rounded-lg overflow-hidden">
+    <div className="border border-navy-800 rounded-lg overflow-hidden">
       <button
         onClick={onToggle}
-        className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-neutral-50 transition-colors"
+        className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-navy-900 transition-colors"
         aria-expanded={isOpen}
       >
-        <span className="font-heading font-bold text-dark-700 pr-4">
+        <span className="font-heading font-bold text-white pr-4">
           {faq.question}
         </span>
         <ChevronDown
@@ -192,7 +192,7 @@ function AccordionItem({
         }`}
       >
         <div className="px-6 pb-5">
-          <p className="text-neutral-600 leading-relaxed text-sm">
+          <p className="text-navy-300 leading-relaxed text-sm">
             {faq.answer}
           </p>
         </div>
@@ -217,13 +217,13 @@ export default function FAQPage() {
         title="Frequently Asked Questions"
         subtitle="Find answers to common questions about our logistics services, pricing, drayage operations, and carrier partnership program."
         breadcrumbs={[{ label: "FAQ" }]}
-        backgroundImage="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80"
+        backgroundImage="/images/hero.jpg"
       />
 
       {/* ============================================================= */}
       {/* FAQ SECTIONS                                                   */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           {/* Quick nav */}
           <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
@@ -231,7 +231,7 @@ export default function FAQPage() {
               <a
                 key={category.title}
                 href={`#faq-${category.title.toLowerCase().replace(/\s+/g, "-")}`}
-                className="flex items-center gap-2 px-4 py-2 rounded-full border border-neutral-200 text-sm font-medium text-neutral-600 hover:border-gold-400 hover:text-gold-400 transition-all"
+                className="flex items-center gap-2 px-4 py-2 rounded-full border border-navy-800 text-sm font-medium text-navy-300 hover:border-gold-400 hover:text-gold-400 transition-all"
               >
                 <category.icon className="w-4 h-4" />
                 {category.title}
@@ -250,7 +250,7 @@ export default function FAQPage() {
                   <div className="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center">
                     <category.icon className="w-5 h-5 text-gold-400" />
                   </div>
-                  <h2 className="text-2xl font-heading font-bold text-dark-700">
+                  <h2 className="text-2xl font-heading font-bold text-white">
                     {category.title}
                   </h2>
                 </div>
@@ -273,11 +273,11 @@ export default function FAQPage() {
           </div>
 
           {/* Still have questions */}
-          <div className="mt-16 bg-neutral-50 rounded-2xl border border-neutral-200 p-8 sm:p-10 text-center">
-            <h3 className="text-2xl font-heading font-bold text-dark-700 mb-3">
+          <div className="mt-16 bg-navy-900 rounded-2xl border border-navy-800 p-8 sm:p-10 text-center">
+            <h3 className="text-2xl font-heading font-bold text-white mb-3">
               Still Have Questions?
             </h3>
-            <p className="text-neutral-600 mb-6 max-w-lg mx-auto">
+            <p className="text-navy-300 mb-6 max-w-lg mx-auto">
               Can&apos;t find the answer you&apos;re looking for? Our team is
               happy to help. Contact us directly and we&apos;ll get back to you
               within 1 business day.
@@ -285,13 +285,13 @@ export default function FAQPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/contact"
-                className="bg-gold-gradient text-dark-700 font-bold px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200 text-sm"
+                className="bg-gold-gradient text-white font-bold px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200 text-sm"
               >
                 Contact Us
               </Link>
               <a
                 href="tel:+12517251929"
-                className="border border-neutral-300 text-dark-700 font-semibold px-8 py-3.5 rounded-lg hover:border-gold-400 hover:text-gold-400 transition-all duration-200 text-sm"
+                className="border border-navy-700 text-white font-semibold px-8 py-3.5 rounded-lg hover:border-gold-400 hover:text-gold-400 transition-all duration-200 text-sm"
               >
                 Call (251) 725-1929
               </a>
@@ -303,7 +303,7 @@ export default function FAQPage() {
       {/* ============================================================= */}
       {/* QUOTE FORM                                                     */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-dark-700">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
@@ -312,7 +312,7 @@ export default function FAQPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Ready to Ship? Request a Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Get a competitive, no-obligation freight quote from our Gulf Coast
               logistics team.
             </p>

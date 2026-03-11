@@ -105,7 +105,7 @@ export default function LogisticsServicesPensacolaFL() {
       <PageHero
         title="Logistics & Freight Services in Pensacola, Florida"
         subtitle="Reliable Gulf Coast freight solutions for Pensacola's defense, aerospace, tourism, and manufacturing sectors — backed by asset-based capacity from nearby Mobile, AL."
-        backgroundImage="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80"
+        backgroundImage="/images/truckings.jpg"
         breadcrumbs={[
           { label: "Gulf Coast Logistics", href: "/gulf-coast-logistics" },
           { label: "Pensacola, FL" },
@@ -113,17 +113,17 @@ export default function LogisticsServicesPensacolaFL() {
       />
 
       {/* ---------- Regional Overview ---------- */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="animate-fade-in-up">
               <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
                 Pensacola Coverage
               </span>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2 mb-6">
                 Pensacola: Where Defense Meets Commerce on the Gulf
               </h2>
-              <div className="space-y-4 text-neutral-600 leading-relaxed">
+              <div className="space-y-4 text-navy-300 leading-relaxed">
                 <p>
                   Pensacola, Florida, occupies a unique position in the Gulf Coast
                   logistics landscape. As the westernmost major city in Florida and the
@@ -156,8 +156,8 @@ export default function LogisticsServicesPensacolaFL() {
             </div>
 
             <div className="animate-fade-in-up stagger-2">
-              <div className="bg-neutral-50 rounded-xl p-8 border border-neutral-200">
-                <h3 className="text-xl font-heading font-bold text-dark-700 mb-6 flex items-center gap-2">
+              <div className="bg-navy-900 rounded-xl p-8 border border-navy-800">
+                <h3 className="text-xl font-heading font-bold text-white mb-6 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-gold-400" />
                   Pensacola Logistics Snapshot
                 </h3>
@@ -174,7 +174,7 @@ export default function LogisticsServicesPensacolaFL() {
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700 text-sm">{item}</span>
+                      <span className="text-navy-200 text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -185,16 +185,16 @@ export default function LogisticsServicesPensacolaFL() {
       </section>
 
       {/* ---------- Services ---------- */}
-      <section className="py-16 sm:py-20 bg-neutral-50">
+      <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Our Services
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Freight & Logistics Services in Pensacola
             </h2>
-            <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-300 mt-4 max-w-2xl mx-auto">
               Comprehensive freight solutions serving Pensacola&apos;s defense
               installations, aerospace manufacturers, hospitality industry, and
               commercial businesses.
@@ -282,16 +282,16 @@ export default function LogisticsServicesPensacolaFL() {
       <MetricsSection />
 
       {/* ---------- Local Advantages ---------- */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Strategic Value
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Why Pensacola Is a Key Gulf Coast Logistics Market
             </h2>
-            <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-300 mt-4 max-w-2xl mx-auto">
               Pensacola&apos;s defense heritage, aerospace growth, and tourism economy
               create a logistics landscape that rewards regional knowledge and reliable
               capacity.
@@ -304,10 +304,10 @@ export default function LogisticsServicesPensacolaFL() {
                 key={i}
                 className={`gold-border-left pl-6 py-4 animate-fade-in-up stagger-${i + 1}`}
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-2">
+                <h3 className="text-lg font-heading font-bold text-white mb-2">
                   {advantage.title}
                 </h3>
-                <p className="text-neutral-600 text-sm leading-relaxed">
+                <p className="text-navy-300 text-sm leading-relaxed">
                   {advantage.description}
                 </p>
               </div>
@@ -320,13 +320,13 @@ export default function LogisticsServicesPensacolaFL() {
       <TrustBadges variant="light" />
 
       {/* ---------- FAQ ---------- */}
-      <section className="py-16 sm:py-20 bg-neutral-50">
+      <section className="py-16 sm:py-20 bg-navy-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Common Questions
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Pensacola Freight Services FAQs
             </h2>
           </div>
@@ -335,12 +335,12 @@ export default function LogisticsServicesPensacolaFL() {
             {faqs.map((faq, i) => (
               <div
                 key={i}
-                className="bg-white rounded-xl border border-neutral-200 p-6 animate-fade-in-up"
+                className="bg-navy-950 rounded-xl border border-navy-800 p-6 animate-fade-in-up"
               >
-                <h3 className="text-lg font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-lg font-heading font-bold text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">{faq.answer}</p>
+                <p className="text-navy-300 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -348,16 +348,16 @@ export default function LogisticsServicesPensacolaFL() {
       </section>
 
       {/* ---------- Quote Form ---------- */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-16 sm:py-20 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <span className="text-gold-400 font-semibold text-sm uppercase tracking-wider">
               Get Started
             </span>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mt-2">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mt-2">
               Request a Quote for Pensacola Freight Services
             </h2>
-            <p className="text-neutral-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-300 mt-4 max-w-2xl mx-auto">
               From defense shipments at NAS Pensacola to hospitality deliveries on
               Pensacola Beach, our team is ready to move your freight. Call{" "}
               <a href="tel:251-725-1929" className="text-gold-400 font-semibold hover:underline">

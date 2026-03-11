@@ -213,19 +213,19 @@ export default function GulfCoastLogisticsPage() {
         title="Gulf Coast Logistics Solutions"
         subtitle="Asset-based freight services from Mobile, Alabama — serving ports, manufacturers, and shippers across the entire Gulf Coast region."
         breadcrumbs={[{ label: "Gulf Coast Logistics" }]}
-        backgroundImage="https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=1920&q=80"
+        backgroundImage="/images/gulf-coast.jpg"
       />
 
       {/* ============================================================= */}
       {/* OVERVIEW                                                       */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80"
+                  src="/images/trucks.jpg"
                   alt="Gulf Coast logistics operations - Fairway Logistics fleet"
                   className="w-full h-[400px] lg:h-[500px] object-cover"
                 />
@@ -237,13 +237,13 @@ export default function GulfCoastLogisticsPage() {
               <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-3">
                 Regional Expertise
               </p>
-              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
                 Your Logistics Partner on the{" "}
                 <span className="text-gold-gradient">Gulf Coast</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
-                <p className="text-neutral-600 leading-relaxed text-lg">
+                <p className="text-navy-300 leading-relaxed text-lg">
                   Fairway Logistics is an asset-based logistics company
                   headquartered in Mobile, Alabama. We own our trucks, know our
                   ports, and deliver freight across the Gulf Coast with the
@@ -252,14 +252,14 @@ export default function GulfCoastLogisticsPage() {
                 </p>
               </div>
 
-              <p className="text-neutral-600 leading-relaxed mb-6">
+              <p className="text-navy-300 leading-relaxed mb-6">
                 From container drayage at the Port of Mobile to full truckload
                 shipping across five Gulf Coast states, our team provides
                 end-to-end freight solutions backed by company-owned equipment,
                 real-time tracking, and 24/7 dispatch support.
               </p>
 
-              <p className="text-neutral-600 leading-relaxed mb-8">
+              <p className="text-navy-300 leading-relaxed mb-8">
                 Whether you&apos;re importing goods through Gulf ports, shipping
                 raw materials to manufacturing facilities, or distributing
                 finished products across the Southeast, Fairway Logistics has the
@@ -277,7 +277,7 @@ export default function GulfCoastLogisticsPage() {
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
-                    <span className="text-sm font-medium text-dark-700">{item}</span>
+                    <span className="text-sm font-medium text-white">{item}</span>
                   </div>
                 ))}
               </div>
@@ -289,16 +289,16 @@ export default function GulfCoastLogisticsPage() {
       {/* ============================================================= */}
       {/* SERVICE AREA MAP / LIST                                        */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Service Coverage
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Gulf Coast Service Areas
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               From our Mobile, AL headquarters, we serve shippers and
               receivers across the entire Gulf Coast corridor — Alabama,
               Mississippi, Louisiana, Florida panhandle, and beyond.
@@ -311,17 +311,17 @@ export default function GulfCoastLogisticsPage() {
               <Link
                 key={area.city}
                 href={area.href}
-                className={`group bg-white rounded-xl border border-neutral-200 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`group bg-navy-950 rounded-xl border border-navy-800 p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 rounded-lg bg-gold-400/10 flex items-center justify-center group-hover:bg-gold-gradient transition-all duration-300">
-                    <MapPin className="w-5 h-5 text-gold-400 group-hover:text-dark-700" />
+                    <MapPin className="w-5 h-5 text-gold-400 group-hover:text-white" />
                   </div>
-                  <h3 className="text-lg font-heading font-bold text-dark-700 group-hover:text-gold-400 transition-colors">
+                  <h3 className="text-lg font-heading font-bold text-white group-hover:text-gold-400 transition-colors">
                     {area.city}
                   </h3>
                 </div>
-                <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                <p className="text-sm text-navy-300 leading-relaxed mb-4">
                   {area.description}
                 </p>
                 <div className="flex items-center gap-1.5 text-gold-400 font-semibold text-sm">
@@ -337,16 +337,16 @@ export default function GulfCoastLogisticsPage() {
       {/* ============================================================= */}
       {/* WHY GULF COAST LOCATION MATTERS                                */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Strategic Advantage
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Why Gulf Coast Logistics Matters
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               The Gulf Coast region is a critical hub for American commerce,
               and its importance continues to grow as shippers look for
               alternatives to congested coastal ports.
@@ -358,15 +358,15 @@ export default function GulfCoastLogisticsPage() {
             {whyGulfCoast.map((item, i) => (
               <div
                 key={item.title}
-                className={`bg-neutral-50 rounded-xl p-8 border border-neutral-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
+                className={`bg-navy-900 rounded-xl p-8 border border-navy-800 hover:shadow-lg transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
               >
                 <div className="w-14 h-14 rounded-full bg-gold-400/10 flex items-center justify-center mb-5">
                   <item.icon className="w-7 h-7 text-gold-400" />
                 </div>
-                <h3 className="text-xl font-heading font-bold text-dark-700 mb-3">
+                <h3 className="text-xl font-heading font-bold text-white mb-3">
                   {item.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-navy-300 leading-relaxed">
                   {item.description}
                 </p>
               </div>
@@ -378,16 +378,16 @@ export default function GulfCoastLogisticsPage() {
       {/* ============================================================= */}
       {/* ALL SERVICES                                                   */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-neutral-50">
+      <section className="py-16 sm:py-24 bg-navy-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
               Our Services
             </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-dark-700">
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
               Comprehensive Logistics Services
             </h2>
-            <p className="text-neutral-500 mt-4 max-w-2xl mx-auto">
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
               From port drayage to nationwide freight brokerage, we provide
               every logistics service Gulf Coast businesses need under one roof.
             </p>
@@ -410,7 +410,7 @@ export default function GulfCoastLogisticsPage() {
       {/* ============================================================= */}
       {/* QUOTE FORM                                                     */}
       {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-dark-700">
+      <section className="py-16 sm:py-24 bg-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
@@ -419,7 +419,7 @@ export default function GulfCoastLogisticsPage() {
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">
               Request a Gulf Coast Freight Quote
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="text-navy-300 max-w-2xl mx-auto">
               Tell us about your shipment and our Gulf Coast logistics team
               will provide a competitive, no-obligation quote within 2 hours.
             </p>

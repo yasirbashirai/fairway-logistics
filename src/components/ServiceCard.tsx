@@ -19,7 +19,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <Link href={href} className="block service-card group">
-      <div className="relative bg-white rounded-2xl border border-neutral-200 hover:border-gold-400 hover:shadow-xl hover:-translate-y-1.5 shadow-sm overflow-hidden h-full flex flex-col transition-all duration-300">
+      <div className="relative glass-card rounded-2xl hover:border-gold-400/40 hover:shadow-xl hover:shadow-gold-400/5 hover:-translate-y-1.5 overflow-hidden h-full flex flex-col transition-all duration-300">
         {/* Gold top border accent */}
         <div className="h-1 bg-gold-400" />
 
@@ -30,12 +30,12 @@ export default function ServiceCard({
           </div>
 
           {/* Title */}
-          <h3 className="text-xl font-heading font-bold text-dark-700 mb-3">
+          <h3 className="text-xl font-heading font-bold text-white mb-3">
             {title}
           </h3>
 
           {/* Description */}
-          <p className="text-neutral-600 leading-relaxed mb-5">
+          <p className="text-navy-300 leading-relaxed mb-5">
             {description}
           </p>
 
@@ -45,7 +45,7 @@ export default function ServiceCard({
               {features.map((feature, index) => (
                 <li
                   key={index}
-                  className="flex items-start gap-2 text-sm text-neutral-600"
+                  className="flex items-start gap-2 text-sm text-navy-200"
                 >
                   <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0 mt-0.5" />
                   {feature}

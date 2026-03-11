@@ -32,13 +32,12 @@ function AnimatedCounter({
     if (!active) return;
 
     let frame: number;
-    const duration = 2000; // ms
+    const duration = 2000;
     const start = performance.now();
 
     const animate = (now: number) => {
       const elapsed = now - start;
       const progress = Math.min(elapsed / duration, 1);
-      // ease-out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       setCount(Math.round(target * eased));
       if (progress < 1) frame = requestAnimationFrame(animate);
@@ -81,7 +80,7 @@ export default function MetricsSection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-dark-gradient py-16 sm:py-20"
+      className="bg-navy-gradient py-16 sm:py-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
@@ -103,7 +102,7 @@ export default function MetricsSection() {
                 suffix={m.suffix}
                 active={inView}
               />
-              <p className="text-neutral-400 text-sm mt-2 font-medium">
+              <p className="text-navy-300 text-sm mt-2 font-medium">
                 {m.label}
               </p>
             </div>

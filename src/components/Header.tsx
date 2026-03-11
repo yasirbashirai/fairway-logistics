@@ -205,7 +205,7 @@ export default function Header() {
               : "max-h-12 opacity-100"
           }`}
         >
-          <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-xs font-body text-neutral-400">
+          <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-xs font-body text-navy-300">
             {/* Left: Credentials */}
             <div className="flex items-center gap-4">
               <span className="flex items-center gap-1.5">
@@ -293,7 +293,7 @@ export default function Header() {
                             <span className="block text-white font-heading font-semibold text-sm group-hover:text-gold-400 transition-colors duration-200">
                               {s.label}
                             </span>
-                            <span className="text-neutral-400 text-xs leading-relaxed font-body font-normal">
+                            <span className="text-navy-300 text-xs leading-relaxed font-body font-normal">
                               {s.desc}
                             </span>
                           </div>
@@ -492,7 +492,7 @@ export default function Header() {
                     <Phone className="w-4 h-4 text-navy-950" />
                   </div>
                   <div>
-                    <p className="text-xs text-neutral-400 font-body">Call Us 24/7</p>
+                    <p className="text-xs text-navy-300 font-body">Call Us 24/7</p>
                     <p className="font-heading font-bold text-sm">(251) 725-1929</p>
                   </div>
                 </a>
@@ -527,7 +527,7 @@ export default function Header() {
                                 key={s.href}
                                 href={s.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-body"
+                                className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-navy-200 hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-body"
                               >
                                 <s.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
                                 {s.label}
@@ -567,7 +567,7 @@ export default function Header() {
                                 key={r.href}
                                 href={r.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-body"
+                                className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-navy-200 hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-body"
                               >
                                 <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
                                 {r.label}
@@ -607,7 +607,7 @@ export default function Header() {
                                 key={ind.href}
                                 href={ind.href}
                                 onClick={() => setMobileOpen(false)}
-                                className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-neutral-300 hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-body"
+                                className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-navy-200 hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-body"
                               >
                                 <ind.icon className="w-4 h-4 text-gold-400 flex-shrink-0" />
                                 {ind.label}
@@ -655,7 +655,7 @@ export default function Header() {
                 </div>
 
                 {/* Credentials Footer */}
-                <div className="mt-6 pt-4 border-t border-white/10 text-neutral-500 text-xs font-body space-y-2">
+                <div className="mt-6 pt-4 border-t border-white/10 text-navy-400 text-xs font-body space-y-2">
                   <p className="flex items-center gap-2">
                     <Package className="w-3.5 h-3.5 text-gold-400 flex-shrink-0" />
                     FMCSA Licensed &bull; DOT Registered
