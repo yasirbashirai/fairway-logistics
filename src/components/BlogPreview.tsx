@@ -51,43 +51,43 @@ export default function BlogPreview() {
         {/* Blog cards grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {posts.map((post) => (
-            <article
+            <Link
               key={post.slug}
-              className="glass-card rounded-2xl overflow-hidden hover:border-gold-400/20 transition-all duration-300 group flex flex-col"
+              href={`/resources/${post.slug}`}
+              className="block"
             >
-              {/* Colored top strip */}
-              <div
-                className={`h-1 bg-gradient-to-r ${post.gradientFrom} ${post.gradientTo}`}
-              />
+              <article className="glass-card rounded-2xl overflow-hidden hover:border-gold-400/20 hover:-translate-y-1 hover:shadow-xl hover:shadow-gold-400/5 transition-all duration-300 group flex flex-col h-full">
+                {/* Colored top strip */}
+                <div
+                  className={`h-1 bg-gradient-to-r ${post.gradientFrom} ${post.gradientTo}`}
+                />
 
-              <div className="p-6 sm:p-8 flex flex-col flex-1">
-                {/* Category badge */}
-                <span className="text-xs uppercase text-gold-400 bg-gold-400/10 px-3 py-1 rounded-full w-fit font-semibold tracking-wide mb-4">
-                  {post.category}
-                </span>
+                <div className="p-6 sm:p-8 flex flex-col flex-1">
+                  {/* Category badge */}
+                  <span className="text-xs uppercase text-gold-400 bg-gold-400/10 px-3 py-1 rounded-full w-fit font-semibold tracking-wide mb-4">
+                    {post.category}
+                  </span>
 
-                {/* Title */}
-                <h3 className="font-heading font-bold text-white text-lg line-clamp-2 mb-3 group-hover:text-gold-200 transition-colors">
-                  {post.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="font-heading font-bold text-white text-lg line-clamp-2 mb-3 group-hover:text-gold-200 transition-colors">
+                    {post.title}
+                  </h3>
 
-                {/* Excerpt */}
-                <p className="text-sm text-navy-300 line-clamp-3 leading-relaxed mb-6 flex-1">
-                  {post.excerpt}
-                </p>
+                  {/* Excerpt */}
+                  <p className="text-sm text-navy-300 line-clamp-3 leading-relaxed mb-6 flex-1">
+                    {post.excerpt}
+                  </p>
 
-                {/* Bottom row: date + read more */}
-                <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
-                  <span className="text-xs text-navy-400">{post.date}</span>
-                  <Link
-                    href={`/resources/${post.slug}`}
-                    className="text-sm text-gold-400 font-semibold hover:text-gold-300 transition-colors"
-                  >
-                    Read More &rarr;
-                  </Link>
+                  {/* Bottom row: date + read more */}
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
+                    <span className="text-xs text-navy-400">{post.date}</span>
+                    <span className="text-sm text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+                      Read More &rarr;
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
+            </Link>
           ))}
         </div>
 

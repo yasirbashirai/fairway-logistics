@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
+import ChatBot from "@/components/ChatBot";
 
 export const metadata: Metadata = {
   title: {
@@ -209,6 +210,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <StickyCTA />
+        <ChatBot />
       </body>
     </html>
   );

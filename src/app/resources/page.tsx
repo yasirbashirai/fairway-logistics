@@ -29,7 +29,7 @@ const articles = [
       "/images/gulf-coast.jpg",
     date: "March 5, 2026",
     readTime: "8 min read",
-    href: "#",
+    href: "/resources/understanding-port-drayage",
   },
   {
     title: "Gulf Coast Shipping Guide 2026",
@@ -40,7 +40,7 @@ const articles = [
       "/images/trucks.jpg",
     date: "February 20, 2026",
     readTime: "12 min read",
-    href: "#",
+    href: "/resources/gulf-coast-shipping-guide-2026",
   },
   {
     title: "Asset-Based vs Broker-Only: Which Model Is Right for You?",
@@ -51,7 +51,7 @@ const articles = [
       "/images/truck-road.jpg",
     date: "February 10, 2026",
     readTime: "6 min read",
-    href: "#",
+    href: "/resources/asset-based-vs-broker-only",
   },
   {
     title: "5 Proven Strategies for Reducing Freight Costs",
@@ -62,7 +62,7 @@ const articles = [
       "/images/warehouse.jpg",
     date: "January 28, 2026",
     readTime: "7 min read",
-    href: "#",
+    href: "/resources/reducing-freight-costs",
   },
   {
     title: "Import/Export Documentation Guide for Gulf Coast Shippers",
@@ -73,7 +73,7 @@ const articles = [
       "/images/hero.jpg",
     date: "January 15, 2026",
     readTime: "10 min read",
-    href: "#",
+    href: "/resources/import-export-documentation-guide",
   },
   {
     title: "Choosing the Right Logistics Partner: A Decision Framework",
@@ -84,7 +84,7 @@ const articles = [
       "/images/truckings.jpg",
     date: "January 5, 2026",
     readTime: "9 min read",
-    href: "#",
+    href: "/resources/choosing-logistics-partner",
   },
 ];
 

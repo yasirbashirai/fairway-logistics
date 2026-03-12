@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  Package,
   Phone,
   Award,
   CheckCircle,
@@ -13,7 +12,6 @@ import {
   Shield,
 } from "lucide-react";
 
-// Stagger animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -46,14 +44,16 @@ const slideInRight = {
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background image */}
-      <Image
-        src="/images/hero.jpg"
-        alt="Fairway truck at port at sunset"
-        fill
-        priority
-        className="object-cover object-center"
-      />
+      {/* Background image with continuous smooth zoom animation */}
+      <div className="absolute inset-0 hero-zoom">
+        <Image
+          src="/images/hero.jpg"
+          alt="Fairway truck at port at sunset"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+      </div>
 
       {/* Dark gradient overlay */}
       <div className="hero-overlay absolute inset-0" />
@@ -83,16 +83,13 @@ export default function HeroSection() {
               </span>
             </motion.div>
 
-            {/* Main heading */}
+            {/* Main heading — compact single-line fit */}
             <motion.h1
               variants={fadeInUp}
-              className="mt-6 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-heading font-black text-white leading-[1.05]"
+              className="mt-6 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-heading font-black text-white leading-[1.1]"
             >
-              Gulf Coast Freight.
-              <br />
-              Delivered with
-              <br />
-              <span className="text-gold-gradient">Precision.</span>
+              Gulf Coast Freight.{" "}
+              <span className="text-gold-gradient">Delivered with Precision.</span>
             </motion.h1>
 
             {/* Subtitle */}
@@ -105,7 +102,7 @@ export default function HeroSection() {
               cargo, our commitment.
             </motion.p>
 
-            {/* CTA buttons */}
+            {/* CTA buttons — removed Track Shipment */}
             <motion.div
               variants={fadeInUp}
               className="mt-8 flex flex-wrap items-center gap-4"
@@ -115,14 +112,9 @@ export default function HeroSection() {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
 
-              <Link href="#tracking" className="btn-secondary">
-                <Package className="w-4 h-4 mr-2" />
-                Track Shipment
-              </Link>
-
               <Link
                 href="tel:+12517251929"
-                className="btn-ghost hidden sm:inline-flex"
+                className="btn-secondary"
               >
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
@@ -158,7 +150,6 @@ export default function HeroSection() {
 
               {/* Stat rows */}
               <div className="space-y-0">
-                {/* Years Experience */}
                 <div className="flex items-center justify-between py-4 border-b border-navy-700/50">
                   <span className="text-navy-300 text-sm font-medium">
                     Years Experience
@@ -168,7 +159,6 @@ export default function HeroSection() {
                   </span>
                 </div>
 
-                {/* Monthly Shipments */}
                 <div className="flex items-center justify-between py-4 border-b border-navy-700/50">
                   <span className="text-navy-300 text-sm font-medium">
                     Monthly Shipments
@@ -178,7 +168,6 @@ export default function HeroSection() {
                   </span>
                 </div>
 
-                {/* On-Time Delivery */}
                 <div className="flex items-center justify-between py-4">
                   <span className="text-navy-300 text-sm font-medium">
                     On-Time Delivery

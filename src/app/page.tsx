@@ -4,6 +4,7 @@ import LogoMarquee from "@/components/LogoMarquee";
 import ServiceExplorer from "@/components/ServiceExplorer";
 import WhyFairway from "@/components/WhyFairway";
 import CoverageMap from "@/components/CoverageMap";
+import InteractiveMap from "@/components/InteractiveMap";
 import TrackingWidget from "@/components/TrackingWidget";
 import QuoteCalculator from "@/components/QuoteCalculator";
 import IndustrySection from "@/components/IndustrySection";
@@ -171,6 +172,9 @@ export default function HomePage() {
 
       {/* 6. Coverage Map + Stats */}
       <CoverageMap />
+
+      {/* 6b. Interactive Service Network Map */}
+      <InteractiveMap />
 
       {/* 7. Instant Quote Calculator */}
       <QuoteCalculator />
