@@ -16,23 +16,22 @@ import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
   title:
-    "Fairway Logistics LLC | Asset-Based Trucking & Freight Services | Gulf Coast",
+    "Fairway Logistics LLC | Asset-Based Trucking, Heavy Haul & Freight Brokerage | Nationwide",
   description:
-    "Gulf Coast's premier asset-based logistics company. Port of Mobile drayage, container shipping, trucking, warehousing & freight brokerage. FMCSA registered, fully insured. Instant quotes available. Call (251) 725-1929.",
+    "Nationwide logistics powered by asset-based reliability. Trucking, heavy haul, drayage, freight brokerage, bonded warehousing & import/export. FMCSA registered, fully insured. Headquartered in Mobile, AL. Call (251) 725-1929.",
   keywords: [
-    "Gulf Coast logistics",
-    "Port of Mobile drayage",
-    "asset-based trucking Mobile AL",
-    "freight services Gulf Coast",
-    "container drayage Alabama",
-    "warehousing Mobile Alabama",
-    "freight brokerage Gulf Coast",
-    "import export logistics Mobile",
+    "nationwide freight services",
+    "asset-based trucking",
+    "heavy haul transport",
+    "freight brokerage",
+    "bonded warehouse Mobile AL",
+    "container drayage Gulf Coast",
+    "over-dimensional freight",
+    "import export logistics",
     "trucking company Mobile AL",
     "Fairway Logistics",
-    "instant freight quote",
-    "shipment tracking",
-    "3PL Gulf Coast",
+    "national freight brokerage",
+    "3PL logistics",
     "supply chain solutions",
   ],
   openGraph: {
@@ -65,10 +64,10 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What areas does Fairway Logistics serve?",
+      name: "Where does Fairway Logistics operate?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We serve the entire Gulf Coast region including Mobile AL, Baldwin County AL, Pensacola FL, Biloxi MS, Gulfport MS, and New Orleans LA. We also provide nationwide freight solutions through our carrier network.",
+        text: "We provide nationwide freight brokerage with 15,000+ carriers. Our asset-based fleet operates primarily across the Gulf Coast and Southeast. Our 200,000 sq ft bonded warehouse and HQ are in Mobile, AL.",
       },
     },
     {
@@ -76,7 +75,7 @@ const faqJsonLd = {
       name: "Do you own your own trucks?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes! Unlike many freight brokers, Fairway Logistics is an asset-based carrier. We own and maintain our fleet of trucks and equipment, giving you guaranteed capacity and direct control over your shipments.",
+        text: "Yes! We are an asset-based carrier — we own trucks, trailers, chassis, and a 200,000 sq ft bonded warehouse. We also run a full nationwide freight brokerage. This gives you guaranteed capacity on our fleet plus access to 15,000+ carriers for any lane.",
       },
     },
     {

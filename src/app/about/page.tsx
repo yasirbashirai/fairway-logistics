@@ -17,9 +17,9 @@ import MetricsSection from "@/components/MetricsSection";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
-  title: "About Fairway Logistics | Gulf Coast Asset-Based Freight Company",
+  title: "About Fairway Logistics | Nationwide Asset-Based Freight & Brokerage",
   description:
-    "Learn about Fairway Logistics LLC — an asset-based logistics company headquartered in Mobile, AL. Company-owned fleet, Port of Mobile expertise, FMCSA registered, and 24/7 operations serving the Gulf Coast.",
+    "Learn about Fairway Logistics LLC — an asset-based logistics company and national freight broker headquartered in Mobile, AL. Company-owned fleet, heavy haul, bonded warehouse, and 24/7 operations with nationwide coverage.",
   keywords: [
     "about Fairway Logistics",
     "Mobile AL logistics company",
@@ -93,17 +93,17 @@ const whyChooseUs = [
   },
   {
     icon: Anchor,
-    title: "Gulf Coast Expertise",
+    title: "National Reach, Gulf Coast Roots",
     description:
-      "With deep roots in Mobile, Alabama, we know the Gulf Coast logistics landscape better than anyone. Our relationships at the Port of Mobile, local terminals, and regional warehouses give our clients an edge.",
+      "Headquartered in Mobile, Alabama, with assets across the Gulf Coast and brokerage capabilities nationwide. We combine local expertise at the Port of Mobile with a 15,000+ carrier network that covers every lane in the country.",
     bullets: [
+      "Nationwide freight brokerage coverage",
+      "Asset-based fleet across the Gulf Coast & Southeast",
       "Port of Mobile preferred carrier",
-      "Priority gate access & fast chassis turns",
-      "Knowledge of Gulf Coast routes & regulations",
-      "Established relationships with port authorities",
+      "200,000 sq ft bonded warehouse in Mobile",
     ],
     image: "/images/truck-road.jpg",
-    imageAlt: "Port of Mobile container operations",
+    imageAlt: "Nationwide freight logistics coverage",
   },
   {
     icon: Cpu,
@@ -135,33 +135,6 @@ const whyChooseUs = [
   },
 ];
 
-/* ---------- Team ---------- */
-const team = [
-  {
-    name: "James Carter",
-    title: "Founder & CEO",
-    bio: "20+ years in Gulf Coast freight and port operations. Founded Fairway Logistics to bring asset-based reliability to the regional market.",
-    image: "/images/main.jpg",
-  },
-  {
-    name: "Michelle Torres",
-    title: "VP of Operations",
-    bio: "Former port operations manager with deep expertise in drayage, intermodal logistics, and carrier management across the Gulf Coast.",
-    image: "/images/main.jpg",
-  },
-  {
-    name: "Robert Williams",
-    title: "Director of Safety & Compliance",
-    bio: "15 years ensuring FMCSA compliance, driver safety programs, and DOT audit readiness. Maintains Fairway's impeccable safety record.",
-    image: "/images/main.jpg",
-  },
-  {
-    name: "Angela Davis",
-    title: "Director of Business Development",
-    bio: "Specializes in building long-term logistics partnerships across manufacturing, construction, and energy industries on the Gulf Coast.",
-    image: "/images/main.jpg",
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -171,7 +144,7 @@ export default function AboutPage() {
       {/* ============================================================= */}
       <PageHero
         title="About Fairway Logistics"
-        subtitle="Asset-based logistics solutions built on Gulf Coast expertise, company-owned equipment, and an unwavering commitment to reliability."
+        subtitle="Nationwide logistics powered by asset-based reliability, company-owned equipment, and an unwavering commitment to service — headquartered in Mobile, AL."
         breadcrumbs={[{ label: "About" }]}
         backgroundImage="/images/hero.jpg"
       />
@@ -201,8 +174,8 @@ export default function AboutPage() {
                 Our Story
               </p>
               <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
-                Built on the Gulf Coast.{" "}
-                <span className="text-gold-gradient">Built to Deliver.</span>
+                Gulf Coast Roots.{" "}
+                <span className="text-gold-gradient">Nationwide Reach.</span>
               </h2>
 
               <div className="gold-border-left pl-6 mb-6">
@@ -216,27 +189,29 @@ export default function AboutPage() {
               <p className="text-navy-300 leading-relaxed mb-6">
                 Headquartered at 456 Dauphin Street in Mobile, Alabama, we
                 started as a single-truck drayage operation at the Port of
-                Mobile. Over the years, we&apos;ve grown into a full-service,
-                asset-based logistics company serving the entire Gulf Coast
-                region and beyond.
+                Mobile. Over the years, we&apos;ve grown into a full-service
+                national logistics company — combining asset-based trucking and
+                a 200,000 sq ft bonded warehouse with a nationwide freight
+                brokerage network.
               </p>
 
               <p className="text-navy-300 leading-relaxed mb-8">
                 Today, our fleet handles everything from container drayage and
-                full truckload shipping to warehousing and specialized freight.
-                But our mission remains the same: provide reliable, transparent,
-                and competitively priced logistics services that help businesses
-                move goods with confidence.
+                heavy haul to full truckload shipping and warehousing. Our
+                brokerage connects shippers to 15,000+ vetted carriers coast to
+                coast. But our mission remains the same: provide reliable,
+                transparent logistics that help businesses move goods with
+                confidence.
               </p>
 
               {/* Key differentiators */}
               <div className="space-y-3">
                 {[
-                  "Company-owned fleet — not a brokerage-only model",
-                  "Deep Port of Mobile operational expertise",
+                  "Company-owned fleet + nationwide brokerage network",
+                  "Heavy haul & over-dimensional specialists",
+                  "200,000 sq ft bonded warehouse in Mobile, AL",
                   "FMCSA registered & fully insured",
                   "24/7 dispatch and operations support",
-                  "Competitive rates with no hidden fees",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-gold-400 flex-shrink-0" />
@@ -367,62 +342,7 @@ export default function AboutPage() {
       </section>
 
       {/* ============================================================= */}
-      {/* SECTION 5 — LEADERSHIP / TEAM                                  */}
-      {/* ============================================================= */}
-      <section className="py-16 sm:py-24 bg-navy-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Header */}
-          <div className="text-center mb-14">
-            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
-              Our Team
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
-              Leadership That Delivers
-            </h2>
-            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
-              Our leadership team brings decades of combined experience in
-              freight, port operations, and supply chain management.
-            </p>
-            <div className="section-divider mx-auto mt-6" />
-          </div>
-
-          {/* Team grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, i) => (
-              <div
-                key={member.name}
-                className={`bg-navy-950 rounded-xl border border-navy-800 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${i + 1}`}
-              >
-                {/* Photo */}
-                <div className="h-56 overflow-hidden">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                {/* Gold accent line */}
-                <div className="h-1 bg-gold-gradient" />
-                {/* Info */}
-                <div className="p-5">
-                  <h3 className="font-heading font-bold text-white text-lg">
-                    {member.name}
-                  </h3>
-                  <p className="text-gold-400 text-sm font-semibold mb-2">
-                    {member.title}
-                  </p>
-                  <p className="text-navy-300 text-sm leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================================= */}
-      {/* SECTION 6 — METRICS                                            */}
+      {/* SECTION 5 — METRICS                                            */}
       {/* ============================================================= */}
       <MetricsSection />
 
@@ -430,8 +350,8 @@ export default function AboutPage() {
       {/* SECTION 7 — CTA                                                */}
       {/* ============================================================= */}
       <CTASection
-        title="Partner with Gulf Coast's Leading Logistics Provider"
-        description="Experience the difference of working with an asset-based carrier. Guaranteed capacity, competitive rates, and a team that treats your freight like their own."
+        title="Partner with a Nationwide Logistics Provider"
+        description="Experience the difference of working with an asset-based carrier. Guaranteed capacity, competitive rates, and a team that treats your freight like their own. National coverage, Gulf Coast roots."
         primaryButtonText="Request a Free Quote"
         primaryButtonHref="/request-quote"
         secondaryButtonText="Call (251) 725-1929"

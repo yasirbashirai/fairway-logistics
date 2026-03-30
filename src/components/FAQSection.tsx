@@ -6,44 +6,44 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "What areas does Fairway Logistics serve?",
+    question: "Where does Fairway Logistics operate?",
     answer:
-      "We serve the entire Gulf Coast region including Mobile AL, Baldwin County AL, Pensacola FL, Biloxi MS, Gulfport MS, and New Orleans LA. We also provide nationwide freight solutions through our carrier network.",
+      "We provide nationwide freight brokerage with access to 15,000+ vetted carriers covering every lane in the country. Our asset-based fleet (company-owned trucks) operates primarily across the Gulf Coast and Southeast. Our 200,000 sq ft bonded warehouse and headquarters are in Mobile, AL.",
   },
   {
     question: "What types of freight do you handle?",
     answer:
-      "We handle full truckload (FTL), less-than-truckload (LTL), container drayage, flatbed loads, refrigerated freight, oversized/overweight loads, and hazardous materials with proper certifications.",
+      "We handle full truckload (FTL), less-than-truckload (LTL), flatbed, step-deck, heavy haul and over-dimensional loads, container drayage, import/export, and hazmat with proper certifications. If it needs to move, we can handle it.",
   },
   {
-    question: "Do you own your own trucks?",
+    question: "Do you own your own trucks or are you just a broker?",
     answer:
-      "Yes! Unlike many freight brokers, Fairway Logistics is an asset-based carrier. We own and maintain our fleet of trucks and equipment, giving you guaranteed capacity and direct control over your shipments.",
+      "Both. We are an asset-based carrier — we own and operate our own fleet of trucks, trailers, and chassis out of the Gulf Coast. But we also run a full freight brokerage operation with nationwide coverage. This means you get guaranteed capacity on our assets where available, plus access to our carrier network for any lane in the country.",
+  },
+  {
+    question: "What are your heavy haul and over-dimensional capabilities?",
+    answer:
+      "We specialize in oversized and overweight freight including construction equipment, industrial machinery, wind energy components, and structural steel. We handle all permit coordination, route surveys, pilot cars, and escort services. Equipment includes RGN, lowboy, step-deck, multi-axle, and extendable trailers.",
+  },
+  {
+    question: "Tell me about your warehouse — is it bonded?",
+    answer:
+      "Yes. Our 200,000 sq ft facility in Mobile, AL is a U.S. Customs bonded warehouse. This means imported goods can be stored before duties are paid, giving importers financial flexibility. We offer cross-docking, inventory management, pick & pack, container transloading, and climate-monitored storage — all integrated with our own drayage and trucking fleet.",
   },
   {
     question: "How quickly can I get a freight quote?",
     answer:
-      "You can get an instant estimate using our online quote calculator. For detailed quotes, our team responds within 2 business hours. Call us at (251) 725-1929 for immediate assistance.",
+      "You can request a quote through our website and our team responds within 2 business hours. For immediate assistance, call our brokerage line or main office at (251) 725-1929. We handle spot quotes, contract rates, and project-based pricing.",
   },
   {
-    question: "Is Fairway Logistics FMCSA registered?",
+    question: "Is Fairway Logistics FMCSA registered and insured?",
     answer:
-      "Absolutely. We are fully FMCSA registered, DOT compliant, and carry comprehensive insurance coverage. Safety and compliance are foundational to our operations.",
-  },
-  {
-    question: "Do you offer warehousing services?",
-    answer:
-      "Yes, we operate strategically located warehouse facilities in Mobile, AL offering cross-docking, inventory management, pick & pack fulfillment, and climate-controlled storage.",
-  },
-  {
-    question: "Can you handle international shipments?",
-    answer:
-      "We provide comprehensive import/export logistics including customs coordination, documentation support, and port-to-door delivery service through the Port of Mobile and other Gulf Coast ports.",
+      "Yes. We are fully FMCSA registered, DOT compliant, and carry comprehensive cargo and liability insurance. Safety and compliance are foundational to everything we do — from our own fleet operations to the carriers in our brokerage network.",
   },
   {
     question: "How can I track my shipment?",
     answer:
-      "Use our shipment tracking portal on this website by entering your PRO number or BOL. You can also contact our 24/7 operations team at (251) 725-1929 for real-time updates.",
+      "Use our shipment tracking portal on this website by entering your PRO number or BOL. For loads on our own fleet, you get real-time GPS tracking. You can also contact our 24/7 dispatch team at (251) 725-1929 for live updates on any shipment.",
   },
 ];
 

@@ -14,6 +14,7 @@ import {
   CheckCircle,
   ArrowRight,
   ChevronDown,
+  Weight,
 } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
@@ -36,7 +37,7 @@ const services: Service[] = [
     title: "Asset-Based Trucking",
     shortDesc: "Company-owned fleet for reliable freight",
     description:
-      "Our company-owned fleet delivers full truckload, less-than-truckload, and flatbed services with real-time GPS tracking across the Gulf Coast and nationwide.",
+      "Our company-owned fleet delivers full truckload, less-than-truckload, and flatbed services with real-time GPS tracking nationwide from our Gulf Coast base.",
     image: "/images/truck-road.jpg",
     features: [
       "Company-owned fleet",
@@ -46,18 +47,33 @@ const services: Service[] = [
     ],
   },
   {
-    id: "port-drayage",
-    icon: Ship,
-    title: "Port of Mobile Drayage",
-    shortDesc: "Direct port container drayage",
+    id: "gulf-drayage",
+    icon: Container,
+    title: "Gulf Coast Container Drayage",
+    shortDesc: "Multi-port regional drayage",
     description:
-      "Seamless container drayage from the Port of Mobile with same-day pickup capability, chassis management, and priority gate access as a bonded carrier.",
+      "Container drayage across Gulf Coast ports including the Port of Mobile with same-day pickup, chassis management, intermodal connections, and transload services.",
     image: "/images/gulf-coast.jpg",
     features: [
+      "Multi-port coverage",
       "Same-day container pickup",
       "Chassis management",
-      "Bonded carrier",
-      "Priority gate access",
+      "Transload services",
+    ],
+  },
+  {
+    id: "heavy-haul",
+    icon: Weight,
+    title: "Heavy Haul & Over-Dimensional",
+    shortDesc: "Oversized and overweight freight specialists",
+    description:
+      "Specialized heavy haul and over-dimensional transport for oversized equipment, machinery, and construction materials. Full permit coordination and route planning nationwide.",
+    image: "/images/truck-road.jpg",
+    features: [
+      "Over-dimensional loads",
+      "Permit coordination",
+      "Route planning & surveys",
+      "Escort & pilot car services",
     ],
   },
   {
@@ -66,11 +82,11 @@ const services: Service[] = [
     title: "Freight Brokerage",
     shortDesc: "Vetted carrier network nationwide",
     description:
-      "Access our vetted network of 15,000+ carriers for competitive rates, full shipment visibility, and on-demand capacity for any lane or load type.",
+      "Access our vetted network of 15,000+ carriers for competitive rates, full shipment visibility, and on-demand capacity for any lane or load type — coast to coast.",
     image: "/images/trucks.jpg",
     features: [
       "15,000+ carrier network",
-      "Competitive rate sourcing",
+      "Nationwide coverage",
       "Full shipment visibility",
       "Capacity on demand",
     ],
@@ -79,15 +95,15 @@ const services: Service[] = [
     id: "warehousing",
     icon: Warehouse,
     title: "Warehousing & Distribution",
-    shortDesc: "Mobile AL warehouse facilities",
+    shortDesc: "200,000 sq ft bonded warehouse",
     description:
-      "Strategic warehousing and distribution facilities in Mobile, AL offering cross-docking, inventory management, pick & pack, and climate-controlled storage.",
+      "200,000 sq ft bonded warehouse facility in Mobile, AL offering cross-docking, inventory management, pick & pack, climate-controlled storage, and container transloading.",
     image: "/images/warehouse.jpg",
     features: [
+      "200,000 sq ft bonded facility",
       "Cross-docking",
       "Inventory management",
       "Pick & pack",
-      "Climate-controlled",
     ],
   },
   {
@@ -103,21 +119,6 @@ const services: Service[] = [
       "Documentation support",
       "Port-to-door",
       "Trade compliance",
-    ],
-  },
-  {
-    id: "gulf-drayage",
-    icon: Container,
-    title: "Gulf Coast Container Drayage",
-    shortDesc: "Multi-port regional drayage",
-    description:
-      "Regional container drayage across all Gulf Coast ports with intermodal connections, last-mile delivery, and transload services for maximum flexibility.",
-    image: "/images/main.jpg",
-    features: [
-      "Multi-port coverage",
-      "Intermodal connections",
-      "Last-mile delivery",
-      "Transload services",
     ],
   },
 ];

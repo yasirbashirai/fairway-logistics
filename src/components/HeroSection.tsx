@@ -79,7 +79,7 @@ export default function HeroSection() {
             <motion.div variants={fadeInUp}>
               <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-400/40 bg-gold-400/5 text-gold-400 font-accent uppercase tracking-widest text-xs">
                 <Shield className="w-3.5 h-3.5" />
-                Asset-Based Gulf Coast Logistics
+                Asset-Based Logistics — Nationwide Coverage
               </span>
             </motion.div>
 
@@ -88,7 +88,7 @@ export default function HeroSection() {
               variants={fadeInUp}
               className="mt-6 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-heading font-black text-white leading-[1.1]"
             >
-              Gulf Coast Freight.{" "}
+              Nationwide Freight.{" "}
               <span className="text-gold-gradient">Delivered with Precision.</span>
             </motion.h1>
 
@@ -97,9 +97,9 @@ export default function HeroSection() {
               variants={fadeInUp}
               className="mt-6 text-lg sm:text-xl text-navy-200 max-w-xl leading-relaxed"
             >
-              Fairway Logistics is an asset-based carrier providing reliable,
-              on-time freight solutions across the Gulf Coast and beyond. Your
-              cargo, our commitment.
+              Fairway Logistics is an asset-based carrier and national freight
+              broker. Trucking, heavy haul, drayage, and bonded warehousing —
+              headquartered in Mobile, AL with nationwide coverage.
             </motion.p>
 
             {/* CTA buttons — removed Track Shipment */}

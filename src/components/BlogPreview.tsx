@@ -2,11 +2,11 @@ import Link from "next/link";
 
 const posts = [
   {
-    category: "Industry Insights",
-    title: "Navigating Gulf Coast Port Congestion: 2026 Shipper's Guide",
+    category: "Featured Experience",
+    title: "Heavy Haul & Over-Dimensional: What We Move Every Day",
     excerpt:
-      "Port delays across the Gulf Coast are impacting supply chains industry-wide. Learn proven strategies to minimize disruption, optimize your routing, and keep freight moving through peak congestion periods.",
-    date: "Mar 8, 2026",
+      "From construction equipment and industrial machinery to structural steel and energy components — see how our heavy haul division handles the loads others can't. Permit coordination, route surveys, and escort services included.",
+    date: "Mar 15, 2026",
     slug: "gulf-coast-port-congestion-guide-2026",
     gradientFrom: "from-gold-300",
     gradientTo: "to-gold-500",
@@ -15,17 +15,17 @@ const posts = [
     category: "Company News",
     title: "Fairway Logistics Expands Fleet with 15 New Trucks",
     excerpt:
-      "We're investing in our future — and yours. Our latest fleet expansion adds 15 new late-model trucks to ensure reliable capacity, improved fuel efficiency, and enhanced service across all our lanes.",
+      "Our latest fleet expansion adds 15 new late-model trucks. More capacity for our customers, better fuel efficiency, and expanded coverage across the Southeast and nationwide brokerage lanes.",
     date: "Mar 1, 2026",
     slug: "fairway-expands-fleet-15-new-trucks",
     gradientFrom: "from-gold-400",
     gradientTo: "to-gold-600",
   },
   {
-    category: "Supply Chain",
-    title: "How Asset-Based Carriers Save You Money vs. Traditional Brokers",
+    category: "Featured Experience",
+    title: "Inside Our 200,000 Sq Ft Bonded Warehouse",
     excerpt:
-      "Discover why working directly with an asset-based carrier like Fairway eliminates broker markups, provides guaranteed capacity, and delivers better communication from pickup to delivery.",
+      "A look at our U.S. Customs bonded warehouse in Mobile, AL — container transloading, cross-docking, inventory management, and seamless integration with our own drayage and trucking fleet.",
     date: "Feb 22, 2026",
     slug: "asset-based-carriers-save-money",
     gradientFrom: "from-gold-200",

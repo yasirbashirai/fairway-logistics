@@ -123,7 +123,7 @@ export default function ResourcesPage() {
       {/* ============================================================= */}
       <PageHero
         title="Resources & Industry Insights"
-        subtitle="Expert guides, industry analysis, and practical tips to help you navigate Gulf Coast logistics with confidence."
+        subtitle="Expert guides, industry analysis, and practical tips to help you navigate nationwide logistics with confidence."
         breadcrumbs={[{ label: "Resources" }]}
         backgroundImage="/images/hero.jpg"
       />
@@ -138,12 +138,12 @@ export default function ResourcesPage() {
               Latest Articles
             </p>
             <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
-              Featured Resources
+              Featured Resources &amp; Experience
             </h2>
             <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
-              Stay informed with the latest insights on Gulf Coast freight,
-              logistics best practices, and industry trends from the Fairway
-              Logistics team.
+              Insights on freight logistics, heavy haul, drayage, and
+              warehousing from the Fairway Logistics team. Plus real examples
+              of what we do every day.
             </p>
             <div className="section-divider mx-auto mt-6" />
           </div>

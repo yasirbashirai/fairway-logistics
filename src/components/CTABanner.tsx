@@ -36,9 +36,9 @@ export default function CTABanner() {
           <div className="section-divider mx-auto mt-4 mb-6" />
 
           <p className="text-navy-200 text-lg max-w-2xl mx-auto leading-relaxed">
-            Partner with Gulf Coast&apos;s leading asset-based logistics
-            provider. Get competitive rates, guaranteed capacity, and a
-            dedicated operations team.
+            Partner with an asset-based logistics provider with nationwide
+            reach. Competitive rates, guaranteed capacity, and a dedicated
+            operations team — from Gulf Coast to coast.
           </p>
 
           {/* CTA buttons */}

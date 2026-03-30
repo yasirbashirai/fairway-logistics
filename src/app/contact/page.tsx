@@ -27,9 +27,27 @@ const contactDetails = [
   },
   {
     icon: Phone,
-    title: "Phone",
+    title: "Main Office",
     lines: ["(251) 725-1929"],
     href: "tel:+12517251929",
+  },
+  {
+    icon: Phone,
+    title: "Brokerage Line",
+    lines: ["(251) 725-1930"],
+    href: "tel:+12517251930",
+  },
+  {
+    icon: Phone,
+    title: "Trucking / Dispatch",
+    lines: ["(251) 725-1931"],
+    href: "tel:+12517251931",
+  },
+  {
+    icon: Phone,
+    title: "Warehouse",
+    lines: ["(251) 725-1932"],
+    href: "tel:+12517251932",
   },
   {
     icon: Mail,

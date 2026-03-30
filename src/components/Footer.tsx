@@ -17,11 +17,11 @@ import {
 
 const serviceLinks = [
   { label: "Asset-Based Trucking", href: "/asset-based-trucking" },
-  { label: "Port of Mobile Drayage", href: "/port-of-mobile-drayage" },
+  { label: "Gulf Coast Drayage", href: "/gulf-coast-container-drayage" },
+  { label: "Heavy Haul & Over-Dimensional", href: "/heavy-haul" },
   { label: "Freight Brokerage", href: "/freight-brokerage" },
   { label: "Warehousing", href: "/warehousing-mobile-al" },
   { label: "Import / Export", href: "/import-export-logistics" },
-  { label: "Gulf Coast Drayage", href: "/gulf-coast-container-drayage" },
 ];
 
 const quickLinks = [
@@ -79,10 +79,10 @@ export default function Footer() {
               </Link>
 
               <p className="text-navy-300 text-sm leading-relaxed mb-6">
-                Fairway Logistics LLC is a premier asset-based logistics company
-                headquartered in Mobile, Alabama. We deliver reliable freight
-                solutions and world-class transportation services across the
-                entire Gulf Coast region and beyond.
+                Fairway Logistics LLC is a nationwide logistics company
+                headquartered in Mobile, Alabama. Asset-based trucking, heavy
+                haul, drayage, freight brokerage, and bonded warehousing —
+                delivering reliable freight solutions coast to coast.
               </p>
 
               {/* Social icons */}

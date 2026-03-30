@@ -23,6 +23,7 @@ import {
   ShoppingCart,
   Mail,
   Package,
+  Weight,
 } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
@@ -37,22 +38,28 @@ const services = [
     desc: "Full truckload shipping with our own dedicated fleet",
   },
   {
-    label: "Port of Mobile Drayage",
-    href: "/port-of-mobile-drayage",
-    icon: Ship,
-    desc: "Container drayage at the Port of Mobile",
+    label: "Gulf Coast Container Drayage",
+    href: "/gulf-coast-container-drayage",
+    icon: Container,
+    desc: "Multi-port container drayage across the Gulf Coast",
+  },
+  {
+    label: "Heavy Haul & Over-Dimensional",
+    href: "/heavy-haul",
+    icon: Weight,
+    desc: "Oversized & overweight freight specialists",
   },
   {
     label: "Freight Brokerage",
     href: "/freight-brokerage",
     icon: Handshake,
-    desc: "Access to a nationwide carrier network",
+    desc: "Nationwide carrier network — coast to coast",
   },
   {
     label: "Warehousing",
     href: "/warehousing-mobile-al",
     icon: Warehouse,
-    desc: "Secure warehousing & distribution in Mobile",
+    desc: "200,000 sq ft bonded warehouse in Mobile",
   },
   {
     label: "Import / Export Logistics",
@@ -60,22 +67,18 @@ const services = [
     icon: Globe,
     desc: "International freight coordination & customs",
   },
-  {
-    label: "Gulf Coast Container Drayage",
-    href: "/gulf-coast-container-drayage",
-    icon: Container,
-    desc: "Regional container transport across the Gulf Coast",
-  },
 ];
 
-const regions = [
-  { label: "Mobile, AL", href: "/logistics-services-mobile-al" },
+const assetRegions = [
+  { label: "Mobile, AL (HQ)", href: "/logistics-services-mobile-al" },
   { label: "Baldwin County, AL", href: "/logistics-services-baldwin-county-al" },
   { label: "Pensacola, FL", href: "/logistics-services-pensacola-fl" },
   { label: "Biloxi, MS", href: "/logistics-services-biloxi-ms" },
   { label: "Gulfport, MS", href: "/logistics-services-gulfport-ms" },
   { label: "New Orleans, LA", href: "/logistics-services-new-orleans-la" },
 ];
+
+const regions = assetRegions;
 
 const industries = [
   { label: "Manufacturing", href: "/logistics-for-manufacturing", icon: Factory },
@@ -329,17 +332,23 @@ export default function Header() {
                     animate="visible"
                     exit="exit"
                   >
-                    <div className="glass-card bg-navy-950/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl shadow-black/40 w-64 p-2">
-                      {regions.map((r) => (
+                    <div className="glass-card bg-navy-950/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl shadow-black/40 w-72 p-3">
+                      <p className="px-3 pt-1 pb-2 text-[10px] uppercase tracking-widest text-gold-400 font-semibold">Asset Coverage (In-House Fleet)</p>
+                      {assetRegions.map((r) => (
                         <Link
                           key={r.href}
                           href={r.href}
-                          className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl hover:bg-white/5 text-white hover:text-gold-400 transition-all duration-200 text-sm font-body font-normal"
+                          className="flex items-center gap-2.5 px-4 py-2 rounded-xl hover:bg-white/5 text-white hover:text-gold-400 transition-all duration-200 text-sm font-body font-normal"
                         >
                           <MapPin className="w-4 h-4 text-gold-400 flex-shrink-0" />
                           {r.label}
                         </Link>
                       ))}
+                      <div className="border-t border-navy-700/50 my-2" />
+                      <p className="px-3 pt-1 pb-2 text-[10px] uppercase tracking-widest text-emerald-400 font-semibold">Brokerage Coverage</p>
+                      <div className="px-4 py-2 text-sm text-navy-300 font-body font-normal">
+                        <span className="text-emerald-400 font-semibold">Nationwide</span> — All 48 states via 15,000+ carrier network
+                      </div>
                     </div>
                   </motion.div>
                 )}
@@ -562,7 +571,8 @@ export default function Header() {
                           exit="exit"
                         >
                           <div className="pl-3 space-y-0.5 pb-2">
-                            {regions.map((r) => (
+                            <p className="px-3 pt-1 pb-1 text-[10px] uppercase tracking-widest text-gold-400 font-semibold">Asset Coverage</p>
+                            {assetRegions.map((r) => (
                               <Link
                                 key={r.href}
                                 href={r.href}
@@ -573,6 +583,9 @@ export default function Header() {
                                 {r.label}
                               </Link>
                             ))}
+                            <div className="border-t border-navy-700/50 my-1.5" />
+                            <p className="px-3 pt-1 pb-1 text-[10px] uppercase tracking-widest text-emerald-400 font-semibold">Brokerage Coverage</p>
+                            <p className="px-3 py-2 text-sm text-navy-300 font-body"><span className="text-emerald-400 font-semibold">Nationwide</span> — All 48 states</p>
                           </div>
                         </motion.div>
                       )}

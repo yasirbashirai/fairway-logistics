@@ -12,9 +12,9 @@ const advantages = [
   },
   {
     icon: Anchor,
-    title: "Gulf Coast Experts",
+    title: "National Reach, Local Roots",
     description:
-      "15+ years of port knowledge, regional freight lanes, and Gulf Coast terminal expertise.",
+      "Nationwide brokerage. Gulf Coast assets. 15+ years of port knowledge and freight expertise.",
   },
   {
     icon: Globe,

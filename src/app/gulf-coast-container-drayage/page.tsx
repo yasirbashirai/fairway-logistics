@@ -83,7 +83,7 @@ const ports = [
     name: "Port of Pensacola",
     location: "Pensacola, FL",
     description:
-      "Serving the western Florida panhandle with container drayage from the Port of Pensacola to regional warehouses and distribution centers.",
+      "Serving the western Florida panhandle with container drayage from the Port of Pensacola to customer facilities and distribution centers.",
     features: ["Florida panhandle coverage", "Project cargo", "Local delivery"],
   },
 ];
@@ -464,7 +464,7 @@ export default function GulfCoastContainerDrayagePage() {
               icon={<Anchor className="w-6 h-6" />}
               title="Port of Mobile Drayage"
               description="Specialized drayage at our home port with priority gate access and the fastest turnaround times."
-              href="/port-of-mobile-drayage"
+              href="/gulf-coast-container-drayage"
               features={["APM Terminals", "Same-day pickup", "Chassis included"]}
             />
             <ServiceCard

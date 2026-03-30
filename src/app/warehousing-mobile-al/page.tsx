@@ -27,7 +27,7 @@ import ServiceCard from "@/components/ServiceCard";
 export const metadata: Metadata = {
   title: "Warehousing & Distribution Mobile AL | Fairway Logistics",
   description:
-    "Warehousing and distribution services in Mobile, AL near the Port of Mobile. Scalable warehouse space, cross-docking, inventory management, and technology-enabled distribution. Fairway Logistics LLC.",
+    "200,000 sq ft bonded warehouse and distribution services in Mobile, AL near the Port of Mobile. Cross-docking, inventory management, and technology-enabled distribution. Fairway Logistics LLC.",
   keywords: [
     "Mobile warehousing",
     "warehousing Mobile AL",
@@ -109,7 +109,7 @@ const advantages = [
     icon: Zap,
     title: "Scalable Space",
     description:
-      "Whether you need 5,000 or 50,000 square feet, our flexible warehousing model scales with your business. Seasonal surges, product launches, and inventory buildups are handled seamlessly.",
+      "Whether you need 5,000 or 200,000 square feet, our flexible warehousing model scales with your business. Seasonal surges, product launches, and inventory buildups are handled seamlessly.",
   },
   {
     icon: ScanLine,
@@ -154,24 +154,29 @@ const processSteps = [
 
 const faqs = [
   {
-    question: "Where are your warehouse facilities located in Mobile, AL?",
+    question: "Where is your warehouse and how big is it?",
     answer:
-      "Our warehouse facilities are strategically located in the Mobile, Alabama metropolitan area, within minutes of the Port of Mobile and APM Terminals. This proximity allows us to receive import containers quickly, minimizing per diem charges, and positions your inventory for fast regional distribution across the Gulf Coast. Our address is convenient to I-10 and I-65 for efficient outbound trucking.",
+      "Our 200,000 sq ft U.S. Customs bonded warehouse is located in the Mobile, Alabama metropolitan area, minutes from the Port of Mobile and APM Terminals. As a bonded facility, we can store imported goods before duties are paid, giving importers financial flexibility. Convenient to I-10 and I-65 for efficient outbound trucking nationwide.",
+  },
+  {
+    question: "What does it mean that the warehouse is bonded?",
+    answer:
+      "A bonded warehouse is authorized by U.S. Customs and Border Protection to store imported goods before customs duties and taxes are paid. This means you can defer duty payments until goods are ready to enter U.S. commerce, re-export goods without paying duties, or consolidate shipments — all of which can significantly improve your cash flow and supply chain flexibility.",
   },
   {
     question: "What is the minimum space commitment for warehousing?",
     answer:
-      "We offer flexible warehousing solutions starting from as little as a few pallets. For dedicated space, our minimum commitment is typically 2,500 square feet with a month-to-month option available after an initial three-month term. We understand that businesses have fluctuating storage needs, so our contracts are designed to scale with your inventory levels.",
+      "We offer flexible warehousing solutions starting from as little as a few pallets. For dedicated space, our minimum commitment is typically 2,500 square feet with a month-to-month option available after an initial three-month term. Our contracts are designed to scale with your inventory levels across our 200,000 sq ft facility.",
   },
   {
     question: "Can you handle container transloading from the Port of Mobile?",
     answer:
-      "Absolutely. Container transloading is one of our core capabilities. We pick up loaded containers from the Port of Mobile using our own drayage fleet, transport them to our warehouse, unload and sort the contents, and then stage or ship the cargo on domestic trailers. This integrated drayage-to-warehouse pipeline saves time and reduces handling costs compared to using separate drayage and warehouse providers.",
+      "Absolutely. Container transloading is one of our core capabilities. We pick up loaded containers from the Port of Mobile using our own drayage fleet, transport them to our bonded warehouse, unload and sort the contents, and then stage or ship the cargo on domestic trailers. This integrated drayage-to-warehouse pipeline saves time and reduces handling costs.",
   },
   {
     question: "Do you offer climate-controlled or temperature-sensitive storage?",
     answer:
-      "Our facilities include climate-monitored storage areas that maintain consistent temperature and humidity levels suitable for a wide range of products. For products requiring strict temperature control such as pharmaceuticals or food-grade items, please contact us to discuss your specific requirements so we can confirm compatibility with our current capabilities.",
+      "Our facilities include climate-monitored storage areas that maintain consistent temperature and humidity levels suitable for a wide range of products. For products requiring strict temperature control such as pharmaceuticals or food-grade items, please contact us to discuss your specific requirements.",
   },
   {
     question: "How do I track my inventory in your warehouse?",
@@ -188,7 +193,7 @@ export default function WarehousingMobileALPage() {
       {/* HERO */}
       <PageHero
         title="Warehousing & Distribution Services"
-        subtitle="Strategic warehousing near the Port of Mobile with scalable space, advanced inventory management, and integrated transportation on our own fleet."
+        subtitle="200,000 sq ft bonded warehouse near the Port of Mobile with advanced inventory management, cross-docking, and integrated transportation on our own fleet."
         breadcrumbs={[
           { label: "Services", href: "/gulf-coast-logistics" },
           { label: "Warehousing & Distribution" },
@@ -232,12 +237,14 @@ export default function WarehousingMobileALPage() {
               </div>
 
               <p className="text-navy-300 leading-relaxed mb-6">
-                Our warehouse facilities in Mobile, Alabama, are strategically
-                located minutes from the Port of Mobile and major interstate
-                corridors. This positioning allows us to receive import containers
-                the same day they clear the terminal, transload cargo into domestic
-                trailers, and distribute across the Gulf Coast on our own trucking
-                fleet — all without third-party handoffs.
+                Our 200,000 sq ft bonded warehouse in Mobile, Alabama, is
+                strategically located minutes from the Port of Mobile and major
+                interstate corridors. As a U.S. Customs bonded facility, we can
+                store imported goods before duties are paid — saving you money
+                and giving you flexibility. We receive import containers the same
+                day they clear the terminal, transload cargo into domestic
+                trailers, and distribute nationwide on our own trucking fleet —
+                all without third-party handoffs.
               </p>
 
               <p className="text-navy-300 leading-relaxed mb-8">
@@ -251,6 +258,7 @@ export default function WarehousingMobileALPage() {
 
               <div className="space-y-3">
                 {[
+                  "200,000 sq ft U.S. Customs bonded facility",
                   "Minutes from Port of Mobile for fast container receiving",
                   "Integrated with our own drayage and trucking fleet",
                   "Real-time WMS with online inventory portal",
@@ -498,7 +506,7 @@ export default function WarehousingMobileALPage() {
               icon={<Ship className="w-6 h-6" />}
               title="Port of Mobile Drayage"
               description="Seamless container drayage from port to warehouse on our own fleet."
-              href="/port-of-mobile-drayage"
+              href="/gulf-coast-container-drayage"
               features={["Same-day pickup", "Chassis included", "Direct to warehouse"]}
             />
             <ServiceCard

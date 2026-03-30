@@ -34,13 +34,13 @@ const benefits = [
     icon: Truck,
     title: "Consistent Freight",
     description:
-      "Steady lane opportunities across the Gulf Coast with dedicated freight options for reliable partners. No empty miles searching for loads.",
+      "Steady lane opportunities nationwide with dedicated freight options for reliable partners. We move loads across the country — not just regionally.",
   },
   {
     icon: Fuel,
     title: "Fuel Discount Program",
     description:
-      "Access our fuel discount network and save on every gallon at major truck stops and fuel stations throughout the Southeast.",
+      "Access our fuel discount network and save on every gallon at major truck stops and fuel stations nationwide.",
   },
   {
     icon: Smartphone,
@@ -56,9 +56,9 @@ const benefits = [
   },
   {
     icon: MapPin,
-    title: "Gulf Coast Lane Expertise",
+    title: "Nationwide Lane Coverage",
     description:
-      "We know the region better than anyone. Get loads that match your preferred lanes with efficient routing and minimal deadhead.",
+      "From Gulf Coast to coast-to-coast — get loads that match your preferred lanes with efficient routing and minimal deadhead anywhere in the country.",
   },
 ];
 
@@ -168,7 +168,7 @@ export default function CarrierPartnersPage() {
       {/* ============================================================= */}
       <PageHero
         title="Carrier Partners Program"
-        subtitle="Join our network of trusted carriers and access consistent Gulf Coast freight, competitive pay, and a partnership built on respect."
+        subtitle="Join our network of trusted carriers and access consistent nationwide freight, competitive pay, and a partnership built on respect."
         breadcrumbs={[{ label: "Carrier Partners" }]}
         backgroundImage="/images/truck-road.jpg"
       />
@@ -677,7 +677,7 @@ export default function CarrierPartnersPage() {
       {/* ============================================================= */}
       <CTASection
         title="Ready to Partner with Fairway Logistics?"
-        description="Join our growing network of trusted carriers. Consistent freight, competitive pay, and a team that treats you like a partner."
+        description="Join our growing network of trusted carriers. Consistent nationwide freight, competitive pay, and a team that treats you like a partner."
         primaryButtonText="Apply Now"
         primaryButtonHref="#apply"
         secondaryButtonText="Call (251) 725-1929"

@@ -99,15 +99,15 @@ export default function CoverageMap() {
           </span>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-white">
-            Gulf Coast{" "}
-            <span className="text-gold-gradient">&amp; Beyond</span>
+            Coast to{" "}
+            <span className="text-gold-gradient">Coast</span>
           </h2>
 
           <div className="section-divider mx-auto mt-4" />
 
           <p className="mt-4 text-navy-300 max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-            From our home base in Mobile, AL we serve the entire Gulf Coast
-            region with asset-based reliability — and connect you nationwide.
+            Gulf Coast assets. Nationwide brokerage. From our home base in
+            Mobile, AL we connect you to every corner of the country.
           </p>
         </ScrollReveal>
 
@@ -134,10 +134,10 @@ export default function CoverageMap() {
               {/* Overlaid text */}
               <div className="absolute bottom-6 left-6 z-10">
                 <h3 className="text-xl sm:text-2xl font-heading font-bold text-white mb-1">
-                  Gulf Coast Coverage
+                  Nationwide Coverage
                 </h3>
                 <p className="text-sm text-navy-200 tracking-wide">
-                  AL &bull; FL &bull; MS &bull; LA &bull; Nationwide
+                  Assets: Gulf Coast &bull; Brokerage: All 48 States
                 </p>
               </div>
 

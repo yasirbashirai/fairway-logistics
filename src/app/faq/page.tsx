@@ -35,27 +35,27 @@ const faqCategories: FAQCategory[] = [
       {
         question: "What services does Fairway Logistics offer?",
         answer:
-          "Fairway Logistics provides a full suite of logistics services including container drayage, full truckload (FTL) and less than truckload (LTL) shipping, freight brokerage, warehousing and distribution, import/export logistics, and specialized freight handling. As an asset-based carrier, we own and operate our own fleet, giving us direct control over capacity and service quality.",
+          "We provide asset-based trucking (FTL, LTL, flatbed), heavy haul and over-dimensional transport, Gulf Coast container drayage, nationwide freight brokerage, bonded warehousing and distribution, and import/export logistics. We own our fleet and also operate a full brokerage — so you get asset-based reliability with nationwide reach.",
       },
       {
-        question: "What areas does Fairway Logistics serve?",
+        question: "Where does Fairway Logistics operate?",
         answer:
-          "Our primary service area covers the entire Gulf Coast corridor including Mobile, AL (headquarters), Baldwin County, AL, New Orleans, LA, Gulfport, MS, Biloxi, MS, and Pensacola, FL. Through our freight brokerage division and carrier partner network, we also provide nationwide coverage for long-haul shipments.",
+          "We provide nationwide freight brokerage through our network of 15,000+ vetted carriers. Our company-owned assets (trucks, trailers, chassis, and warehouse) are based in Mobile, AL and primarily cover the Gulf Coast and Southeast. We're a national brokerage headquartered on the Gulf Coast.",
       },
       {
         question: "What are your business hours?",
         answer:
-          "Our office is open Monday through Friday from 7:00 AM to 6:00 PM and Saturday from 8:00 AM to 12:00 PM (Central Time). However, our dispatch team operates 24/7 to support active shipments. For after-hours emergencies related to an active shipment, call our main line at (251) 725-1929.",
+          "Our office is open Monday through Friday from 7:00 AM to 6:00 PM and Saturday from 8:00 AM to 12:00 PM (Central Time). Our dispatch team operates 24/7 to support active shipments. For after-hours emergencies, call (251) 725-1929.",
       },
       {
-        question: "What does 'asset-based' mean?",
+        question: "What does 'asset-based' mean and why does it matter?",
         answer:
-          "Asset-based means we own and operate our own trucks, trailers, and chassis rather than relying solely on third-party carriers. This gives us direct control over capacity, scheduling, equipment quality, and driver standards — resulting in more reliable service and competitive pricing for our customers.",
+          "Asset-based means we own and operate our own trucks, trailers, chassis, and warehouse — rather than relying solely on third-party carriers. This gives you guaranteed capacity, direct control over your shipments, better pricing (no broker markup on our fleet), and a single point of accountability. For loads outside our fleet coverage, we broker through our vetted carrier network.",
       },
       {
-        question: "Where is Fairway Logistics located?",
+        question: "Where is your headquarters and warehouse?",
         answer:
-          "Our headquarters is located at 456 Dauphin Street, Mobile, AL 36602. We're conveniently situated near the Port of Mobile with easy access to I-65 and I-10 corridors.",
+          "Our headquarters and 200,000 sq ft U.S. Customs bonded warehouse are in Mobile, AL — minutes from the Port of Mobile with direct access to I-65 and I-10 corridors.",
       },
     ],
   },
@@ -66,27 +66,27 @@ const faqCategories: FAQCategory[] = [
       {
         question: "How do I get a freight quote?",
         answer:
-          "You can request a quote through our online form at fairwaylogisticsllc.com/request-quote, call us directly at (251) 725-1929, or email info@fairwaylogisticsllc.com. We respond to all quote requests within 2 business hours with a detailed, no-obligation estimate.",
-      },
-      {
-        question: "What are typical transit times?",
-        answer:
-          "Transit times depend on the origin, destination, and service type. Regional Gulf Coast shipments typically deliver within 1-2 business days. Longer haul shipments vary based on distance. Container drayage from the Port of Mobile to local destinations is often same-day or next-day. We provide estimated delivery dates with every quote.",
-      },
-      {
-        question: "Can I track my shipment?",
-        answer:
-          "Yes. Every Fairway Logistics shipment includes real-time GPS tracking. You'll receive a tracking link upon dispatch and can monitor your freight's location, estimated arrival time, and status updates throughout the journey. Our dispatch team also provides proactive notifications for key milestones.",
-      },
-      {
-        question: "Do you offer insurance on shipments?",
-        answer:
-          "Yes. All Fairway Logistics shipments are covered by our standard cargo insurance up to $100,000 per shipment. For higher-value cargo, we can arrange additional insurance coverage. We also carry $1,000,000 in general liability insurance and meet all FMCSA insurance requirements.",
+          "Request a quote through our website, call us at (251) 725-1929, or email info@fairwaylogisticsllc.com. We respond within 2 business hours with a detailed, no-obligation estimate. We handle spot quotes, contract rates, and project-based pricing for heavy haul and specialized freight.",
       },
       {
         question: "What types of freight do you handle?",
         answer:
-          "We handle a wide range of freight including dry goods, refrigerated/temperature-controlled cargo, flatbed loads, containers (20' and 40'), oversized and overweight shipments, and hazmat materials (with proper endorsements). If you have specialized freight needs, contact us to discuss your requirements.",
+          "Dry goods, flatbed loads, containers (20' and 40'), heavy haul and over-dimensional (oversized/overweight equipment, machinery, steel), refrigerated cargo, and hazmat with proper endorsements. We also specialize in construction equipment, industrial machinery, and energy sector freight.",
+      },
+      {
+        question: "Can I track my shipment?",
+        answer:
+          "Yes. Shipments on our fleet include real-time GPS tracking. For brokered loads, we provide regular status updates and tracking through our dispatch team. You can also use our tracking portal or call our 24/7 dispatch at (251) 725-1929.",
+      },
+      {
+        question: "Do you handle heavy haul and over-dimensional loads?",
+        answer:
+          "Yes — this is one of our specialties. We transport oversized equipment, construction machinery, wind energy components, structural steel, and more. We handle all permit coordination, route surveys, pilot cars, and escort services. Equipment includes RGN, lowboy, step-deck, multi-axle, and extendable trailers.",
+      },
+      {
+        question: "Do you offer insurance on shipments?",
+        answer:
+          "All shipments are covered by our standard cargo insurance up to $100,000 per shipment. For higher-value cargo, we arrange additional coverage. We carry $1,000,000 in general liability insurance and meet all FMCSA insurance requirements.",
       },
     ],
   },
@@ -97,22 +97,17 @@ const faqCategories: FAQCategory[] = [
       {
         question: "What is drayage?",
         answer:
-          "Drayage is the short-distance transport of shipping containers, typically from a port or rail terminal to a nearby warehouse, distribution center, or customer facility. It's a critical first or last mile in the intermodal supply chain. Fairway Logistics specializes in container drayage at the Port of Mobile and other Gulf Coast ports.",
+          "Drayage is the short-distance transport of shipping containers from a port or rail terminal to a nearby warehouse, distribution center, or customer facility. Fairway Logistics provides container drayage at the Port of Mobile and other Gulf Coast ports using our own fleet of trucks and chassis.",
       },
       {
-        question: "Which ports do you serve?",
+        question: "Which ports do you serve for drayage?",
         answer:
-          "Our primary port operations are at the Port of Mobile, Alabama, where we hold preferred carrier status with priority gate access. We also provide drayage services at the Port of Gulfport and can coordinate container transport from the Port of New Orleans and other Gulf Coast terminals.",
-      },
-      {
-        question: "What container types can you handle?",
-        answer:
-          "We handle all standard container types including 20-foot standard containers, 40-foot standard containers, 40-foot high cube containers, and refrigerated (reefer) containers. We maintain our own chassis fleet to ensure efficient container pickup and delivery without chassis shortages.",
+          "Our primary drayage operations are at the Port of Mobile, where we hold preferred carrier status with priority gate access. We also serve the Port of Gulfport and coordinate container transport from the Port of New Orleans and other Gulf Coast terminals.",
       },
       {
         question: "How quickly can you pick up a container from the port?",
         answer:
-          "With our preferred carrier status at the Port of Mobile, we can typically arrange same-day container pickup once the container is available for release. For pre-planned shipments, we coordinate with the terminal in advance to minimize wait times and ensure priority gate access.",
+          "With our preferred carrier status at the Port of Mobile, we typically arrange same-day pickup once the container clears. Containers can go directly to our bonded warehouse for transloading or to your facility.",
       },
     ],
   },
@@ -123,22 +118,17 @@ const faqCategories: FAQCategory[] = [
       {
         question: "How does pricing work?",
         answer:
-          "Our pricing is based on factors including distance, freight type, weight, dimensions, equipment required, and current market conditions. As an asset-based carrier, we eliminate broker markups on loads moved by our own fleet, resulting in competitive rates. We provide all-inclusive quotes with no hidden fees.",
+          "Pricing is based on distance, freight type, weight, dimensions, equipment required, and market conditions. Loads on our fleet skip the broker markup. Brokered loads are competitively sourced across our carrier network. We provide all-inclusive quotes with no hidden fees.",
       },
       {
         question: "What are your payment terms?",
         answer:
-          "Standard payment terms are Net 30 from invoice date. We accept payment via ACH, wire transfer, check, and major credit cards. For new customers, we may require prepayment or credit approval for the first few shipments. Volume customers may qualify for customized payment arrangements.",
+          "Standard terms are Net 30 from invoice date. We accept ACH, wire transfer, check, and major credit cards. Volume customers may qualify for customized payment arrangements.",
       },
       {
         question: "Are there any hidden fees?",
         answer:
-          "No. Fairway Logistics is committed to transparent pricing. Your quote includes all standard costs for the requested service. Any potential additional charges — such as detention, layover, or accessorial fees — are clearly communicated upfront before you approve the shipment.",
-      },
-      {
-        question: "Do you offer volume discounts?",
-        answer:
-          "Yes. We offer competitive pricing for customers with consistent shipping volumes. Whether you need dedicated fleet capacity, regular lane commitments, or high-volume drayage services, our team will work with you to develop pricing that reflects the value of your business.",
+          "No. Your quote includes all standard costs. Any potential additional charges — detention, layover, or accessorials — are communicated upfront before you approve the shipment.",
       },
     ],
   },
@@ -149,12 +139,12 @@ const faqCategories: FAQCategory[] = [
       {
         question: "How do I become a carrier partner?",
         answer:
-          "You can apply through our Carrier Partners page at fairwaylogisticsllc.com/carrier-partners. Fill out the application form with your company information, MC number, equipment types, and preferred lanes. Our carrier relations team reviews applications within 24 hours and most carriers are approved and hauling within 48 hours.",
+          "Apply through our Carrier Partners page with your company information, MC number, equipment types, and preferred lanes. Our team reviews applications within 24 hours and most carriers are approved and hauling within 48 hours. We need carriers nationwide — not just Gulf Coast.",
       },
       {
-        question: "What are the requirements to become a carrier partner?",
+        question: "What are the requirements?",
         answer:
-          "Key requirements include an active FMCSA operating authority (MC number), minimum 1 year of operating history, satisfactory or unrated safety rating, minimum $1,000,000 auto liability and $100,000 cargo insurance, ELD compliance, and a clean safety record. Full requirements are listed on our Carrier Partners page.",
+          "Active FMCSA operating authority (MC number), minimum 1 year of operating history, satisfactory or unrated safety rating, minimum $1,000,000 auto liability and $100,000 cargo insurance, ELD compliance, and a clean safety record.",
       },
     ],
   },
@@ -313,8 +303,8 @@ export default function FAQPage() {
               Ready to Ship? Request a Quote
             </h2>
             <p className="text-navy-300 max-w-2xl mx-auto">
-              Get a competitive, no-obligation freight quote from our Gulf Coast
-              logistics team.
+              Get a competitive, no-obligation freight quote from our logistics
+              team.
             </p>
           </div>
           <QuoteForm />
@@ -325,8 +315,8 @@ export default function FAQPage() {
       {/* CTA                                                            */}
       {/* ============================================================= */}
       <CTASection
-        title="Partner with Gulf Coast's Trusted Logistics Provider"
-        description="From drayage to distribution, Fairway Logistics delivers reliable freight solutions backed by a company-owned fleet."
+        title="Partner with a Trusted Nationwide Logistics Provider"
+        description="From heavy haul to drayage to distribution, Fairway Logistics delivers reliable freight solutions backed by a company-owned fleet and national brokerage network."
         primaryButtonText="Request a Free Quote"
         primaryButtonHref="/request-quote"
         secondaryButtonText="Call (251) 725-1929"

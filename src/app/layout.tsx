@@ -3,16 +3,15 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
-import ChatBot from "@/components/ChatBot";
 
 export const metadata: Metadata = {
   title: {
     default:
-      "Fairway Logistics LLC | Asset-Based Trucking & Freight Services | Gulf Coast",
+      "Fairway Logistics LLC | Asset-Based Trucking, Heavy Haul & Freight Services | Nationwide",
     template: "%s | Fairway Logistics LLC",
   },
   description:
-    "Gulf Coast's premier asset-based logistics company. Port of Mobile drayage, trucking, warehousing, freight brokerage & import/export. FMCSA registered, fully insured. Real assets. Real reliability. Call (251) 725-1929.",
+    "Nationwide logistics with asset-based reliability. Trucking, heavy haul, drayage, freight brokerage, bonded warehousing & import/export. FMCSA registered, fully insured. Headquartered in Mobile, AL. Call (251) 725-1929.",
   keywords: [
     "Gulf Coast logistics",
     "Port of Mobile drayage",
@@ -136,16 +135,14 @@ const jsonLd = {
         longitude: -88.0399,
       },
       areaServed: [
-        { "@type": "State", name: "Alabama" },
-        { "@type": "State", name: "Mississippi" },
-        { "@type": "State", name: "Louisiana" },
-        { "@type": "State", name: "Florida" },
+        { "@type": "Country", name: "United States" },
       ],
       serviceType: [
         "Full Truckload Shipping",
+        "Heavy Haul & Over-Dimensional Transport",
         "Container Drayage",
-        "Freight Brokerage",
-        "Warehousing & Distribution",
+        "Nationwide Freight Brokerage",
+        "Bonded Warehousing & Distribution",
         "Import/Export Logistics",
         "Flatbed & Specialized Hauling",
       ],
@@ -210,7 +207,6 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <StickyCTA />
-        <ChatBot />
       </body>
     </html>
   );
