@@ -59,10 +59,10 @@ export default function CaseStudy() {
 
             {/* CTA link */}
             <Link
-              href="#"
+              href="/contact"
               className="text-gold-400 font-semibold inline-flex items-center gap-1 hover:underline"
             >
-              Read Full Case Study &rarr;
+              Get Similar Results &rarr;
             </Link>
           </div>
 

@@ -30,6 +30,15 @@ interface Service {
   features: string[];
 }
 
+const serviceRoutes: Record<string, string> = {
+  trucking: "/asset-based-trucking",
+  "gulf-drayage": "/gulf-coast-container-drayage",
+  "heavy-haul": "/heavy-haul",
+  brokerage: "/freight-brokerage",
+  warehousing: "/warehousing-mobile-al",
+  "import-export": "/import-export-logistics",
+};
+
 const services: Service[] = [
   {
     id: "trucking",
@@ -247,7 +256,7 @@ export default function ServiceExplorer() {
 
                 {/* Learn more link */}
                 <Link
-                  href={`/services#${active.id}`}
+                  href={serviceRoutes[active.id]}
                   className="inline-flex items-center gap-1.5 mt-6 text-gold-400 text-sm font-semibold hover:text-gold-300 transition-colors"
                 >
                   Learn More
@@ -340,7 +349,7 @@ export default function ServiceExplorer() {
 
                           {/* Learn more */}
                           <Link
-                            href={`/services#${svc.id}`}
+                            href={serviceRoutes[svc.id]}
                             className="inline-flex items-center gap-1.5 mt-4 text-gold-400 text-sm font-semibold hover:text-gold-300 transition-colors"
                           >
                             Learn More

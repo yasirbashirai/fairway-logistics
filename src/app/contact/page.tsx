@@ -204,7 +204,7 @@ export default function ContactPage() {
                         placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => update("name", e.target.value)}
-                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-colors"
                       />
                       {errors.name && (
                         <p className="flex items-center gap-1 text-red-400 text-xs mt-1">
@@ -224,7 +224,7 @@ export default function ContactPage() {
                         placeholder="john@company.com"
                         value={formData.email}
                         onChange={(e) => update("email", e.target.value)}
-                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-colors"
                       />
                       {errors.email && (
                         <p className="flex items-center gap-1 text-red-400 text-xs mt-1">
@@ -246,7 +246,7 @@ export default function ContactPage() {
                         placeholder="(251) 555-0123"
                         value={formData.phone}
                         onChange={(e) => update("phone", e.target.value)}
-                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-colors"
                       />
                     </div>
 
@@ -258,7 +258,7 @@ export default function ContactPage() {
                       <select
                         value={formData.subject}
                         onChange={(e) => update("subject", e.target.value)}
-                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm appearance-none focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                        className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm appearance-none focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-colors"
                       >
                         <option value="">Select a subject</option>
                         {subjects.map((s) => (
@@ -280,7 +280,7 @@ export default function ContactPage() {
                       placeholder="Tell us how we can help..."
                       value={formData.message}
                       onChange={(e) => update("message", e.target.value)}
-                      className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors resize-none"
+                      className="w-full bg-navy-950 border border-navy-700 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-colors resize-none"
                     />
                     {errors.message && (
                       <p className="flex items-center gap-1 text-red-400 text-xs mt-1">

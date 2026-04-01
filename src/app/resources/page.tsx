@@ -273,7 +273,7 @@ export default function ResourcesPage() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold outline-none transition-colors"
+                  className="flex-1 bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white text-sm placeholder-navy-500 focus:border-gold-400 focus:ring-1 focus:ring-gold-400 outline-none transition-colors"
                 />
                 <button
                   type="submit"
