@@ -230,11 +230,11 @@ export default function Header() {
               </a>
               <span className="text-white/20">|</span>
               <a
-                href="mailto:info@fairwaylogisticsllc.com"
+                href="mailto:info@fwllogistics.com"
                 className="flex items-center gap-1.5 hover:text-gold-400 transition-colors duration-200"
               >
                 <Mail className="w-3.5 h-3.5 text-gold-400" />
-                info@fairwaylogisticsllc.com
+                info@fwllogistics.com
               </a>
             </div>
           </div>
@@ -243,15 +243,15 @@ export default function Header() {
         {/* -------------------------------------------------------- */}
         {/*  Main Navigation Bar                                      */}
         {/* -------------------------------------------------------- */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="relative flex-shrink-0 group">
             <Image
               src="/logo.png"
               alt="Fairway Logistics LLC"
-              width={160}
-              height={48}
-              className="h-12 w-auto object-contain rounded-lg transition-transform duration-200 group-hover:scale-105"
+              width={220}
+              height={66}
+              className="h-16 sm:h-[72px] w-auto object-contain transition-transform duration-200 group-hover:scale-105"
               priority
             />
           </Link>
@@ -477,9 +477,9 @@ export default function Header() {
                   <Image
                     src="/logo.png"
                     alt="Fairway Logistics LLC"
-                    width={130}
-                    height={40}
-                    className="h-10 w-auto object-contain rounded-lg"
+                    width={180}
+                    height={54}
+                    className="h-14 w-auto object-contain"
                   />
                   <button
                     onClick={() => setMobileOpen(false)}
@@ -672,11 +672,11 @@ export default function Header() {
                     FMCSA Licensed &bull; DOT Registered
                   </p>
                   <a
-                    href="mailto:info@fairwaylogisticsllc.com"
+                    href="mailto:info@fwllogistics.com"
                     className="flex items-center gap-2 hover:text-gold-400 transition-colors duration-200"
                   >
                     <Mail className="w-3.5 h-3.5 text-gold-400 flex-shrink-0" />
-                    info@fairwaylogisticsllc.com
+                    info@fwllogistics.com
                   </a>
                 </div>
               </div>

@@ -64,7 +64,7 @@ const sections = [
   {
     title: "Contact",
     content: [
-      "For questions about these Terms of Service, please contact us at info@fairwaylogisticsllc.com or call (251) 725-1929. Our office is located at 456 Dauphin Street, Mobile, AL 36602.",
+      "For questions about these Terms of Service, please contact us at info@fwllogistics.com or call (251) 725-1929. Our office is located at 456 Dauphin Street, Mobile, AL 36602.",
     ],
   },
 ];

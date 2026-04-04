@@ -147,8 +147,41 @@ export default function QuoteForm() {
 
   const prevStep = () => setStep((s) => Math.max(s - 1, 1));
 
-  const handleSubmit = () => {
-    if (validate()) setSubmitted(true);
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
+
+  const handleSubmit = async () => {
+    if (!validate()) return;
+
+    setSending(true);
+    setSendError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "quote",
+          ...formData,
+          hasAttachments: uploadedFiles.length > 0,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to send");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setSendError(
+        err instanceof Error
+          ? err.message
+          : "Failed to submit. Please call (251) 725-1929."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   const resetForm = () => {
@@ -585,14 +618,20 @@ export default function QuoteForm() {
             <ArrowRight className="w-4 h-4" />
           </button>
         ) : (
-          <button
-            type="button"
-            onClick={handleSubmit}
-            className="flex items-center gap-2 bg-gold-gradient text-navy-950 font-bold px-8 py-3 rounded-lg w-full sm:w-auto justify-center hover:shadow-lg hover:shadow-gold-400/20 transition-all"
-          >
-            Submit Quote Request
-            <ArrowRight className="w-4 h-4" />
-          </button>
+          <div className="flex flex-col items-end gap-2 w-full sm:w-auto">
+            {sendError && (
+              <p className="text-red-400 text-xs">{sendError}</p>
+            )}
+            <button
+              type="button"
+              onClick={handleSubmit}
+              disabled={sending}
+              className="flex items-center gap-2 bg-gold-gradient text-navy-950 font-bold px-8 py-3 rounded-lg w-full sm:w-auto justify-center hover:shadow-lg hover:shadow-gold-400/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {sending ? "Submitting..." : "Submit Quote Request"}
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
         )}
       </div>
     </form>

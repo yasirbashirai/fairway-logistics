@@ -137,9 +137,41 @@ export default function CareersPage() {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) setSubmitted(true);
+    if (!validate()) return;
+
+    setSending(true);
+    setSendError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "career",
+          ...formData,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to send");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setSendError(
+        err instanceof Error
+          ? err.message
+          : "Failed to submit. Please call (251) 725-1929."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -453,12 +485,16 @@ export default function CareersPage() {
               </div>
 
               {/* Submit */}
+              {sendError && (
+                <p className="text-red-400 text-sm">{sendError}</p>
+              )}
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-gold-gradient text-white font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all"
+                disabled={sending}
+                className="w-full flex items-center justify-center gap-2 bg-gold-gradient text-white font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 <Send className="w-4 h-4" />
-                Submit Application
+                {sending ? "Submitting..." : "Submit Application"}
               </button>
             </form>
           )}

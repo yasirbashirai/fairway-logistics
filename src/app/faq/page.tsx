@@ -66,7 +66,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: "How do I get a freight quote?",
         answer:
-          "Request a quote through our website, call us at (251) 725-1929, or email info@fairwaylogisticsllc.com. We respond within 2 business hours with a detailed, no-obligation estimate. We handle spot quotes, contract rates, and project-based pricing for heavy haul and specialized freight.",
+          "Request a quote through our website, call us at (251) 725-1929, or email info@fwllogistics.com. We respond within 2 business hours with a detailed, no-obligation estimate. We handle spot quotes, contract rates, and project-based pricing for heavy haul and specialized freight.",
       },
       {
         question: "What types of freight do you handle?",

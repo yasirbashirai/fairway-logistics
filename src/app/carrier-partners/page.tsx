@@ -156,9 +156,50 @@ export default function CarrierPartnersPage() {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) setSubmitted(true);
+    if (!validate()) return;
+
+    setSending(true);
+    setSendError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "carrier",
+          companyName: formData.companyName,
+          contactName: formData.contactName,
+          email: formData.contactEmail,
+          phone: formData.contactPhone,
+          mcNumber: formData.mcNumber,
+          dotNumber: formData.dotNumber,
+          equipmentTypes: formData.equipmentTypes,
+          serviceAreas: formData.lanesCovered,
+          fleetSize: formData.fleetSize,
+          additionalInfo: formData.message,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to send");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setSendError(
+        err instanceof Error
+          ? err.message
+          : "Failed to submit. Please call (251) 725-1929."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -658,12 +699,17 @@ export default function CarrierPartnersPage() {
                 </div>
               </div>
 
+              {sendError && (
+                <p className="text-red-400 text-sm mt-2">{sendError}</p>
+              )}
+
               <div className="mt-6 flex justify-end">
                 <button
                   type="submit"
-                  className="flex items-center gap-2 bg-gold-gradient text-white font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
+                  disabled={sending}
+                  className="flex items-center gap-2 bg-gold-gradient text-white font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
-                  Submit Application
+                  {sending ? "Submitting..." : "Submit Application"}
                   <ArrowRight className="w-4 h-4" />
                 </button>
               </div>

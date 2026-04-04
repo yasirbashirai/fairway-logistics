@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import NewsletterForm from "@/components/NewsletterForm";
 import {
   MapPin,
   Phone,
@@ -72,9 +73,9 @@ export default function Footer() {
                 <Image
                   src="/logo.png"
                   alt="Fairway Logistics LLC"
-                  width={160}
-                  height={48}
-                  className="h-12 w-auto"
+                  width={220}
+                  height={66}
+                  className="h-16 w-auto"
                 />
               </Link>
 
@@ -155,11 +156,11 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="mailto:info@fairwaylogisticsllc.com"
+                    href="mailto:info@fwllogistics.com"
                     className="flex items-center gap-3 text-sm hover:text-gold-400 transition-colors duration-300"
                   >
                     <Mail className="w-4 h-4 text-gold-400 flex-shrink-0" />
-                    info@fairwaylogisticsllc.com
+                    info@fwllogistics.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3 text-sm">
@@ -173,20 +174,7 @@ export default function Footer() {
                 <h4 className="text-white font-semibold text-sm mb-3">
                   Subscribe to Our Newsletter
                 </h4>
-                <form className="flex gap-2">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    aria-label="Email address for newsletter"
-                    className="flex-1 min-w-0 bg-navy-800/60 border border-navy-600 rounded-lg px-3 py-2.5 text-sm text-white placeholder-navy-400 focus:border-gold-400 focus:ring-1 focus:ring-gold-400/30 focus:outline-none transition-all duration-300"
-                  />
-                  <button
-                    type="submit"
-                    className="bg-gold-gradient text-navy-950 font-bold px-4 py-2.5 rounded-lg text-sm hover:shadow-lg hover:shadow-gold-400/20 transition-all duration-300 flex-shrink-0"
-                  >
-                    Subscribe
-                  </button>
-                </form>
+                <NewsletterForm />
               </div>
             </div>
           </div>

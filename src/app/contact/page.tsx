@@ -52,8 +52,8 @@ const contactDetails = [
   {
     icon: Mail,
     title: "Email",
-    lines: ["info@fairwaylogisticsllc.com"],
-    href: "mailto:info@fairwaylogisticsllc.com",
+    lines: ["info@fwllogistics.com"],
+    href: "mailto:info@fwllogistics.com",
   },
   {
     icon: Clock,
@@ -137,9 +137,38 @@ export default function ContactPage() {
     return Object.keys(errs).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+  const [sendError, setSendError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (validate()) setSubmitted(true);
+    if (!validate()) return;
+
+    setSending(true);
+    setSendError(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ formType: "contact", ...formData }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to send");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setSendError(
+        err instanceof Error
+          ? err.message
+          : "Failed to send message. Please call (251) 725-1929."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -290,11 +319,19 @@ export default function ContactPage() {
                     )}
                   </div>
 
+                  {sendError && (
+                    <p className="flex items-center gap-1 text-red-400 text-sm">
+                      <AlertCircle className="w-4 h-4" />
+                      {sendError}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="flex items-center gap-2 bg-gold-gradient text-navy-950 font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200"
+                    disabled={sending}
+                    className="flex items-center gap-2 bg-gold-gradient text-navy-950 font-bold text-sm px-8 py-3.5 rounded-lg hover:shadow-lg hover:shadow-gold-400/20 hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                   >
-                    Send Message
+                    {sending ? "Sending..." : "Send Message"}
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </form>

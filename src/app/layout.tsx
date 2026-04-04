@@ -92,7 +92,7 @@ const jsonLd = {
         "@type": "ContactPoint",
         telephone: "+1-251-725-1929",
         contactType: "customer service",
-        email: "info@fairwaylogisticsllc.com",
+        email: "info@fwllogistics.com",
         availableLanguage: "English",
         hoursAvailable: {
           "@type": "OpeningHoursSpecification",
@@ -118,7 +118,7 @@ const jsonLd = {
         "Asset-based logistics company serving the Gulf Coast region with full truckload, drayage, warehousing, freight brokerage, and import/export services.",
       url: "https://fairwaylogisticsllc.com",
       telephone: "+1-251-725-1929",
-      email: "info@fairwaylogisticsllc.com",
+      email: "info@fwllogistics.com",
       image: "https://fairwaylogisticsllc.com/images/hero.jpg",
       logo: "https://fairwaylogisticsllc.com/logo.png",
       address: {

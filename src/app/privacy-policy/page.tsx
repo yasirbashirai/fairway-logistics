@@ -52,7 +52,7 @@ const sections = [
   {
     title: "Contact Us",
     content: [
-      "If you have any questions about this Privacy Policy or our data practices, please contact us at info@fairwaylogisticsllc.com or call (251) 725-1929. Our mailing address is 456 Dauphin Street, Mobile, AL 36602.",
+      "If you have any questions about this Privacy Policy or our data practices, please contact us at info@fwllogistics.com or call (251) 725-1929. Our mailing address is 456 Dauphin Street, Mobile, AL 36602.",
     ],
   },
 ];

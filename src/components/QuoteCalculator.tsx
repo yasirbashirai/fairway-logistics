@@ -149,8 +149,31 @@ export default function QuoteCalculator() {
     if (step > 0) setStep(step - 1);
   };
 
-  const handleSubmit = () => {
-    setSubmitted(true);
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async () => {
+    setSending(true);
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          formType: "quote-calculator",
+          name: form.fullName,
+          email: form.email,
+          phone: form.phone,
+          serviceType: form.equipment,
+          origin: form.origin,
+          destination: form.destination,
+          weight: form.weight,
+        }),
+      });
+    } catch {
+      // Still show success to user, email delivery is best-effort
+    } finally {
+      setSending(false);
+      setSubmitted(true);
+    }
   };
 
   const handleReset = () => {
