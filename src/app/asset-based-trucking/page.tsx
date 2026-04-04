@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/logo.png",
         width: 800,
         height: 600,
         alt: "Asset-Based Trucking Services - Fairway Logistics",
@@ -211,7 +211,7 @@ export default function AssetBasedTruckingPage() {
       {/* HERO */}
       <PageHero
         title="Asset-Based Trucking Services"
-        subtitle="Company-owned fleet with guaranteed capacity, professional drivers, and the reliability that only an asset-based carrier can deliver."
+        subtitle="BONDED, company-owned fleet with guaranteed capacity, professional drivers, and the reliability that only an asset-based carrier can deliver."
         breadcrumbs={[
           { label: "Services", href: "/gulf-coast-logistics" },
           { label: "Asset-Based Trucking" },
@@ -264,6 +264,7 @@ export default function AssetBasedTruckingPage() {
 
               <div className="space-y-3">
                 {[
+                  "BONDED carrier — fully authorized & compliant",
                   "Company-owned trucks — not a brokerage",
                   "Guaranteed capacity even in tight markets",
                   "Professional W-2 employee drivers",

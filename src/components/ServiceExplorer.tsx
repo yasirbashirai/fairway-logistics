@@ -91,10 +91,10 @@ const services: Service[] = [
     title: "Freight Brokerage",
     shortDesc: "Vetted carrier network nationwide",
     description:
-      "Access our vetted network of 15,000+ carriers for competitive rates, full shipment visibility, and on-demand capacity for any lane or load type — coast to coast.",
+      "Access our vetted network of 2,000+ carriers for competitive rates, full shipment visibility, and on-demand capacity for any lane or load type — coast to coast.",
     image: "/images/trucks.jpg",
     features: [
-      "15,000+ carrier network",
+      "2,000+ carrier network",
       "Nationwide coverage",
       "Full shipment visibility",
       "Capacity on demand",
@@ -104,12 +104,12 @@ const services: Service[] = [
     id: "warehousing",
     icon: Warehouse,
     title: "Warehousing & Distribution",
-    shortDesc: "200,000 sq ft bonded warehouse",
+    shortDesc: "200,000 sq ft BONDED warehouse",
     description:
-      "200,000 sq ft bonded warehouse facility in Mobile, AL offering cross-docking, inventory management, pick & pack, climate-controlled storage, and container transloading.",
+      "200,000 sq ft BONDED warehouse facility in Mobile, AL offering cross-docking, inventory management, pick & pack, climate-controlled storage, and container transloading.",
     image: "/images/warehouse.jpg",
     features: [
-      "200,000 sq ft bonded facility",
+      "200,000 sq ft BONDED facility",
       "Cross-docking",
       "Inventory management",
       "Pick & pack",

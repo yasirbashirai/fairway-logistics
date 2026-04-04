@@ -161,7 +161,7 @@ const mapTabs: { id: MapTab; label: string; icon: React.ElementType; description
     id: "brokerage",
     label: "Brokerage Coverage",
     icon: Globe,
-    description: "Nationwide freight brokerage with 15,000+ vetted carriers covering all 48 continental states.",
+    description: "Nationwide freight brokerage with 2,000+ vetted carriers covering all 48 continental states.",
   },
   {
     id: "assets",
@@ -304,7 +304,7 @@ export default function InteractiveMap() {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                   {[
                     { label: "States Covered", value: "48" },
-                    { label: "Carrier Network", value: "15,000+" },
+                    { label: "Carrier Network", value: "2,000+" },
                     { label: "Load Types", value: "All" },
                     { label: "Availability", value: "24/7" },
                   ].map((stat) => (

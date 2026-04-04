@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/logo.png",
         width: 800,
         height: 600,
         alt: "About Fairway Logistics LLC",
@@ -95,7 +95,7 @@ const whyChooseUs = [
     icon: Anchor,
     title: "National Reach, Gulf Coast Roots",
     description:
-      "Headquartered in Mobile, Alabama, with assets across the Gulf Coast and brokerage capabilities nationwide. We combine local expertise at the Port of Mobile with a 15,000+ carrier network that covers every lane in the country.",
+      "Headquartered in Mobile, Alabama, with assets across the Gulf Coast and brokerage capabilities nationwide. We combine local expertise at the Port of Mobile with a 2,000+ carrier network that covers every lane in the country.",
     bullets: [
       "Nationwide freight brokerage coverage",
       "Asset-based fleet across the Gulf Coast & Southeast",
@@ -198,7 +198,7 @@ export default function AboutPage() {
               <p className="text-navy-300 leading-relaxed mb-8">
                 Today, our fleet handles everything from container drayage and
                 heavy haul to full truckload shipping and warehousing. Our
-                brokerage connects shippers to 15,000+ vetted carriers coast to
+                brokerage connects shippers to 2,000+ vetted carriers coast to
                 coast. But our mission remains the same: provide reliable,
                 transparent logistics that help businesses move goods with
                 confidence.
@@ -342,7 +342,126 @@ export default function AboutPage() {
       </section>
 
       {/* ============================================================= */}
-      {/* SECTION 5 — METRICS                                            */}
+      {/* SECTION 5 — PORT OF MOBILE GALLERY                             */}
+      {/* ============================================================= */}
+      <section className="py-16 sm:py-24 bg-navy-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-14">
+            <p className="text-gold-400 font-semibold text-sm uppercase tracking-wider mb-2">
+              Our Home Base
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white">
+              The Port of Mobile, Alabama
+            </h2>
+            <p className="text-navy-400 mt-4 max-w-2xl mx-auto">
+              Mobile, Alabama is the heart of our operations. Strategically
+              positioned on the Gulf Coast, the Port of Mobile is one of the
+              fastest-growing ports in the nation — and it&apos;s where Fairway
+              Logistics calls home.
+            </p>
+            <div className="section-divider mx-auto mt-6" />
+          </div>
+
+          {/* Photo Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Image 1 — Large feature */}
+            <div className="sm:col-span-2 lg:col-span-2 row-span-2 relative rounded-2xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1559511260-66a68e6a684b?w=1200&h=800&fit=crop&q=80"
+                alt="Aerial view of a busy shipping port with cargo containers and cranes — representing Port of Mobile operations"
+                className="w-full h-full min-h-[300px] sm:min-h-[400px] lg:min-h-[500px] object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-white font-heading font-bold text-lg">
+                  Port Operations
+                </h3>
+                <p className="text-navy-200 text-sm">
+                  Container handling and crane operations at the port
+                </p>
+              </div>
+            </div>
+
+            {/* Image 2 */}
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=600&h=400&fit=crop&q=80"
+                alt="Cargo ship docked at port with large cranes loading containers"
+                className="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4">
+                <h3 className="text-white font-heading font-bold text-sm">
+                  Container Drayage
+                </h3>
+              </div>
+            </div>
+
+            {/* Image 3 */}
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1494412574643-ff11b0a5eb19?w=600&h=400&fit=crop&q=80"
+                alt="Industrial waterfront with cranes and cargo vessels at sunset"
+                className="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4">
+                <h3 className="text-white font-heading font-bold text-sm">
+                  Gulf Coast Waterfront
+                </h3>
+              </div>
+            </div>
+
+            {/* Image 4 */}
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&q=80"
+                alt="Stacked shipping containers at a busy port terminal"
+                className="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4">
+                <h3 className="text-white font-heading font-bold text-sm">
+                  Container Yard
+                </h3>
+              </div>
+            </div>
+
+            {/* Image 5 */}
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1605745341112-85968b19335b?w=600&h=400&fit=crop&q=80"
+                alt="Large cargo ship being loaded at a port dock with heavy crane equipment"
+                className="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4">
+                <h3 className="text-white font-heading font-bold text-sm">
+                  Ship Loading
+                </h3>
+              </div>
+            </div>
+
+            {/* Image 6 */}
+            <div className="relative rounded-2xl overflow-hidden group">
+              <img
+                src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&h=400&fit=crop&q=80"
+                alt="Aerial view of shipping containers organized at a port terminal"
+                className="w-full h-[240px] object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 p-4">
+                <h3 className="text-white font-heading font-bold text-sm">
+                  Port Logistics Hub
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================= */}
+      {/* SECTION 6 — METRICS                                            */}
       {/* ============================================================= */}
       <MetricsSection />
 

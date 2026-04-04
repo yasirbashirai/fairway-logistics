@@ -5,7 +5,6 @@ import ServiceExplorer from "@/components/ServiceExplorer";
 import WhyFairway from "@/components/WhyFairway";
 import CoverageMap from "@/components/CoverageMap";
 import InteractiveMap from "@/components/InteractiveMap";
-import TrackingWidget from "@/components/TrackingWidget";
 import QuoteCalculator from "@/components/QuoteCalculator";
 import IndustrySection from "@/components/IndustrySection";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
@@ -67,7 +66,7 @@ const faqJsonLd = {
       name: "Where does Fairway Logistics operate?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We provide nationwide freight brokerage with 15,000+ carriers. Our asset-based fleet operates primarily across the Gulf Coast and Southeast. Our 200,000 sq ft bonded warehouse and HQ are in Mobile, AL.",
+        text: "We provide nationwide freight brokerage with 2,000+ carriers. Our asset-based fleet operates primarily across the Gulf Coast and Southeast. Our 200,000 sq ft bonded warehouse and HQ are in Mobile, AL.",
       },
     },
     {
@@ -75,7 +74,7 @@ const faqJsonLd = {
       name: "Do you own your own trucks?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes! We are an asset-based carrier — we own trucks, trailers, chassis, and a 200,000 sq ft bonded warehouse. We also run a full nationwide freight brokerage. This gives you guaranteed capacity on our fleet plus access to 15,000+ carriers for any lane.",
+        text: "Yes! We are an asset-based carrier — we own trucks, trailers, chassis, and a 200,000 sq ft bonded warehouse. We also run a full nationwide freight brokerage. This gives you guaranteed capacity on our fleet plus access to 2,000+ carriers for any lane.",
       },
     },
     {
@@ -96,10 +95,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "How can I track my shipment?",
+      name: "How can I get updates on my shipment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Use our shipment tracking portal on this website by entering your PRO number or BOL. You can also contact our 24/7 operations team at (251) 725-1929 for real-time updates.",
+        text: "Contact our 24/7 operations team at (251) 725-1929 for real-time updates on your shipment status, location, and estimated delivery time.",
       },
     },
   ],
@@ -126,50 +125,7 @@ export default function HomePage() {
       {/* 4. Why Choose Fairway — 4 advantage cards */}
       <WhyFairway />
 
-      {/* 5. Shipment Tracking Widget */}
-      <section id="tracking" className="py-20 sm:py-28 bg-navy-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left: Text content */}
-            <div>
-              <p className="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-3">
-                Shipment Tracking
-              </p>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-white mb-6">
-                Real-Time Visibility Into Every Load
-              </h2>
-              <p className="text-navy-300 text-lg leading-relaxed mb-8">
-                Track your shipments in real time with our advanced tracking
-                portal. Enter your PRO number or BOL for instant status updates,
-                location data, and estimated delivery times.
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "GPS-powered real-time location tracking",
-                  "Automated status notifications via email & SMS",
-                  "Estimated time of arrival updates",
-                  "Proof of delivery documentation",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-navy-200"
-                  >
-                    <span className="w-5 h-5 rounded-full bg-gold-400/15 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="w-2 h-2 rounded-full bg-gold-400" />
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Right: Tracking widget */}
-            <TrackingWidget />
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Coverage Map + Stats */}
+      {/* 5. Coverage Map + Stats */}
       <CoverageMap />
 
       {/* 6b. Interactive Service Network Map */}

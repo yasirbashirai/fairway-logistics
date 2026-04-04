@@ -59,7 +59,7 @@ const services = [
     label: "Warehousing",
     href: "/warehousing-mobile-al",
     icon: Warehouse,
-    desc: "200,000 sq ft bonded warehouse in Mobile",
+    desc: "200,000 sq ft BONDED warehouse in Mobile",
   },
   {
     label: "Import / Export Logistics",
@@ -247,7 +247,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="relative flex-shrink-0 group">
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="Fairway Logistics LLC"
               width={160}
               height={48}
@@ -347,7 +347,7 @@ export default function Header() {
                       <div className="border-t border-navy-700/50 my-2" />
                       <p className="px-3 pt-1 pb-2 text-[10px] uppercase tracking-widest text-emerald-400 font-semibold">Brokerage Coverage</p>
                       <div className="px-4 py-2 text-sm text-navy-300 font-body font-normal">
-                        <span className="text-emerald-400 font-semibold">Nationwide</span> — All 48 states via 15,000+ carrier network
+                        <span className="text-emerald-400 font-semibold">Nationwide</span> — All 48 states via 2,000+ carrier network
                       </div>
                     </div>
                   </motion.div>
@@ -404,6 +404,12 @@ export default function Header() {
               About
             </Link>
             <Link
+              href="/portfolio"
+              className="px-3.5 py-2.5 rounded-lg hover:text-gold-400 transition-colors duration-200"
+            >
+              Portfolio
+            </Link>
+            <Link
               href="/contact"
               className="px-3.5 py-2.5 rounded-lg hover:text-gold-400 transition-colors duration-200"
             >
@@ -420,14 +426,6 @@ export default function Header() {
               <Phone className="w-4 h-4 text-gold-400" />
               <span className="font-semibold">(251) 725-1929</span>
             </a>
-
-            {/* Track Shipment — Ghost Button */}
-            <Link
-              href="/track-shipment"
-              className="border border-white/20 hover:border-gold-400 text-white hover:text-gold-400 text-xs font-heading font-semibold px-4 py-2 rounded-lg transition-all duration-200"
-            >
-              Track Shipment
-            </Link>
 
             {/* Get a Quote — Gold CTA */}
             <Link
@@ -477,7 +475,7 @@ export default function Header() {
                 {/* Close + Logo */}
                 <div className="flex items-center justify-between mb-8">
                   <Image
-                    src="/logo.jpg"
+                    src="/logo.png"
                     alt="Fairway Logistics LLC"
                     width={130}
                     height={40}
@@ -641,6 +639,13 @@ export default function Header() {
                     About
                   </Link>
                   <Link
+                    href="/portfolio"
+                    onClick={() => setMobileOpen(false)}
+                    className="block px-3 py-3 text-white hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-heading font-semibold text-sm"
+                  >
+                    Portfolio
+                  </Link>
+                  <Link
                     href="/contact"
                     onClick={() => setMobileOpen(false)}
                     className="block px-3 py-3 text-white hover:text-gold-400 rounded-xl hover:bg-white/5 transition-colors duration-200 font-heading font-semibold text-sm"
@@ -657,13 +662,6 @@ export default function Header() {
                     className="block text-center bg-gradient-to-r from-gold-400 to-amber-500 text-navy-950 font-heading font-bold text-sm px-6 py-3.5 rounded-xl hover:shadow-lg hover:shadow-gold-400/25 transition-all duration-200"
                   >
                     Get a Quote
-                  </Link>
-                  <Link
-                    href="/track-shipment"
-                    onClick={() => setMobileOpen(false)}
-                    className="block text-center border border-white/20 text-white font-heading font-semibold text-sm px-6 py-3 rounded-xl hover:border-gold-400 hover:text-gold-400 transition-all duration-200"
-                  >
-                    Track Shipment
                   </Link>
                 </div>
 

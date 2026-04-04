@@ -422,7 +422,7 @@ export default function CoverageMap() {
             </div>
             <div className="flex items-center gap-2 px-4 py-2 rounded-full glass-card-light border-fwgreen-400/20">
               <Globe className="w-4 h-4 text-fwgreen-400" />
-              <span className="text-sm text-fwgreen-300 font-medium">15,000+ Carrier Network</span>
+              <span className="text-sm text-fwgreen-300 font-medium">2,000+ Carrier Network</span>
             </div>
           </div>
         </ScrollReveal>

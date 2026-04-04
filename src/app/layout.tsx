@@ -85,7 +85,7 @@ const jsonLd = {
       url: "https://fairwaylogisticsllc.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://fairwaylogisticsllc.com/logo.jpg",
+        url: "https://fairwaylogisticsllc.com/logo.png",
       },
       sameAs: [],
       contactPoint: {
@@ -120,7 +120,7 @@ const jsonLd = {
       telephone: "+1-251-725-1929",
       email: "info@fairwaylogisticsllc.com",
       image: "https://fairwaylogisticsllc.com/images/hero.jpg",
-      logo: "https://fairwaylogisticsllc.com/logo.jpg",
+      logo: "https://fairwaylogisticsllc.com/logo.png",
       address: {
         "@type": "PostalAddress",
         streetAddress: "456 Dauphin Street",

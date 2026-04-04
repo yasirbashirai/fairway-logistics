@@ -40,7 +40,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: "Where does Fairway Logistics operate?",
         answer:
-          "We provide nationwide freight brokerage through our network of 15,000+ vetted carriers. Our company-owned assets (trucks, trailers, chassis, and warehouse) are based in Mobile, AL and primarily cover the Gulf Coast and Southeast. We're a national brokerage headquartered on the Gulf Coast.",
+          "We provide nationwide freight brokerage through our network of 2,000+ vetted carriers. Our company-owned assets (trucks, trailers, chassis, and warehouse) are based in Mobile, AL and primarily cover the Gulf Coast and Southeast. We're a national brokerage headquartered on the Gulf Coast.",
       },
       {
         question: "What are your business hours?",

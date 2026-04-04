@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/logo.png",
         width: 800,
         height: 600,
         alt: "Warehousing & Distribution Mobile AL - Fairway Logistics",
@@ -193,7 +193,7 @@ export default function WarehousingMobileALPage() {
       {/* HERO */}
       <PageHero
         title="Warehousing & Distribution Services"
-        subtitle="200,000 sq ft bonded warehouse near the Port of Mobile with advanced inventory management, cross-docking, and integrated transportation on our own fleet."
+        subtitle="200,000 sq ft BONDED warehouse near the Port of Mobile with advanced inventory management, cross-docking, and integrated transportation on our own fleet."
         breadcrumbs={[
           { label: "Services", href: "/gulf-coast-logistics" },
           { label: "Warehousing & Distribution" },
@@ -237,9 +237,9 @@ export default function WarehousingMobileALPage() {
               </div>
 
               <p className="text-navy-300 leading-relaxed mb-6">
-                Our 200,000 sq ft bonded warehouse in Mobile, Alabama, is
+                Our 200,000 sq ft <strong className="text-white font-bold">BONDED</strong> warehouse in Mobile, Alabama, is
                 strategically located minutes from the Port of Mobile and major
-                interstate corridors. As a U.S. Customs bonded facility, we can
+                interstate corridors. As a U.S. Customs <strong className="text-white font-bold">BONDED</strong> facility, we can
                 store imported goods before duties are paid — saving you money
                 and giving you flexibility. We receive import containers the same
                 day they clear the terminal, transload cargo into domestic
@@ -258,7 +258,7 @@ export default function WarehousingMobileALPage() {
 
               <div className="space-y-3">
                 {[
-                  "200,000 sq ft U.S. Customs bonded facility",
+                  "200,000 sq ft U.S. Customs BONDED facility",
                   "Minutes from Port of Mobile for fast container receiving",
                   "Integrated with our own drayage and trucking fleet",
                   "Real-time WMS with online inventory portal",

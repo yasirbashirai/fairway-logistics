@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.jpg",
+        url: "/logo.png",
         width: 800,
         height: 600,
         alt: "Gulf Coast Logistics Solutions - Fairway Logistics",

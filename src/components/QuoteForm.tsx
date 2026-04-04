@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { CheckCircle, ArrowRight, ArrowLeft, AlertCircle } from "lucide-react";
+import { useState, useRef } from "react";
+import { CheckCircle, ArrowRight, ArrowLeft, AlertCircle, Upload, X, FileImage, FileText } from "lucide-react";
 
 interface FormData {
   origin: string;
@@ -66,6 +66,47 @@ export default function QuoteForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<Partial<Record<string, string>>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+  const [fileError, setFileError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  const MAX_FILES = 5;
+  const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB per file
+  const ALLOWED_TYPES = ["image/jpeg", "image/jpg", "application/pdf"];
+
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFileError(null);
+    const files = e.target.files;
+    if (!files) return;
+
+    const newFiles: File[] = [];
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      if (!ALLOWED_TYPES.includes(file.type)) {
+        setFileError("Only JPEG images and PDF files are accepted.");
+        continue;
+      }
+      if (file.size > MAX_FILE_SIZE) {
+        setFileError("Each file must be under 10MB.");
+        continue;
+      }
+      newFiles.push(file);
+    }
+
+    const total = uploadedFiles.length + newFiles.length;
+    if (total > MAX_FILES) {
+      setFileError(`You can upload a maximum of ${MAX_FILES} files.`);
+      return;
+    }
+
+    setUploadedFiles((prev) => [...prev, ...newFiles]);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
+
+  const removeFile = (index: number) => {
+    setUploadedFiles((prev) => prev.filter((_, i) => i !== index));
+    setFileError(null);
+  };
 
   const update = (field: keyof FormData, value: string | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -115,6 +156,8 @@ export default function QuoteForm() {
     setStep(1);
     setSubmitted(false);
     setErrors({});
+    setUploadedFiles([]);
+    setFileError(null);
   };
 
   if (submitted) {
@@ -346,6 +389,73 @@ export default function QuoteForm() {
             <label htmlFor="hazmat" className="text-sm font-semibold text-navy-200 cursor-pointer">
               This shipment contains hazardous materials (Hazmat)
             </label>
+          </div>
+
+          {/* ---- Product Photos Upload ---- */}
+          <div className="pt-2">
+            <label className={labelClass}>
+              Upload Product Photos
+            </label>
+            <p className="text-xs text-navy-400 mb-3">
+              Upload JPEG images or PDF files of your product so we can provide an accurate quote. Max 5 files, 10MB each.
+            </p>
+
+            <div
+              onClick={() => fileInputRef.current?.click()}
+              className="border-2 border-dashed border-navy-700 hover:border-gold-400/50 rounded-xl p-6 text-center cursor-pointer transition-colors duration-200 group"
+            >
+              <Upload className="w-8 h-8 text-navy-500 group-hover:text-gold-400 mx-auto mb-2 transition-colors" />
+              <p className="text-sm text-navy-300 group-hover:text-navy-200 transition-colors">
+                Click to upload JPEG or PDF files
+              </p>
+              <p className="text-xs text-navy-500 mt-1">
+                No links accepted — files only for security
+              </p>
+            </div>
+
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept=".jpg,.jpeg,.pdf"
+              multiple
+              onChange={handleFileUpload}
+              className="hidden"
+            />
+
+            {fileError && <FieldError msg={fileError} />}
+
+            {/* Uploaded files list */}
+            {uploadedFiles.length > 0 && (
+              <div className="mt-3 space-y-2">
+                {uploadedFiles.map((file, index) => (
+                  <div
+                    key={`${file.name}-${index}`}
+                    className="flex items-center justify-between bg-navy-900/60 border border-navy-700/50 rounded-lg px-4 py-2.5"
+                  >
+                    <div className="flex items-center gap-3 min-w-0">
+                      {file.type === "application/pdf" ? (
+                        <FileText className="w-4 h-4 text-red-400 flex-shrink-0" />
+                      ) : (
+                        <FileImage className="w-4 h-4 text-blue-400 flex-shrink-0" />
+                      )}
+                      <span className="text-sm text-navy-200 truncate">
+                        {file.name}
+                      </span>
+                      <span className="text-xs text-navy-500 flex-shrink-0">
+                        ({(file.size / 1024 / 1024).toFixed(1)} MB)
+                      </span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => removeFile(index)}
+                      className="text-navy-400 hover:text-red-400 transition-colors p-1 flex-shrink-0"
+                    >
+                      <X className="w-4 h-4" />
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )}

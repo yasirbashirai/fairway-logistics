@@ -70,7 +70,7 @@ export default function Footer() {
             <div>
               <Link href="/" className="inline-block mb-6">
                 <Image
-                  src="/logo.jpg"
+                  src="/logo.png"
                   alt="Fairway Logistics LLC"
                   width={160}
                   height={48}
